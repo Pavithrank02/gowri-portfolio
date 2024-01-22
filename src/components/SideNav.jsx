@@ -1,17 +1,16 @@
+import { Grid } from '@mui/material'
 import React from 'react'
-import About from './view/About';
-import Contact from './view/Contact';
-import Home from './view/Home';
-import Project from './view/Project';
+import { Link } from 'react-router-dom'
+
 
 const SideNav = () => {
   return (
-    <div>
-      <Home />
-      <Project />
-      <Contact />
-      <About />
-    </div>
+    <Grid style={{ height: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'black', color: 'white'}}>
+     <Link to='/'>Home</Link>
+     <Link to='/about'>About</Link>
+     <Link to='/contact'>Contact</Link>
+     <Link to='/project'>Project</Link>
+    </Grid>
   )
 }
 
