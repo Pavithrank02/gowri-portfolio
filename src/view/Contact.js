@@ -47,6 +47,7 @@ const Contact = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       onSubmit={handleSubmit}
+      
     >
       <Typography variant="h5" gutterBottom>
         Contact Me

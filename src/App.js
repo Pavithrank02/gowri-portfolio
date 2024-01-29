@@ -9,8 +9,8 @@ import Project from './view/Project';
 function App() {
   return (
     <div className="App">
+      <Home />
       <Routes >
-        <Route path='/' element={<Home />} />
         <Route path='/project' element={<Project />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/about' element={<About />} />

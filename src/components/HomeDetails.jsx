@@ -5,7 +5,7 @@ import img1 from '../assets/gowr.jpg'
 
 const HomeDetails = () => {
   return (
-    <Grid container style={{ display: 'flex', flexDirection: 'column', justifyContent: "space-around",  width: '60vw' }}>
+    <Grid container style={{ display: 'flex', flexDirection: 'column', justifyContent: "space-around",  width: '60vw',   }}>
       <Grid xs={4}>
         <img
           style={{ width: '300px', borderRadius: "50%", marginRight: '20px' }}

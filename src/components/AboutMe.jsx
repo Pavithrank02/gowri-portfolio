@@ -1,73 +1,185 @@
-import { Card, Grid, Typography } from '@mui/material'
+import { Button, Card, Grid, Typography } from '@mui/material'
 import React from 'react'
 import img1 from '../assets/gowr.jpg'
 import { About } from '../constants'
 import { motion } from 'framer-motion'
 import { Box, flexbox } from '@mui/system'
+import MainContainer from './MainContainer'
+import SideNav from './SideNav'
 const AboutMe = () => {
   return (
-    <Grid container style={{ display: 'flex', flexDirection: 'column', justifyContent: "space-around", width: '60vw' }}>
-      <Grid>
-        <Typography variant='h4'>AboutMe </Typography>
-      </Grid>
-      <Grid >
-        <img
-          style={{ width: '50vw', height: '70vh' }}
-          src={img1} />
-      </Grid>
-      <Grid>
-        <Typography variant='h5'>{About.name} </Typography>
-      </Grid>
-      <Grid>
-        <Typography variant='h5'>{About.role} </Typography>
-      </Grid>
-      <Grid>
-        <motion.a animate={{ x: 0, scale: 1 }} initial={{ scale: 0 }} transition={{ type: "tween", duration: 2, delay: 1 }} download className="btn btn-primary mt-5 custom-btn fw-bold">Download My Resume</motion.a>
-      </Grid>
-      <Grid>
+    <>
+    <MainContainer />
+      <Grid container position='absolute' style={{ top: '100px', marginLeft: '25vw', display: 'flex', flexDirection: 'column', justifyContent: "space-around", width: '70vw', color: 'white' }}>
+        <Grid style={{ marginBottom: '30px' }}>
+          <Typography variant='h4'>About Me </Typography>
+        </Grid>
+        <Grid style={{ marginBottom: '30px' }}>
+          <img
+            style={{ width: '50vw', height: '70vh' }}
+            src={img1} />
+        </Grid>
+        <Grid>
+          <Typography variant='h4'>{About.name} </Typography>
+        </Grid>
+        <Grid>
+          <Typography variant='h6'>{About.role} </Typography>
+        </Grid>
+
+        <Grid style={{ marginBottom: '30px' }}>
+          <Card variant="outlined" sx={{ width: '60vw', backgroundColor: '#131314', color: 'white' }}>
+            <Box sx={{ p: 2 }}>
+              <Typography gutterBottom variant="h5" component="div" align='justify'>
+                {About.description}
+              </Typography>
+            </Box>
+          </Card>
+          <Card variant="outlined" sx={{ width: '60vw', }} style={{ marginBottom: '30px', backgroundColor: '#131314', color: 'white' }}>
+            <Box sx={{ p: 2 }}>
+              <Grid xs={12} style={{ display: 'flex', flexDirection: 'row', }}>
+                <Grid xs={6} style={{ display: 'flex', flexDirection: 'column', }}>
+                  <Grid style={{ display: 'flex', flexDirection: 'row', }}>
+                    <Grid>
+                      <Typography gutterBottom variant="body" component="div" align='justify' fontWeight={800}>
+                        Birthday :
+                      </Typography>
+                    </Grid>
+                    <Grid>
+                      <Typography gutterBottom variant="body" component="div" align='justify' style={{ marginLeft: '10px' }}>
+                        {About.Birthday}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                  <Grid style={{ display: 'flex', flexDirection: 'row', }}>
+                    <Grid>
+                      <Typography gutterBottom variant="body" component="div" align='justify' fontWeight={800}>
+                        Age :
+                      </Typography>
+                    </Grid>
+                    <Grid>
+                      <Typography gutterBottom variant="body" component="div" align='justify' style={{ marginLeft: '10px' }}>
+                        {About.Age}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                  <Grid style={{ display: 'flex', flexDirection: 'row', }}>
+                    <Grid>
+                      <Typography gutterBottom variant="body" component="div" align='justify' fontWeight={800}>
+                        Address :
+                      </Typography>
+                    </Grid>
+                    <Grid>
+                      <Typography gutterBottom variant="body" component="div" align='justify' style={{ marginLeft: '10px' }}>
+                        {About.Address}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                  <Grid style={{ display: 'flex', flexDirection: 'row', }}>
+                    <Grid>
+                      <Typography gutterBottom variant="body" component="div" align='justify' fontWeight={800}>
+                        Email :
+                      </Typography>
+                    </Grid>
+                    <Grid>
+                      <Typography gutterBottom variant="body" component="div" align='justify' style={{ marginLeft: '10px' }}>
+                        {About.Email}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                  <Grid style={{ display: 'flex', flexDirection: 'row', }}>
+                    <Grid>
+                      <Typography gutterBottom variant="body" component="div" align='justify' fontWeight={800}>
+                        Phone :
+                      </Typography>
+                    </Grid>
+                    <Grid>
+                      <Typography gutterBottom variant="body" component="div" align='justify' style={{ marginLeft: '10px' }}>
+                        {About.Phone}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+
+                </Grid>
+                <Grid xs={6} style={{ display: 'flex', flexDirection: 'column', }}>
+                  <Grid style={{ display: 'flex', flexDirection: 'row', }}>
+                    <Grid>
+                      <Typography gutterBottom variant="body" component="div" align='justify' fontWeight={800}>
+                        Nationality :
+                      </Typography>
+                    </Grid>
+                    <Grid>
+                      <Typography gutterBottom variant="body" component="div" align='justify' style={{ marginLeft: '10px' }}>
+                        {About.Nationality}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                  <Grid style={{ display: 'flex', flexDirection: 'row', }}>
+                    <Grid>
+                      <Typography gutterBottom variant="body" component="div" align='justify' fontWeight={800}>
+                        Study :
+                      </Typography>
+                    </Grid>
+                    <Grid>
+                      <Typography gutterBottom variant="body" component="div" align='justify' style={{ marginLeft: '10px' }}>
+                        {About.Study}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                  <Grid style={{ display: 'flex', flexDirection: 'row', }}>
+                    <Grid>
+                      <Typography gutterBottom variant="body" component="div" align='justify' fontWeight={800}>
+                        Degree :
+                      </Typography>
+                    </Grid>
+                    <Grid>
+                      <Typography gutterBottom variant="body" component="div" align='justify' style={{ marginLeft: '10px' }}>
+                        {About.Degree}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                  <Grid style={{ display: 'flex', flexDirection: 'row', }}>
+                    <Grid>
+                      <Typography gutterBottom variant="body" component="div" align='justify' fontWeight={800}>
+                        Interest :
+                      </Typography>
+                    </Grid>
+                    <Grid>
+                      <Typography gutterBottom variant="body" component="div" align='justify' style={{ marginLeft: '10px' }}>
+                        {About.Interest}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                  <Grid style={{ display: 'flex', flexDirection: 'row', }}>
+                    <Grid>
+                      <Typography gutterBottom variant="body" component="div" align='justify' fontWeight={800}>
+                        Freelance :
+                      </Typography>
+                    </Grid>
+                    <Grid>
+                      <Typography gutterBottom variant="body" component="div" align='justify' style={{ marginLeft: '10px' }}>
+                        {About.Freelance}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Box>
+          </Card>
+          <Grid style={{ marginBottom: '30px' }}>
+            <motion.a animate={{ x: 0, scale: 1 }} initial={{ scale: 0 }} transition={{ type: "tween", duration: 2, delay: 1 }}><Button style={{ padding: '10px', backgroundColor: "white" }}> Download My Resume </Button></motion.a>
+          </Grid>
+        </Grid>
         <Card variant="outlined" sx={{ width: '60vw' }}>
           <Box sx={{ p: 2 }}>
-            <Typography gutterBottom variant="h5" component="div" align='justify'>
-              {About.description}
-            </Typography>
-          </Box>
-        </Card>
-        <Card variant="outlined" sx={{ width: '60vw' }}>
-          <Box sx={{ p: 2 }}>
-            <Grid xs={12} style={{ display: 'flex', flexDirection: 'row',  }}>
-              <Grid xs={6} style={{ display: 'flex', flexDirection: 'row', }}>
-                <Grid>
-                  <Typography gutterBottom variant="body" component="div" align='justify' fontWeight={800}>
-                    Birthday :
-                  </Typography>
-                </Grid>
-                <Grid>
-                  <Typography gutterBottom variant="body" component="div" align='justify' style={{ marginLeft: '10px' }}>
-                    {About.Birthday}
-                  </Typography>
-                </Grid>
-              </Grid>
-          
-              <Grid xs={6}>
-              <Grid style={{ display: 'flex', flexDirection: 'row', }}>
-                <Grid>
-                  <Typography gutterBottom variant="body" component="div" align='justify' fontWeight={800}>
-                    Birthday :
-                  </Typography>
-                </Grid>
-                <Grid>
-                  <Typography gutterBottom variant="body" component="div" align='justify' style={{ marginLeft: '10px' }}>
-                    {About.Birthday}
-                  </Typography>
-                </Grid>
-                
-              </Grid>
-              </Grid>
+            <Grid>
+              <Typography gutterBottom variant="body" component="div" align='justify' fontWeight={800}>
+                Experience
+              </Typography>
             </Grid>
           </Box>
         </Card>
       </Grid>
-    </Grid>
+    </>
   )
 }
 
