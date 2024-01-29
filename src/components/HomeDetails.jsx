@@ -1,7 +1,7 @@
 import React from 'react';
 import { perSonalDetails } from '../constants';
 import { Grid, Typography, IconButton } from '@mui/material';
-import { GitHub, LinkedIn, Twitter, Instagram } from '@mui/icons-material'; // Import social media icons
+import { GitHub, LinkedIn, Twitter, Instagram } from '@mui/icons-material';
 import img1 from '../assets/gowr.jpg';
 import { motion } from 'framer-motion';
 import MainContainer from './MainContainer';
@@ -10,6 +10,11 @@ const HomeDetails = () => {
   const containerVariants = {
     hidden: { x: '-30%' },
     visible: { x: 0, transition: { type: 'spring', stiffness: 60 } },
+  };
+
+  const imageContainerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 1 } },
   };
 
   return (
@@ -31,7 +36,12 @@ const HomeDetails = () => {
           color: 'white',
         }}
       >
-        <Grid container spacing={2} alignItems="center">
+        <motion.div
+          variants={imageContainerVariants}
+          initial="hidden"
+          animate="visible"
+          style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}
+        >
           <Grid item xs={4}>
             <img
               style={{ width: '300px', borderRadius: '50%', marginRight: '20px' }}
@@ -41,7 +51,7 @@ const HomeDetails = () => {
           </Grid>
           <Grid container item xs={8} spacing={2} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
             <Grid item>
-              <Typography variant="h3" style={{ color: 'white', margin: '3px' }}>
+              <Typography variant="h3" style={{ color: 'white', margin: '3px', fontWeight: 800 }}>
                 {perSonalDetails.name}
               </Typography>
               <Typography variant="h5" style={{ color: 'white', marginTop: '30px' }}>
@@ -65,7 +75,7 @@ const HomeDetails = () => {
               {/* Add more icons as needed */}
             </Grid>
           </Grid>
-        </Grid>
+        </motion.div>
       </motion.div>
     </>
   );

@@ -9,11 +9,11 @@ import AccountTreeIcon from '@mui/icons-material/AccountTree';
 
 const SideNav = () => {
   return (
-    <Grid style={{ position: 'fixed', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'black', color: 'white' }}>
+    <Grid style={{ position: 'fixed', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'black', color: 'white', cursor: 'pointer',  }}>
       <Grid style={{ margin: '10px' }}>
         <Typography variant='h3' style={{ color: 'white', align: "center" }}>Gowri Shankar </Typography>
       </Grid>
-      <Grid style={{ padding: '1rem', }} display>
+      <Grid style={{ padding: '1rem', }}>
         <Link to='/'>
           <Typography variant='body'style={{ color: 'white', align: "center" }}>
             <HomeIcon style={{marginBottom: '-4px', marginRight: '5px'}}/>

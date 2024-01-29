@@ -22,18 +22,18 @@ const AboutMe = () => {
         style={{
           position: 'absolute',
           top: '100px',
-          marginLeft: '27vw',
+          marginLeft: '35vw',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-around',
-          width: '70vw',
+          width: '60vw',
           color: 'white',
           scrollBehavior: 'smooth',
         }}
       >
       
           <Grid style={{ marginBottom: '30px', }}>
-            <Typography variant='h4'>About Me </Typography>
+            <Typography style={{fontWeight: 800 }} variant='h4'>About Me </Typography>
           </Grid>
           <Grid style={{ marginBottom: '30px' }}>
             <img
@@ -57,7 +57,7 @@ const AboutMe = () => {
             </Card>
             <Card variant="outlined" sx={{ width: '60vw', }} style={{ marginBottom: '30px', backgroundColor: '#131314', color: 'white' }}>
               <Box sx={{ p: 2 }}>
-                <Grid xs={12} style={{ display: 'flex', flexDirection: 'row', }}>
+                <Grid xs={12} style={{ display: 'flex', flexDirection: 'row', width: '50vw' }}>
                   <Grid xs={6} style={{ display: 'flex', flexDirection: 'column', }}>
                     <Grid style={{ display: 'flex', flexDirection: 'row', }}>
                       <Grid>
