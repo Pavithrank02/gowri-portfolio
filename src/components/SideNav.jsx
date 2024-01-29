@@ -9,12 +9,30 @@ import AccountTreeIcon from '@mui/icons-material/AccountTree';
 
 const SideNav = () => {
   return (
-    <Grid style={{ height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-evenly',  backgroundColor: 'black', color: 'white'}}>
-     <Typography style={{color: 'white'}}>Gowri Shankar </Typography> 
-     <Link to='/'><Typography style={{color: 'white'}}><HomeIcon /> Home </Typography> </Link>
-     <Link to='/about'><Typography style={{color: 'white'}}><PersonIcon /> About </Typography></Link>
-     <Link to='/contact'><Typography style={{color: 'white'}}><ContactsIcon /> Contact </Typography></Link>
-     <Link to='/project'><Typography style={{color: 'white'}}><AccountTreeIcon /> Project </Typography></Link>
+    <Grid style={{ height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'black', color: 'white' }}>
+      <Grid style={{ margin: '10px' }}>
+        <Typography variant='h3' style={{ color: 'white', align: "center" }}>Gowri Shankar </Typography>
+      </Grid>
+      <Grid style={{ margin: '10px', }} display>
+        <Link to='/'>
+          <Typography variant='h5'style={{ color: 'white', align: "center" }}>
+            <HomeIcon style={{marginBottom: '-4px', marginRight: '5px'}}/>
+            Home
+          </Typography>
+        </Link>
+      </Grid>
+      <Grid style={{ margin: '10px' }}>
+        <Link to='/about'><Typography variant='h5' style={{ color: 'white' }}><PersonIcon style={{marginBottom: '-4px', marginRight: '5px'}}/> About </Typography></Link>
+      </Grid>
+      <Grid style={{ margin: '10px' }}>
+        <Link to='/contact'><Typography variant='h5' style={{ color: 'white' }}><ContactsIcon style={{marginBottom: '-4px', marginRight: '5px'}}/> Contact </Typography></Link>
+      </Grid>
+      <Grid style={{ margin: '10px' }}>
+        <Link to='/project'><Typography variant='h5' style={{ color: 'white' }}><AccountTreeIcon style={{marginBottom: '-4px', marginRight: '5px'}}/> Project </Typography></Link>
+      </Grid>
+      <Grid style={{ margin: '10px' }}>
+        <Typography variant='h5' style={{ color: 'white' }}>CopyRighted to Gowri@2024 </Typography>
+      </Grid>
     </Grid>
   )
 }
