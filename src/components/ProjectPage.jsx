@@ -10,17 +10,19 @@ const useStyles = makeStyles((theme) => ({
   projectsContainer: {
     position: 'absolute',
     top: 0,
-    marginLeft: '30vw',
+    left: '25vw',
     padding: theme.spacing(4),
+    width: '75vw',
     [theme.breakpoints.down('md')]: {
-      marginLeft: '20vw',
+      left: '15vw',
     },
     [theme.breakpoints.down('sm')]: {
-      marginLeft: '10vw',
+      left: '10vw',
     },
   },
   sectionTitle: {
     marginBottom: theme.spacing(3),
+    color: '#333',
   },
 }));
 
