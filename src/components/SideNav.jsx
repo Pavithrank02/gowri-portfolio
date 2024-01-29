@@ -13,24 +13,24 @@ const SideNav = () => {
       <Grid style={{ margin: '10px' }}>
         <Typography variant='h3' style={{ color: 'white', align: "center" }}>Gowri Shankar </Typography>
       </Grid>
-      <Grid style={{ margin: '10px', }} display>
+      <Grid style={{ padding: '1rem', }} display>
         <Link to='/'>
-          <Typography variant='h5'style={{ color: 'white', align: "center" }}>
+          <Typography variant='body'style={{ color: 'white', align: "center" }}>
             <HomeIcon style={{marginBottom: '-4px', marginRight: '5px'}}/>
             Home
           </Typography>
         </Link>
       </Grid>
-      <Grid style={{ margin: '10px' }}>
-        <Link to='/about'><Typography variant='h5' style={{ color: 'white' }}><PersonIcon style={{marginBottom: '-4px', marginRight: '5px'}}/> About </Typography></Link>
+      <Grid style={{padding: '1rem' }}>
+        <Link to='/about'><Typography variant='body' style={{ color: 'white' }}><PersonIcon style={{marginBottom: '-4px', marginRight: '5px'}}/> About </Typography></Link>
       </Grid>
-      <Grid style={{ margin: '10px' }}>
-        <Link to='/contact'><Typography variant='h5' style={{ color: 'white' }}><ContactsIcon style={{marginBottom: '-4px', marginRight: '5px'}}/> Contact </Typography></Link>
+      <Grid style={{ padding: '1rem'}}>
+        <Link to='/contact'><Typography variant='body' style={{ color: 'white' }}><ContactsIcon style={{marginBottom: '-4px', marginRight: '5px'}}/> Contact </Typography></Link>
       </Grid>
-      <Grid style={{ margin: '10px' }}>
-        <Link to='/project'><Typography variant='h5' style={{ color: 'white' }}><AccountTreeIcon style={{marginBottom: '-4px', marginRight: '5px'}}/> Project </Typography></Link>
+      <Grid style={{ padding: '1rem' }}>
+        <Link to='/project'><Typography variant='body' style={{ color: 'white' }}><AccountTreeIcon style={{marginBottom: '-4px', marginRight: '5px'}}/> Project </Typography></Link>
       </Grid>
-      <Grid style={{ margin: '10px' }}>
+      <Grid style={{ padding: '1rem' }}>
         <Typography variant='h5' style={{ color: 'white' }}>CopyRighted to Gowri@2024 </Typography>
       </Grid>
     </Grid>
