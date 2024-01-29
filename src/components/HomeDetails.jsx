@@ -1,28 +1,74 @@
-import React from 'react'
-import { perSonalDetails } from '../constants'
-import { Grid, Typography } from '@mui/material'
-import img1 from '../assets/gowr.jpg'
+import React from 'react';
+import { perSonalDetails } from '../constants';
+import { Grid, Typography, IconButton } from '@mui/material';
+import { GitHub, LinkedIn, Twitter, Instagram } from '@mui/icons-material'; // Import social media icons
+import img1 from '../assets/gowr.jpg';
+import { motion } from 'framer-motion';
+import MainContainer from './MainContainer';
 
 const HomeDetails = () => {
-  return (
-    <Grid container style={{ display: 'flex', flexDirection: 'column', justifyContent: "space-around",  width: '60vw',   }}>
-      <Grid xs={4}>
-        <img
-          style={{ width: '300px', borderRadius: "50%", marginRight: '20px' }}
-          src={img1} />
-      </Grid>
-      <Grid container xs={8} style={{display: 'flex', flexDirection: 'column', justifyContent: "space-around",}}>
-        <Grid >
-          <Typography  variant="h3" style={{ color: 'white', margin: '3px' }} >
-            {perSonalDetails.name}
-          </Typography>
-          <Typography  variant="h5" style={{ color: 'white', marginTop: '30px' }} >
-            {perSonalDetails.description}
-          </Typography>
-        </Grid>
-      </Grid>
-    </Grid>
-  )
-}
+  const containerVariants = {
+    hidden: { x: '-30%' },
+    visible: { x: 0, transition: { type: 'spring', stiffness: 60 } },
+  };
 
-export default HomeDetails
+  return (
+    <>
+      <MainContainer />
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+        style={{
+          position: 'absolute',
+          top: '20vh',
+          left: '30vw',
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: '60vw',
+          color: 'white',
+        }}
+      >
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs={4}>
+            <img
+              style={{ width: '300px', borderRadius: '50%', marginRight: '20px' }}
+              src={img1}
+              alt="Profile"
+            />
+          </Grid>
+          <Grid container item xs={8} spacing={2} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
+            <Grid item>
+              <Typography variant="h3" style={{ color: 'white', margin: '3px' }}>
+                {perSonalDetails.name}
+              </Typography>
+              <Typography variant="h5" style={{ color: 'white', marginTop: '30px' }}>
+                {perSonalDetails.description}
+              </Typography>
+            </Grid>
+            <Grid item container spacing={1}>
+              {/* Social Media Icons with adjusted size */}
+              <IconButton color="inherit" style={{ fontSize: '3rem' }}>
+                <GitHub />
+              </IconButton>
+              <IconButton color="inherit" style={{ fontSize: '2rem' }}>
+                <LinkedIn />
+              </IconButton>
+              <IconButton color="inherit" style={{ fontSize: '2rem' }}>
+                <Twitter />
+              </IconButton>
+              <IconButton color="inherit" style={{ fontSize: '2rem' }}>
+                <Instagram />
+              </IconButton>
+              {/* Add more icons as needed */}
+            </Grid>
+          </Grid>
+        </Grid>
+      </motion.div>
+    </>
+  );
+};
+
+export default HomeDetails;
