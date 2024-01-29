@@ -9,7 +9,7 @@ import AccountTreeIcon from '@mui/icons-material/AccountTree';
 
 const SideNav = () => {
   return (
-    <Grid style={{ position: 'fixed', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'black', color: 'white', cursor: 'pointer',  }}>
+    <Grid style={{ position: 'fixed', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'black', color: 'white', cursor: 'pointer', }}>
       <Grid style={{ margin: '10px' }}>
         <Typography variant='h3' style={{ color: 'white', align: "center" }}>Gowri Shankar </Typography>
       </Grid>
@@ -31,7 +31,7 @@ const SideNav = () => {
         <Link to='/project'><Typography variant='body' style={{ color: 'white' }}><AccountTreeIcon style={{marginBottom: '-4px', marginRight: '5px'}}/> Project </Typography></Link>
       </Grid>
       <Grid style={{ padding: '1rem' }}>
-        <Typography variant='h5' style={{ color: 'white' }}>CopyRighted to Gowri@2024 </Typography>
+        <Typography variant='body' style={{ color: 'white' }}>CopyRighted to Gowri@2024 </Typography>
       </Grid>
     </Grid>
   )

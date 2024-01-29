@@ -8,10 +8,10 @@ import HomeDetails from '../components/HomeDetails'
 const Home = () => {
   return (
     <Grid container style={{backgroundColor: 'black'}}>
-      <Grid xs={3}>
+      <Grid xs={4}>
         <SideNav />
       </Grid>
-      <Grid xs={9}>
+      <Grid xs={8}>
         <HomeDetails />
       </Grid>
     </Grid>
