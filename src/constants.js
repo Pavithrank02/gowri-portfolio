@@ -27,3 +27,19 @@ export const About = {
   Interest:"Playing Football",
   Freelance:"Available",
 }
+
+export const projectsData = [
+  {
+    id: 1,
+    title: 'Project 1',
+    description: 'Description for Project 1.',
+    techStack: ['React', 'Node.js', 'Express'],
+  },
+  {
+    id: 2,
+    title: 'Project 2',
+    description: 'Description for Project 2.',
+    techStack: ['Angular', 'Java', 'Spring Boot'],
+  },
+  // Add more projects as needed
+];

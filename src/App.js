@@ -5,10 +5,12 @@ import About from './view/About';
 import Contact from './view/Contact';
 import Home from './view/Home';
 import Project from './view/Project';
+import { CssBaseline, Container } from '@mui/material';
 
 function App() {
   return (
     <div className="App">
+      
       <SideNav />
       <Routes >
         <Route path='/' element={<Home />} />
