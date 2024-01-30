@@ -5,6 +5,7 @@ import { About, experiences } from '../constants'
 import { motion } from 'framer-motion'
 import { Box, flexbox } from '@mui/system'
 import MainContainer from './MainContainer'
+// import resumePdf from '../assets/your-resume.pdf';
 import SideNav from './SideNav'
 const AboutMe = () => {
   const containerVariants = {
@@ -58,7 +59,7 @@ const AboutMe = () => {
           </Card>
           <Card variant="outlined" sx={{ width: '60vw', }} style={{ marginBottom: '30px', backgroundColor: '#131314', color: 'white' }}>
             <Box sx={{ p: 2 }}>
-              <Grid xs={12} style={{ display: 'flex', flexDirection: 'row', width: '50vw' }}>
+              <Grid xs={12} columnGap={30} style={{ display: 'flex', flexDirection: 'row', width: '50vw' }}>
                 <Grid xs={6} style={{ display: 'flex', flexDirection: 'column', }}>
                   <Grid style={{ display: 'flex', flexDirection: 'row', }}>
                     <Grid>
@@ -188,7 +189,13 @@ const AboutMe = () => {
             </Box>
           </Card>
           <Grid style={{ marginBottom: '30px' }}>
-            <motion.a animate={{ x: 0, scale: 1 }} initial={{ scale: 0 }} transition={{ type: "tween", duration: 2, delay: 1 }}><Button style={{ padding: '10px', backgroundColor: "white" }}> Download My Resume </Button></motion.a>
+            <motion.a animate={{ x: 0, scale: 1 }} initial={{ scale: 0 }} transition={{ type: "tween", duration: 2, delay: 1 }}>
+              <Button style={{ padding: '10px', backgroundColor: "white" }}>
+                {/* <a href={resumePdf} download="YourResume.pdf" style={{ textDecoration: 'none', color: 'black' }}> */}
+                  Download My Resume (PDF)
+                {/* </a> */}
+              </Button>
+            </motion.a>
           </Grid>
         </Grid>
         <Card variant="outlined" sx={{ width: '60vw' }}>
@@ -200,8 +207,8 @@ const AboutMe = () => {
               {experiences.map((experience, index) => (
                 <motion.div key={index} animate={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -50 }} transition={{ type: 'tween', duration: 0.5, delay: index * 0.2 }}>
                   <Card style={{ width: '40vw', marginBottom: '20px', backgroundColor: '#131314', color: 'white', padding: '16px', borderRadius: '8px', position: 'relative', overflow: 'hidden' }}>
-                    <Typography variant="h6">{experience.title}</Typography>
-                    <Typography variant="subtitle1" color="textSecondary">{experience.company} - {experience.date}</Typography>
+                    <Typography variant="h6" style={{color: 'white'}}>{experience.title}</Typography>
+                    <Typography variant="subtitle1" color="white">{experience.company} - {experience.date}</Typography>
                     <Typography variant="body1" style={{ marginTop: '10px' }}>{experience.description}</Typography>
                     {index !== experiences.length - 1 && <Divider style={{ position: 'absolute', bottom: 0, width: '80%', margin: 'auto' }} />}
                   </Card>
