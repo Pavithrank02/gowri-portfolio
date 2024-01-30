@@ -43,3 +43,13 @@ export const projectsData = [
   },
   // Add more projects as needed
 ];
+
+export const experiences = [
+  {
+    title: 'Software Engineer',
+    company: 'Tech Solutions Inc.',
+    date: 'Jan 2020 - Present',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum tortor et feugiat iaculis.',
+  },
+  // Add more experiences as needed
+];
