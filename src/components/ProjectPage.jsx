@@ -1,6 +1,6 @@
 // ProjectPage.js
 import React from 'react';
-import { Grid, Typography, makeStyles } from '@mui/material';
+import { Grid, Typography, makeStyles, useTheme, useMediaQuery } from '@mui/material';
 import { motion } from 'framer-motion';
 import ProjectItem from './ProjectItem';
 import { projectsData } from '../constants';
@@ -10,14 +10,14 @@ const useStyles = makeStyles((theme) => ({
   projectsContainer: {
     position: 'absolute',
     top: 0,
-    left: '25vw',
+    left: '15vw',
     padding: theme.spacing(4),
-    width: '75vw',
+    width: '70vw',
     [theme.breakpoints.down('md')]: {
-      left: '15vw',
+      left: '10vw',
     },
     [theme.breakpoints.down('sm')]: {
-      left: '10vw',
+      left: '5vw',
     },
   },
   sectionTitle: {
@@ -28,6 +28,8 @@ const useStyles = makeStyles((theme) => ({
 
 const ProjectPage = () => {
   const classes = useStyles();
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -42,7 +44,7 @@ const ProjectPage = () => {
           <Typography variant="h3" align="center" className={classes.sectionTitle} gutterBottom>
             Projects
           </Typography>
-          <Grid container spacing={3} justifyContent="center">
+          <Grid container spacing={isSmallScreen ? 2 : 3} justifyContent="center">
             {projectsData.map((project) => (
               <Grid key={project.id} item xs={12} md={6} lg={4}>
                 <ProjectItem project={project} />
