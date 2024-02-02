@@ -9,7 +9,12 @@ const ProjectContainer = () => {
     <Grid>
       <MainContainer />
       <Grid style={{ display: "flex", flexDirection: "row" }}>
-        <Grid style={{ display: 'flex', flexDirection: 'column', justifyContent: "space-evenly", alignItems: 'center', backgroundColor: "lightgray", width: '20vw', marginLeft: '30vw', height: '50vh', marginTop: '10vh', borderRadius: '10px' }}>
+      <Grid>
+            <Typography variant='h4'>
+              Project 1
+            </Typography>
+          </Grid>
+        <Grid style={{ display: 'flex', flexDirection: 'column', justifyContent: "space-evenly", alignItems: 'center', backgroundColor: "white", width: '20vw', marginLeft: '30vw', height: '50vh', marginTop: '10vh', borderRadius: '10px' }}>
           <Grid>
             <Typography variant='h4'>
               Project 1
