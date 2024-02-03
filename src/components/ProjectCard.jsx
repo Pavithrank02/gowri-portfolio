@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import { Grid, Typography } from '@mui/material'
 
 const ProjectCard = ({ img }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -23,7 +21,7 @@ const ProjectCard = ({ img }) => {
     borderRadius: '10px',
     marginRight: '10px',
     cursor: 'pointer',
-    ...(isHovered && { transform: 'scale(3)' }), // Apply transform on hover
+    ...(isHovered && { transform: 'scale(1.2)' }), // Apply transform on hover
     transition: 'transform 0.15s ease-in-out',
   };
 
@@ -34,6 +32,11 @@ const ProjectCard = ({ img }) => {
       onMouseLeave={handleMouseLeave}
     >
       <img src={img} alt='img' style={{ width: '20vw', height: '50vh', borderRadius: '10px' }} />
+      {isHovered && (
+        <Typography variant='h6' style={{ margin: '10px', textAlign: 'center', color: 'white' }}>
+          project
+        </Typography>
+      )}
     </Grid>
   );
 };
