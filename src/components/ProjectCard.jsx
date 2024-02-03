@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Grid, Typography } from '@mui/material'
+import { Grid, Typography, Dialog , DialogContent, DialogTitle  } from '@mui/material'
 
 const ProjectCard = ({ img }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -10,6 +11,12 @@ const ProjectCard = ({ img }) => {
 
   const handleMouseLeave = () => {
     setIsHovered(false);
+  };
+  const handleImageClick = () => {
+    setIsModalOpen(true);
+  };
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
   };
 
   const gridStyle = {
@@ -31,12 +38,21 @@ const ProjectCard = ({ img }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <img src={img} alt='img' style={{ width: '20vw', height: '50vh', borderRadius: '10px' }} />
+      <img src={img} alt='img' style={{ width: '20vw', height: '50vh', borderRadius: '10px' }}  onClick={handleImageClick} />
       {isHovered && (
         <Typography variant='h6' style={{ margin: '10px', textAlign: 'center', color: 'white' }}>
           project
         </Typography>
       )}
+      <Dialog open={isModalOpen} onClose={handleCloseModal}>
+        <DialogTitle>Project Description</DialogTitle>
+        <DialogContent>
+          {/* Add your project description content here */}
+          <Typography variant="body1">
+            This is the project description.
+          </Typography>
+        </DialogContent>
+      </Dialog>
     </Grid>
   );
 };
