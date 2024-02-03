@@ -1,7 +1,4 @@
-import { Grid, Typography } from '@mui/material'
 import React from 'react'
-import HomeDetails from './HomeDetails'
-
 
 const MainContainer = () => {
   return (
