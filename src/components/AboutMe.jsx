@@ -5,6 +5,7 @@ import { About, experiences } from '../constants'
 import { motion } from 'framer-motion'
 import { Box, flexbox } from '@mui/system'
 import MainContainer from './MainContainer'
+import Testimonial from './Testimonial'
 // import resumePdf from '../assets/your-resume.pdf';
 const AboutMe = () => {
   const containerVariants = {
@@ -50,13 +51,12 @@ const AboutMe = () => {
           scrollBehavior: 'smooth',
         }}
       >
-
         <Grid style={{ marginBottom: '30px', }}>
           <Typography style={{ fontWeight: 800 }} variant='h4'>About Me </Typography>
         </Grid>
         <Grid style={{ marginBottom: '30px' }}>
           <img
-            style={{ width: '50vw', height: '70vh' }}
+            style={{ width: '60vw', height: '70vh' }}
             src={img1} />
         </Grid>
         <Grid>
@@ -256,6 +256,9 @@ const AboutMe = () => {
             </Grid>
           </Box>
         </Card>
+            <Grid style={{}}>
+              <Testimonial />
+            </Grid>
       </motion.div>
     </>
   )
