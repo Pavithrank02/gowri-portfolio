@@ -96,7 +96,7 @@ const Experience = () => {
       </VerticalTimelineElement>
       <VerticalTimelineElement
         iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-      icon={<PlayCircleFilledIcon />}
+        icon={<PlayCircleFilledIcon />}
       />
     </VerticalTimeline>
   )

@@ -18,66 +18,64 @@ const HomeDetails = () => {
   };
 
   return (
-    <>
-      <MainContainer />
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+      style={{
+        position: 'absolute',
+        top: '20vh',
+        left: '30vw',
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '60vw',
+        color: 'white',
+        backgroundColor: '#131314'
+      }}
+    >
       <motion.div
+        variants={imageContainerVariants}
         initial="hidden"
         animate="visible"
-        variants={containerVariants}
-        style={{
-          position: 'absolute',
-          top: '20vh',
-          left: '30vw',
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center',
-          justifyContent: 'center',
-          width: '60vw',
-          color: 'white',
-        }}
+        style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}
       >
-        <motion.div
-          variants={imageContainerVariants}
-          initial="hidden"
-          animate="visible"
-          style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}
-        >
-          <Grid item xs={4}>
-            <img
-              style={{ width: '300px', borderRadius: '50%', marginRight: '20px' }}
-              src={img1}
-              alt="Profile"
-            />
+        <Grid item xs={4}>
+          <img
+            style={{ width: '300px', borderRadius: '50%', marginRight: '20px' }}
+            src={img1}
+            alt="Profile"
+          />
+        </Grid>
+        <Grid container item xs={8} spacing={2} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
+          <Grid item>
+            <Typography variant="h3" style={{ color: 'white', margin: '3px', fontWeight: 800 }}>
+              {perSonalDetails.name}
+            </Typography>
+            <Typography variant="h5" style={{ color: 'white', marginTop: '30px' }}>
+              {perSonalDetails.description}
+            </Typography>
           </Grid>
-          <Grid container item xs={8} spacing={2} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
-            <Grid item>
-              <Typography variant="h3" style={{ color: 'white', margin: '3px', fontWeight: 800 }}>
-                {perSonalDetails.name}
-              </Typography>
-              <Typography variant="h5" style={{ color: 'white', marginTop: '30px' }}>
-                {perSonalDetails.description}
-              </Typography>
-            </Grid>
-            <Grid item container spacing={1}>
-              {/* Social Media Icons with adjusted size */}
-              <IconButton color="inherit" style={{ fontSize: '3rem' }}>
-                <GitHub />
-              </IconButton>
-              <IconButton color="inherit" style={{ fontSize: '2rem' }}>
-                <LinkedIn />
-              </IconButton>
-              <IconButton color="inherit" style={{ fontSize: '2rem' }}>
-                <Twitter />
-              </IconButton>
-              <IconButton color="inherit" style={{ fontSize: '2rem' }}>
-                <Instagram />
-              </IconButton>
-              {/* Add more icons as needed */}
-            </Grid>
+          <Grid item container spacing={1}>
+            {/* Social Media Icons with adjusted size */}
+            <IconButton color="inherit" style={{ fontSize: '3rem' }}>
+              <GitHub />
+            </IconButton>
+            <IconButton color="inherit" style={{ fontSize: '2rem' }}>
+              <LinkedIn />
+            </IconButton>
+            <IconButton color="inherit" style={{ fontSize: '2rem' }}>
+              <Twitter />
+            </IconButton>
+            <IconButton color="inherit" style={{ fontSize: '2rem' }}>
+              <Instagram />
+            </IconButton>
+            {/* Add more icons as needed */}
           </Grid>
-        </motion.div>
+        </Grid>
       </motion.div>
-    </>
+    </motion.div>
   );
 };
 

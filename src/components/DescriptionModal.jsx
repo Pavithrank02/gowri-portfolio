@@ -23,7 +23,7 @@ export default function DescriptionModal() {
 
   return (
     <div>
-      <Button onClick={handleOpen} style={{backgroundColor: 'black', padding: '10px'}}>Description</Button>
+      <Button onClick={handleOpen} style={{ backgroundColor: 'black', padding: '10px' }}>Description</Button>
       <Modal
         open={open}
         onClose={handleClose}

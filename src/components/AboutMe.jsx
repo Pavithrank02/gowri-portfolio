@@ -17,7 +17,6 @@ const AboutMe = () => {
 
   return (
     <>
-      <MainContainer />
       <motion.div
         initial="hidden"
         animate="visible"
@@ -25,13 +24,14 @@ const AboutMe = () => {
         style={{
           position: 'absolute',
           top: '100px',
-          marginLeft: '30vw',
+          left: '30vw',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-around',
           width: '60vw',
           color: 'white',
           scrollBehavior: 'smooth',
+          
         }}
       >
         <Grid style={{ marginBottom: '30px', }}>
