@@ -6,17 +6,22 @@ const Testimonial = () => {
   return (
     <Grid style={{ display: 'flex', flexDirection: "row" }}>
       {Testimonies.map((key) => {
-        console.log( key)
+        console.log(key)
         return (
-          <Grid style={{ padding: '2rem', margin: '10px' }}>
-            <Typography >
-              {key.testimony}
-            </Typography>
+          <Grid style={{ padding: '1rem', margin: '10px', width: '20vw', textAlign: 'justify', backgroundColor: 'gray' }}>
+            <Grid>
+              <Typography >
+                {key.name}
+              </Typography>
+            </Grid>
+            <Grid>
+              <Typography >
+                {key.testimony}
+              </Typography>
+            </Grid>
           </Grid>
         )
       })}
-
-
     </Grid>
   )
 }
