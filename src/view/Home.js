@@ -7,9 +7,9 @@ import HomeDetails from '../components/HomeDetails'
 
 const Home = () => {
   return (
-      <Grid>
-        <HomeDetails />
-    </Grid>
+    <>
+      <HomeDetails />
+    </>
   )
 }
 

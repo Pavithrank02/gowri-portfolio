@@ -3,7 +3,9 @@ import ProjectContainer from '../components/ProjectContainer'
 
 const Project = () => {
   return (
-    <div><ProjectContainer /></div>
+    <>
+      <ProjectContainer />
+      </>
   )
 }
 

@@ -38,7 +38,6 @@ const PersonalDetails = () => {
                   </Typography>
                 </Grid>
               </Grid>
-
             )
           })}
         </Grid>

@@ -24,8 +24,9 @@ const HomeDetails = () => {
       variants={containerVariants}
       style={{
         position: 'absolute',
-        top: '20vh',
         left: '30vw',
+        height: '100vh',
+        width: '100%',
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',

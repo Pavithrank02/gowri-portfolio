@@ -45,7 +45,6 @@ const Contact = () => {
 
   return (
     <>
-      <MainContainer />
       <Grid style={{position: 'absolute', top: '20vh', left: '40vw', }}>
         <StyledForm
           initial={{ opacity: 0, y: -20 }}

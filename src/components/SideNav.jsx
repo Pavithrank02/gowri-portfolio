@@ -9,7 +9,7 @@ import AccountTreeIcon from '@mui/icons-material/AccountTree';
 
 const SideNav = () => {
   return (
-    <Grid style={{ height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'black', color: 'white',}}>
+    <Grid style={{ height: '100vh', width: 'contain', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'black', color: 'white',}}>
       <Grid style={{ margin: '10px' }}>
         <Typography variant='h3' style={{ color: 'white', align: "center" }}>
           Gowri Shankar

@@ -28,7 +28,6 @@ const ProjectContainer = () => {
         style={{
           position: 'absolute',
           top: '100px',
-          marginLeft: '30vw',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-around',
