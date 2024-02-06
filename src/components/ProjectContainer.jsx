@@ -28,38 +28,83 @@ const ProjectContainer = () => {
         style={{
           position: 'absolute',
           top: '100px',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-around',
-          width: '60vw',
           color: 'white',
           scrollBehavior: 'smooth',
 
         }}
       >
-        <Grid style={{ display: "flex", flexDirection: "column", }}>
-          <Grid style={{ padding: '1rem', backgroundColor: 'lightgray', borderRadius: '10px', }}>
-            <Typography variant='h4'>
+        <Grid style={{ display: "flex", flexDirection: "column", marginLeft: '5vw'}}>
+          <Grid style={{ padding: '1rem', backgroundColor: 'lightgray', borderRadius: '10px', width: '20vh' }}>
+            <Typography variant='h5'>
               My Project
             </Typography>
           </Grid>
           <Grid
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
             style={{
               display: "flex",
               flexDirection: "row",
               overflow: 'hidden',
               backgroundColor: 'white',
-              ...(isHovered && { transform: 'scale(1.1)' }), // Apply transform on hover
-              transition: 'transform 0.15s ease-in-out',
+              overflowX: 'hidden',
+              width: '65vw'
+
             }}>
-            {/* {isHovered && (
-              <Typography variant='h6' style={{ margin: '10px', textAlign: 'center', color: 'white' }}>
-                project
-              </Typography>
-            )} */}
-            <ProjectCard img={img} />
+            <Grid
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              style={{
+                ...(isHovered && { transform: 'scale(1.1)' }), // Apply transform on hover
+                transition: 'transform 0.15s ease-in-out',
+              }}>
+              <ProjectCard img={img} />
+              {isHovered && (
+                <Typography variant='h6' style={{ margin: '10px', textAlign: 'center', color: 'white' }}>
+                  project
+                </Typography>
+              )}
+            </Grid>
+            <Grid
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              style={{
+                ...(isHovered && { transform: 'scale(1.1)' }), // Apply transform on hover
+                transition: 'transform 0.15s ease-in-out',
+              }}>
+              <ProjectCard img={img} />
+              {isHovered && (
+                <Typography variant='h6' style={{ margin: '10px', textAlign: 'center', color: 'white' }}>
+                  project
+                </Typography>
+              )}
+            </Grid>
+            <Grid
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              style={{
+                ...(isHovered && { transform: 'scale(1.1)' }), // Apply transform on hover
+                transition: 'transform 0.15s ease-in-out',
+              }}>
+              <ProjectCard img={img} />
+              {isHovered && (
+                <Typography variant='h6' style={{ margin: '10px', textAlign: 'center', color: 'white' }}>
+                  project
+                </Typography>
+              )}
+            </Grid>
+            <Grid
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              style={{
+                ...(isHovered && { transform: 'scale(1.1)' }), // Apply transform on hover
+                transition: 'transform 0.15s ease-in-out',
+              }}>
+              <ProjectCard img={img} />
+              {isHovered && (
+                <Typography variant='h6' style={{ margin: '10px', textAlign: 'center', color: 'white' }}>
+                  project
+                </Typography>
+              )}
+            </Grid>
           </Grid>
 
         </Grid>

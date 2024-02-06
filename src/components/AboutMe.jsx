@@ -23,32 +23,33 @@ const AboutMe = () => {
         variants={containerVariants}
         style={{
           position: 'absolute',
-          top: '100px',
-          left: '30vw',
+          top: '15vh',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-around',
-          width: '60vw',
           color: 'white',
           scrollBehavior: 'smooth',
-          
+
         }}
       >
-        <Grid style={{ marginBottom: '30px', }}>
-          <Typography style={{ fontWeight: 800 }} variant='h4'>About Me </Typography>
-        </Grid>
-        <Grid style={{ marginBottom: '30px' }}>
-          <img
-            style={{ width: '60vw', height: '70vh' }}
-            src={img1} />
-        </Grid>
         <Grid>
-          <Typography variant='h4'>{About.name} </Typography>
+          <Grid style={{ marginBottom: '30px', }}>
+            <Typography style={{ fontWeight: 800 }} variant='h4'>About Me </Typography>
+          </Grid>
+          <Grid style={{ marginBottom: '35px' }}>
+            <img
+              style={{ width: '60vw', height: '70vh' }}
+              src={img1} />
+          </Grid>
         </Grid>
-        <Grid>
-          <Typography variant='h6'>{About.role} </Typography>
+        <Grid style={{backgroundColor:'black', marginBottom: '30px', marginLeft: '-0.5rem',width:"70vw", }}>
+          <Grid>
+            <Typography variant='h4'>{About.name} </Typography>
+          </Grid>
+          <Grid>
+            <Typography variant='h6'>{About.Role} </Typography>
+          </Grid>
         </Grid>
-
         <Grid style={{ marginBottom: '30px' }}>
           <Card variant="outlined" sx={{ width: '60vw', backgroundColor: '#131314', color: 'white' }}>
             <Box sx={{ p: 2, borderColor: 'white' }}>

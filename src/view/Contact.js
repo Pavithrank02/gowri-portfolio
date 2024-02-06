@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { TextField, Button, Typography, Grid } from '@mui/material';
 import { styled } from '@mui/system';
 import { motion } from 'framer-motion';
-import MainContainer from '../components/MainContainer';
 
 const StyledForm = styled(motion.form)({
   maxWidth: '700px',

@@ -7,7 +7,7 @@ const Testimonial = () => {
     <Grid style={{ display: 'flex', flexDirection: "row" }}>
       {Testimonies.map((key) => {
         return (
-          <Grid style={{ padding: '1rem', margin: '10px', width: '20vw', textAlign: 'justify', backgroundColor: 'gray' }}>
+          <Grid style={{ padding: '1rem', margin: '10px', textAlign: 'justify', backgroundColor: 'gray' }}>
             <Grid>
               <Typography >
                 {key.name}

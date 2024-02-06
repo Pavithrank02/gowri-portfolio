@@ -25,30 +25,33 @@ const HomeDetails = () => {
       style={{
         position: 'absolute',
         left: '30vw',
-        height: '100vh',
+        top: "40vh",
+        height: '10vh',
         width: '100%',
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         width: '60vw',
         color: 'white',
         backgroundColor: '#131314'
       }}
     >
-      <motion.div
-        variants={imageContainerVariants}
-        initial="hidden"
-        animate="visible"
-        style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}
-      >
-        <Grid item xs={4}>
-          <img
-            style={{ width: '300px', borderRadius: '50%', marginRight: '20px' }}
-            src={img1}
-            alt="Profile"
-          />
-        </Grid>
+      <Grid xs={12} style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+
+        <motion.div
+          variants={imageContainerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <Grid item xs={4}>
+            <img
+              style={{ width: '300px', borderRadius: '50%', marginRight: '20px' }}
+              src={img1}
+              alt="Profile"
+            />
+          </Grid>
+        </motion.div>
         <Grid container item xs={8} spacing={2} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
           <Grid item>
             <Typography variant="h3" style={{ color: 'white', margin: '3px', fontWeight: 800 }}>
@@ -75,7 +78,8 @@ const HomeDetails = () => {
             {/* Add more icons as needed */}
           </Grid>
         </Grid>
-      </motion.div>
+      </Grid>
+
     </motion.div>
   );
 };

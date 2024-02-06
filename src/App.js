@@ -9,19 +9,19 @@ import { Grid } from '@mui/material';
 
 function App() {
   return (
-    <Grid container columnSpacing={2}>
-  <Grid item xs={3} style={{ position: 'fixed', height: '100vh', zIndex: 1, backgroundColor: '#131314' }}>
-    <SideNav />
-  </Grid>
-  <Grid item xs={9} style={{ marginLeft: '50vw', padding: '20px', overflowY: 'auto', height: '100vh' }}>
-    <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/project' element={<Project />} />
-      <Route path='/contact' element={<Contact />} />
-      <Route path='/about' element={<About />} />
-    </Routes>
-  </Grid>
-</Grid>
+    <Grid container xs={12}>
+      <Grid item xs={3} style={{ position: 'fixed', height: '100vh', width: '28vw',zIndex: 1,  backgroundColor: 'black'}}>
+        <SideNav />
+      </Grid>
+      <Grid item xs={9} style={{ marginLeft: '24vw', padding: '20px', width: '72vw',overflowY: 'auto', height: '100vh', backgroundColor: '#131314' }}>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/project' element={<Project />} />
+          {/* <Route path='/contact' element={<Contact />} />
+          <Route path='/about' element={<About />} /> */}
+        </Routes>
+      </Grid>
+    </Grid>
 
 
 
