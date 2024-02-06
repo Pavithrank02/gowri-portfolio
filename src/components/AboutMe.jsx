@@ -8,7 +8,7 @@ import MainContainer from './MainContainer'
 import Testimonial from './Testimonial'
 import Experience from './Experience'
 import PersonalDetails from './PersonalDetails'
-// import resumePdf from '../assets/your-resume.pdf';
+
 const AboutMe = () => {
   const containerVariants = {
     hidden: { x: '-30%' },
