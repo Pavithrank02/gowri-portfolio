@@ -6,21 +6,13 @@ import ProjectCard from './ProjectCard'
 import { motion } from 'framer-motion'
 
 const ProjectContainer = () => {
-  const [isHovered, setIsHovered] = useState(false);
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
   const containerVariants = {
     hidden: { x: '-30%' },
     visible: { x: 0, transition: { type: 'spring', stiffness: 60 } },
   };
   return (
     <Grid>
-      <MainContainer />
       <motion.div
         initial="hidden"
         animate="visible"
@@ -29,12 +21,10 @@ const ProjectContainer = () => {
           position: 'absolute',
           top: '100px',
           color: 'white',
-          scrollBehavior: 'smooth',
-
         }}
       >
-        <Grid style={{ display: "flex", flexDirection: "column", marginLeft: '5vw'}}>
-          <Grid style={{ padding: '1rem', backgroundColor: 'lightgray', borderRadius: '10px', width: '20vh' }}>
+        <Grid style={{ display: "flex", flexDirection: "column", marginLeft: '5vw' }}>
+          <Grid style={{ padding: '0.7rem', backgroundColor: 'lightgray', borderRadius: '10px', width: '20vh', marginBottom: '19px', marginLeft: '15px' }}>
             <Typography variant='h5'>
               My Project
             </Typography>
@@ -43,70 +33,23 @@ const ProjectContainer = () => {
             style={{
               display: "flex",
               flexDirection: "row",
+              justifyContent: 'flex-start',
+              alignContent: 'center',
               overflow: 'hidden',
-              backgroundColor: 'white',
               overflowX: 'hidden',
-              width: '65vw'
+              gridTemplateColumns: "2fr 2fr 2fr"
 
             }}>
-            <Grid
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              style={{
-                ...(isHovered && { transform: 'scale(1.1)' }), // Apply transform on hover
-                transition: 'transform 0.15s ease-in-out',
-              }}>
+            <Grid>
               <ProjectCard img={img} />
-              {isHovered && (
-                <Typography variant='h6' style={{ margin: '10px', textAlign: 'center', color: 'white' }}>
-                  project
-                </Typography>
-              )}
             </Grid>
-            <Grid
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              style={{
-                ...(isHovered && { transform: 'scale(1.1)' }), // Apply transform on hover
-                transition: 'transform 0.15s ease-in-out',
-              }}>
+            <Grid>
               <ProjectCard img={img} />
-              {isHovered && (
-                <Typography variant='h6' style={{ margin: '10px', textAlign: 'center', color: 'white' }}>
-                  project
-                </Typography>
-              )}
             </Grid>
-            <Grid
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              style={{
-                ...(isHovered && { transform: 'scale(1.1)' }), // Apply transform on hover
-                transition: 'transform 0.15s ease-in-out',
-              }}>
+            <Grid>
               <ProjectCard img={img} />
-              {isHovered && (
-                <Typography variant='h6' style={{ margin: '10px', textAlign: 'center', color: 'white' }}>
-                  project
-                </Typography>
-              )}
-            </Grid>
-            <Grid
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              style={{
-                ...(isHovered && { transform: 'scale(1.1)' }), // Apply transform on hover
-                transition: 'transform 0.15s ease-in-out',
-              }}>
-              <ProjectCard img={img} />
-              {isHovered && (
-                <Typography variant='h6' style={{ margin: '10px', textAlign: 'center', color: 'white' }}>
-                  project
-                </Typography>
-              )}
             </Grid>
           </Grid>
-
         </Grid>
       </motion.div >
     </Grid>

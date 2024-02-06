@@ -3,6 +3,14 @@ import { Grid, Typography, Dialog, DialogContent, DialogTitle } from '@mui/mater
 
 const ProjectCard = ({ img }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
   const handleImageClick = () => {
     setIsModalOpen(true);
   };
@@ -12,21 +20,29 @@ const ProjectCard = ({ img }) => {
 
   const gridStyle = {
     display: 'flex',
-    backgroundColor: 'white',
     width: '20vw',
-    height: '50vh',
-    marginTop: '10vh',
+    height: '70vh',
     borderRadius: '10px',
-    marginRight: '10px',
+    marginRight: '30px',
     cursor: 'pointer',
+    ...(isHovered && { transform: 'scale(1.1)' }), // Apply transform on hover
+    transition: 'transform 0.15s ease-in-out',
 
   };
 
   return (
     <Grid
       style={gridStyle}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      padding={2}
     >
-      <img src={img} alt='img' style={{ width: '20vw', height: '50vh', borderRadius: '10px' }} onClick={handleImageClick} />
+      <img src={img} alt='img' style={{ width: '20vw', height: '50vh', borderRadius: '10px', objectFit: 'cover' }} onClick={handleImageClick} />
+      {isHovered && (
+        <Typography variant='h6' style={{ margin: '10px', textAlign: 'center', color: 'white' }}>
+          project
+        </Typography>
+      )}
       <Dialog open={isModalOpen} onClose={handleCloseModal}>
         <DialogTitle>Project Description</DialogTitle>
         <DialogContent>
