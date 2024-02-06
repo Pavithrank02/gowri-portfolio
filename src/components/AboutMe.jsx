@@ -16,7 +16,7 @@ const AboutMe = () => {
   };
 
   return (
-    <>
+    <Grid style={{marginLeft: '4vw'}}>
       <motion.div
         initial="hidden"
         animate="visible"
@@ -24,25 +24,21 @@ const AboutMe = () => {
         style={{
           position: 'absolute',
           top: '15vh',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-around',
           color: 'white',
           scrollBehavior: 'smooth',
-
         }}
       >
         <Grid>
-          <Grid style={{ marginBottom: '30px', }}>
+          <Grid style={{ marginBottom: '30px', backgroundColor: 'lightgray',padding: '10px', width: '26vh', borderRadius: '10px'}}>
             <Typography style={{ fontWeight: 800 }} variant='h4'>About Me </Typography>
           </Grid>
-          <Grid style={{ marginBottom: '35px' }}>
+          <Grid style={{ marginBottom: '20px' }}>
             <img
-              style={{ width: '60vw', height: '70vh' }}
+              style={{ width: '60vw', height: '70vh', objectFit: 'cover' }}
               src={img1} />
           </Grid>
         </Grid>
-        <Grid style={{backgroundColor:'black', marginBottom: '30px', marginLeft: '-0.5rem',width:"70vw", }}>
+        <Grid style={{backgroundColor:'black', marginLeft: '-6.2vw',width:"74.3vw", }}>
           <Grid>
             <Typography variant='h4'>{About.name} </Typography>
           </Grid>
@@ -50,22 +46,22 @@ const AboutMe = () => {
             <Typography variant='h6'>{About.Role} </Typography>
           </Grid>
         </Grid>
-        <Grid style={{ marginBottom: '30px' }}>
-          <Card variant="outlined" sx={{ width: '60vw', backgroundColor: '#131314', color: 'white' }}>
+        <Grid style={{  backgroundColor: 'black', marginLeft: '-6.2vw' }}>
+          <Card variant="outlined" sx={{ width: '60vw',backgroundColor: 'black', color: 'white' }}>
             <Box sx={{ p: 2, borderColor: 'white' }}>
-              <Typography gutterBottom variant="h5" component="div" align='justify'>
+              <Typography gutterBottom variant="body" component="div" align='justify'>
                 {About.description}
               </Typography>
             </Box>
           </Card>
-          <Card variant="outlined" sx={{ width: '60vw', }} style={{ marginBottom: '30px', backgroundColor: '#131314', color: 'white' }}>
+          <Card variant="outlined" sx={{ width: '60vw', }} style={{ backgroundColor: '#131314', color: 'white' }}>
             <Box sx={{ p: 2 }}>
               <PersonalDetails />
             </Box>
           </Card>
-          <Grid style={{ marginBottom: '30px' }}>
+          <Grid style={{}}>
             <motion.a animate={{ x: 0, scale: 1 }} initial={{ scale: 0 }} transition={{ type: "tween", duration: 2, delay: 1 }}>
-              <Button style={{ padding: '10px', backgroundColor: "white" }}>
+              <Button style={{ padding: '10px', color: 'white' }}>
                 {/* <a href={resumePdf} download="YourResume.pdf" style={{ textDecoration: 'none', color: 'black' }}> */}
                 Download My Resume (PDF)
                 {/* </a> */}
@@ -73,10 +69,10 @@ const AboutMe = () => {
             </motion.a>
           </Grid>
         </Grid>
-        <Card variant="outlined" sx={{ width: '60vw', marginBottom: '1.5rem' }}>
+        <Card variant="outlined" sx={{ width: '60vw', backgroundColor: '#131314',color: 'white', marginLeft: '-6.2vw', width: '74vw' }}>
           <Box sx={{ p: 2 }}>
             <Grid>
-              <Typography gutterBottom variant="body" component="div" align='justify' fontWeight={800}>
+              <Typography gutterBottom variant="h5" component="div" align='justify' fontWeight={800}>
                 Experience
               </Typography>
             </Grid>
@@ -85,7 +81,7 @@ const AboutMe = () => {
             </Grid>
           </Box>
         </Card>
-        <Grid style={{ backgroundColor: 'black', }}>
+        <Grid style={{display: 'flex',flexDirection: 'column', justifyContent: 'space-around',  backgroundColor: 'black', textAlign: 'center', marginLeft: '-6.2vw', height: '40vh', width: '74vw'}}>
           <Grid>
             <Typography variant='h5'>
               Testimonies
@@ -96,7 +92,7 @@ const AboutMe = () => {
           </Grid>
         </Grid>
       </motion.div>
-    </>
+    </Grid>
   )
 }
 

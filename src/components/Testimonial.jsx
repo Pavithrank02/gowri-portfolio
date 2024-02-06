@@ -4,10 +4,10 @@ import { Testimonies } from '../constants'
 
 const Testimonial = () => {
   return (
-    <Grid style={{ display: 'flex', flexDirection: "row" }}>
+    <Grid style={{ display: 'flex', flexDirection: "row", }}>
       {Testimonies.map((key) => {
         return (
-          <Grid style={{ padding: '1rem', margin: '10px', textAlign: 'justify', backgroundColor: 'gray' }}>
+          <Grid style={{ padding: '2rem', margin: '10px', textAlign: 'justify', backgroundColor: 'gray', width: '20vw' }}>
             <Grid>
               <Typography >
                 {key.name}
