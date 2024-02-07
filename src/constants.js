@@ -56,22 +56,22 @@ export const experiences = [
 export const Testimonies = [
   {
     name: 'Gowri Shankar',
-    testimony: "I have been using this app for a few months now and I can honestly say that this guy is gay.",
+    testimony: "I have been using this app for a few months now and I can honestly say that this guy is gay.for the last ten years designing, programming and operating WordPress sites. One of my specialties is ",
 
   }, 
   {
     name: 'Gowri Shankar',
-    testimony: "I have been using this app for a few months now and I can honestly say that this guy is gay.",
+    testimony: "I have been using this app for a few months now and I can honestly say that this guy is gayfor the last ten years designing, programming and operating WordPress sites. One of my specialties is .",
 
   }, 
   {
     name: 'Gowri Shankar',
-    testimony: "I have been using this app for a few months now and I can honestly say that this guy is gay.",
+    testimony: "I have been using this app for a few months now and I can honestly say that this guy is gayfor the last ten years designing, programming and operating WordPress sites. One of my specialties is .",
 
   }, 
   {
     name: 'Gowri Shankar',
-    testimony: "I have been using this app for a few months now and I can honestly say that this guy is gay.",
+    testimony: "I have been using this app for a few months now and I can honestly say that this guy is gayfor the last ten years designing, programming and operating WordPress sites. One of my specialties is .",
 
   }, 
 ]
