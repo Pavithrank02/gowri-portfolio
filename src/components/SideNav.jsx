@@ -14,15 +14,13 @@ const SideNav = () => {
         height: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
+        alignItems: 'left',
         justifyContent: 'center',
         backgroundColor: 'black',
         color: 'white',
       }}>
       <Grid
         container
-        justifyContent="center"
-        alignItems="center"
         sx={{
           padding: '20px',
           textAlign: 'center',
@@ -45,19 +43,24 @@ const SideNav = () => {
           Gowri Shankar
         </Typography>
       </Grid>
-      <Grid style={{ cursor: 'pointer', }}>
+      <Grid
+        style={{
+          cursor: 'pointer',
+          transition: 'transform 1.3s', // Add a smooth transition for the transform effect
+          ":hover": {
+            transform: 'scale(1.4)'
+          }
+        }}>
         <Link to='/'>
           <Grid style={{
-            padding: '1rem', transition: 'transform 0.3s', // Add a smooth transition for the transform effect
-            ":hover": {
-              transform: 'scale(1.4)'
-            }
+            padding: '1rem',
+
           }}>
             <Typography
               variant='body'
               style={{
                 color: 'white',
-                textAlign: "center",
+                textAlign: "left",
 
               }}
             >

@@ -14,7 +14,7 @@ const PersonalDetails = () => {
                 </Typography>
               </Grid>
               <Grid>
-                <Typography gutterBottom variant="body" component="div" align='justify' style={{ marginLeft: '10px' }}>
+                <Typography gutterBottom variant="body" component="div" align='justify' style={{ marginLeft: '10px', color: '#B0B0B0' }}>
                   {value}
                 </Typography>
               </Grid>
@@ -33,7 +33,7 @@ const PersonalDetails = () => {
                   </Typography>
                 </Grid>
                 <Grid>
-                  <Typography gutterBottom variant="body" component="div" align='justify' style={{ marginLeft: '10px' }}>
+                  <Typography gutterBottom variant="body" component="div" align='justify' style={{ marginLeft: '10px', color: '#B0B0B0' }}>
                     {value}
                   </Typography>
                 </Grid>

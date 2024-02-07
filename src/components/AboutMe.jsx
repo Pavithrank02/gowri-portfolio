@@ -37,14 +37,14 @@ const AboutMe = () => {
               src={img1} />
           </Grid>
         </Grid>
-        <Grid style={{ backgroundColor: 'black', width: "100%", display: 'flex', flexDirection: 'column'}}>
-          <Grid style={{ marginLeft: '5vw', marginTop: '10px', fontStyle: 'italic'}}>
-            <Typography variant='h4'>{About.name} </Typography>
+        <Grid style={{ backgroundColor: 'black', width: "100%", display: 'flex', flexDirection: 'column', }}>
+          <Grid style={{ marginLeft: '5vw', marginTop: '10px', fontStyle: 'italic', }}>
+            <Typography style={{fontWeight: 800}} variant='h4'>{About.name} </Typography>
           </Grid>
-          <Grid style={{ marginLeft: '5vw', fontStyle: 'italic' }}>
+          <Grid style={{ marginLeft: '5vw', fontStyle: 'italic',color: '#B0B0B0',  }}>
             <Typography variant='h6'>{About.Role} </Typography>
           </Grid>
-          <Card variant="outlined" sx={{ width: '65vw', backgroundColor: 'black', color: 'white', }}>
+          <Grid variant="outlined" sx={{ width: '65vw', backgroundColor: 'black', color: '#B0B0B0', boxShadow: 'gray',}}>
             <Box sx={{ p: 2, borderColor: 'white' , marginLeft: '4.2vw'}}>
               <Typography gutterBottom variant="body" component="div" align='justify'>
                 {lines.map((line, index) => (
@@ -52,8 +52,8 @@ const AboutMe = () => {
                 ))}
               </Typography>
             </Box>
-          </Card>
-          <Card variant="outlined" sx={{}} style={{ backgroundColor: 'black', color: 'white' }}>
+          </Grid>
+          <Card variant="outlined" style={{ backgroundColor: 'black', color: 'white' }}>
             <Box sx={{ p: 2, marginLeft: '4.2vw' }}>
               <PersonalDetails />
             </Box>

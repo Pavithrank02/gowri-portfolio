@@ -1,9 +1,9 @@
 import React from 'react';
-import { perSonalDetails } from '../constants';
+import { motion } from 'framer-motion';
 import { Grid, Typography, IconButton } from '@mui/material';
 import { GitHub, LinkedIn, Twitter, Instagram } from '@mui/icons-material';
+import { perSonalDetails } from '../constants';
 import img1 from '../assets/gowr.jpg';
-import { motion } from 'framer-motion';
 
 const HomeDetails = () => {
   const containerVariants = {
@@ -34,7 +34,7 @@ const HomeDetails = () => {
           color: 'white',
         }}
       >
-        <Grid xs={12} style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Grid xs={12} style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly', width: '60vw' }}>
           <motion.div
             variants={imageContainerVariants}
             initial="hidden"
@@ -42,22 +42,24 @@ const HomeDetails = () => {
           >
             <Grid item xs={4}>
               <img
-                style={{ width: '300px', borderRadius: '50%', }}
+                style={{ width: '300px', borderRadius: '50%', objectFit: 'cover' }}
                 src={img1}
                 alt="Profile"
               />
             </Grid>
           </motion.div>
-          <Grid container item xs={8} spacing={2} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
-            <Grid item>
-              <Typography variant="h3" style={{ color: 'white', margin: '3px', fontWeight: 800, fontStyle: 'italic' }}>
+          <Grid container item xs={8} spacing={2} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center' }}>
+            <Grid item style={{ width: '30vw' }}>
+              <Typography variant="h2" style={{ color: 'white', fontWeight: 800, fontStyle: 'italic' }}>
                 {perSonalDetails.name}
               </Typography>
-              <Typography variant="h5" style={{ color: 'white', marginTop: '30px', fontStyle: 'italic'  }}>
+            </Grid>
+            <Grid item style={{ width: '30vw' }}>
+              <Typography variant="h5" style={{ color: 'white', fontStyle: 'italic' }}>
                 {perSonalDetails.description}
               </Typography>
             </Grid>
-            <Grid item container spacing={1}>
+            <Grid item spacing={1}>
               {/* Social Media Icons with adjusted size */}
               <IconButton color="inherit" style={{ fontSize: '3rem' }}>
                 <GitHub />
