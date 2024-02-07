@@ -20,7 +20,7 @@ const ProjectContainer = () => {
         style={{
           position: 'absolute',
           top: '100px',
-          color: 'white',
+          color: 'black',
         }}
       >
         <Grid style={{ display: "flex", flexDirection: "column", marginLeft: '5vw' }}>

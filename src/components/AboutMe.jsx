@@ -7,10 +7,10 @@ import { Box } from '@mui/system'
 import Testimonial from './Testimonial'
 import Experience from './Experience'
 import PersonalDetails from './PersonalDetails'
-import { Fade } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 
 const AboutMe = () => {
+  const lines = About.description.split('\n');
   const containerVariants = {
     hidden: { x: '-30%' },
     visible: { x: 0, transition: { type: 'spring', stiffness: 60 } },
@@ -48,10 +48,12 @@ const AboutMe = () => {
           </Grid>
         </Grid>
         <Grid style={{ backgroundColor: 'black', marginLeft: '-6.2vw' }}>
-          <Card variant="outlined" sx={{ width: '65vw', backgroundColor: 'black', color: 'white' }}>
+          <Card variant="outlined" sx={{ width: '65vw', backgroundColor: 'black', color: 'white', }}>
             <Box sx={{ p: 2, borderColor: 'white', marginLeft: '5vw' }}>
               <Typography gutterBottom variant="body" component="div" align='justify'>
-                {About.description}
+                {lines.map((line, index) => (
+                  <p key={index}>{line}</p>
+                ))}
               </Typography>
             </Box>
           </Card>
@@ -88,7 +90,7 @@ const AboutMe = () => {
               Testimonies
             </Typography>
           </Grid>
-          <Grid style={{width: '70vw', marginLeft: '2vw'}}>
+          <Grid style={{ width: '70vw', marginLeft: '2vw' }}>
             <Testimonial />
           </Grid>
         </Grid>
