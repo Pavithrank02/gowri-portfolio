@@ -1,9 +1,8 @@
-import { Button, Grid, Typography } from '@mui/material'
-import React, { useState } from 'react'
-import img from '../assets/gowr.jpg'
-import MainContainer from './MainContainer'
-import ProjectCard from './ProjectCard'
-import { motion } from 'framer-motion'
+import { Grid, Typography } from '@mui/material';
+import React from 'react';
+import img from '../assets/gowr.jpg';
+import ProjectCard from './ProjectCard';
+import { motion } from 'framer-motion';
 
 const ProjectContainer = () => {
 
@@ -11,8 +10,9 @@ const ProjectContainer = () => {
     hidden: { x: '-30%' },
     visible: { x: 0, transition: { type: 'spring', stiffness: 60 } },
   };
+
   return (
-    <Grid>
+    <Grid style={{ display: "flex", flexDirection: "column", marginTop: '15vh', marginLeft: '5vw' }}>
       <motion.div
         initial="hidden"
         animate="visible"
@@ -22,37 +22,32 @@ const ProjectContainer = () => {
           color: 'black',
         }}
       >
-        <Grid style={{ display: "flex", flexDirection: "column", marginLeft: '5vw' }}>
-          <Grid style={{ padding: '0.7rem', backgroundColor: 'lightgray', borderRadius: '10px', width: '20vh', marginBottom: '19px', marginLeft: '15px' }}>
-            <Typography variant='h5'>
-              My Project
-            </Typography>
-          </Grid>
-          <Grid
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: 'flex-start',
-              alignContent: 'center',
-              overflow: 'hidden',
-              overflowX: 'hidden',
-              gridTemplateColumns: "2fr 2fr 2fr"
-
-            }}>
-            <Grid>
-              <ProjectCard img={img} />
-            </Grid>
-            <Grid>
-              <ProjectCard img={img} />
-            </Grid>
-            <Grid>
-              <ProjectCard img={img} />
-            </Grid>
-          </Grid>
+        <Grid style={{ padding: '0.7rem', backgroundColor: 'lightgray', borderRadius: '10px', width: '20vh', marginBottom: '19px', marginLeft: '15px' }}>
+          <Typography variant='h5'>
+            My Project
+          </Typography>
         </Grid>
-      </motion.div >
+        <Grid container style={{ display: "flex", flexDirection: "row", flexWrap: 'wrap' }}>
+          <Grid item xs={6}>
+            <ProjectCard img={img} />
+          </Grid>
+          <Grid item xs={6}>
+            <ProjectCard img={img} />
+          </Grid>
+          <Grid item xs={6}>
+            <ProjectCard img={img} />
+          </Grid>
+          <Grid item xs={6}>
+            <ProjectCard img={img} />
+          </Grid>
+          <Grid item xs={6}>
+            <ProjectCard img={img} />
+          </Grid>
+          {/* Add more pairs of ProjectCards as needed */}
+        </Grid>
+      </motion.div>
     </Grid>
-  )
+  );
 }
 
-export default ProjectContainer
+export default ProjectContainer;
