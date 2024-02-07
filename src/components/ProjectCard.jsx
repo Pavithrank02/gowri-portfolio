@@ -38,16 +38,17 @@ const ProjectCard = ({ img }) => {
 
   const gridStyle = {
     display: 'flex',
+    justifyContent: 'space-around',
     borderRadius: '10px',
     cursor: 'pointer',
-    ...(isHovered && { transform: 'scale(1.1)' }), // Apply transform on hover
+    ...(isHovered && { transform: 'scale(1.1)', }), // Apply transform on hover
     transition: 'transform 0.15s ease-in-out',
   };
 
   const textContainerStyle = {
     position: 'absolute',
-    top: cursorPosition.y - 180, // Slightly below cursor
-    left: cursorPosition.x - 480, // Centered horizontally with cursor
+    top: cursorPosition.y - cursorPosition, // Slightly below cursor
+    left: cursorPosition.x - cursorPosition, // Centered horizontally with cursor
     zIndex: 999,
     pointerEvents: 'none',
   };
@@ -61,9 +62,9 @@ const ProjectCard = ({ img }) => {
     >
       <img src={img} alt='img' style={{ width: '30vw', height: '50vh', borderRadius: '10px', objectFit: 'cover' }} onClick={handleImageClick} />
       {isHovered && (
-        <div >
+        <div style={textContainerStyle}>
           <Typography variant='h6' style={{ textAlign: 'center', color: 'white' }}>
-            project
+            Project
           </Typography>
         </div>
       )}
