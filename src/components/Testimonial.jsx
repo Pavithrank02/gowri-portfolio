@@ -22,8 +22,9 @@ const Testimonial = () => {
       {Testimonies.map((testimonial, index) => (
         <Box
           key={index}
+          
         >
-          <Grid style={{width: '30vw', height: '15vh'}}>
+          <Grid style={{ marginLeft: '34px', width: '30vw', height: '15vh', textAlign: 'justify'}}>
 
             <Typography variant="h6" gutterBottom>
               {testimonial.name}

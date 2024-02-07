@@ -82,7 +82,7 @@ const AboutMe = () => {
             </Grid>
           </Box>
         </Grid>
-        <Grid style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around', backgroundColor: 'black', textAlign: 'center', marginLeft: '-5.2vw', height: '40vh', width: '74.2vw' }}>
+        <Grid style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', backgroundColor: 'black', textAlign: 'center', marginLeft: '-5.2vw', height: '40vh', width: '74.2vw' }}>
           <Grid>
             <Typography variant='h5'>
               Testimonies
