@@ -17,20 +17,18 @@ const AboutMe = () => {
   };
 
   return (
-    <Grid style={{ marginLeft: '4vw' }}>
+    <Grid style={{ marginTop: '15vh'}}>
       <motion.div
         initial="hidden"
         animate="visible"
         variants={containerVariants}
         style={{
-          position: 'absolute',
-          top: '15vh',
           color: 'white',
           scrollBehavior: 'smooth',
         }}
       >
-        <Grid>
-          <Grid style={{ marginBottom: '30px', backgroundColor: 'lightgray', padding: '10px', width: '23vh', borderRadius: '10px' }}>
+        <Grid style={{marginLeft: '5vw'}}>
+          <Grid style={{ marginBottom: '30px', backgroundColor: 'lightgray', padding: '10px', width: '16vh', borderRadius: '10px' }}>
             <Typography style={{ fontWeight: 800, color: 'black' }} variant='h6'>About Me </Typography>
           </Grid>
           <Grid style={{ marginBottom: '30px' }}>
@@ -39,17 +37,15 @@ const AboutMe = () => {
               src={img1} />
           </Grid>
         </Grid>
-        <Grid style={{ backgroundColor: 'black', marginLeft: '-5.2vw', width: "74.3vw", }}>
-          <Grid style={{ marginLeft: '5vw', }}>
+        <Grid style={{ backgroundColor: 'black', width: "100%", display: 'flex', flexDirection: 'column'}}>
+          <Grid style={{ marginLeft: '5vw', marginTop: '10px', fontStyle: 'italic'}}>
             <Typography variant='h4'>{About.name} </Typography>
           </Grid>
-          <Grid style={{ marginLeft: '5vw' }}>
+          <Grid style={{ marginLeft: '5vw', fontStyle: 'italic' }}>
             <Typography variant='h6'>{About.Role} </Typography>
           </Grid>
-        </Grid>
-        <Grid style={{ backgroundColor: 'black', marginLeft: '-6.2vw' }}>
           <Card variant="outlined" sx={{ width: '65vw', backgroundColor: 'black', color: 'white', }}>
-            <Box sx={{ p: 2, borderColor: 'white', marginLeft: '5vw' }}>
+            <Box sx={{ p: 2, borderColor: 'white' , marginLeft: '4.2vw'}}>
               <Typography gutterBottom variant="body" component="div" align='justify'>
                 {lines.map((line, index) => (
                   <p key={index}>{line}</p>
@@ -57,14 +53,14 @@ const AboutMe = () => {
               </Typography>
             </Box>
           </Card>
-          <Card variant="outlined" sx={{ width: '75vw', }} style={{ backgroundColor: '#131314', color: 'white' }}>
-            <Box sx={{ p: 2, marginLeft: '5vw' }}>
+          <Card variant="outlined" sx={{}} style={{ backgroundColor: 'black', color: 'white' }}>
+            <Box sx={{ p: 2, marginLeft: '4.2vw' }}>
               <PersonalDetails />
             </Box>
           </Card>
           <Grid style={{}}>
             <motion.a animate={{ x: 0, scale: 1 }} initial={{ scale: 0 }} transition={{ type: "tween", duration: 2, delay: 1 }}>
-              <Button style={{ padding: '30px', color: 'white', marginLeft: '4vw' }}>
+              <Button style={{ padding: '30px', color: 'white', marginLeft: '3.5vw' }}>
                 {/* <a href={resumePdf} download="YourResume.pdf" style={{ textDecoration: 'none', color: 'black' }}> */}
                 Download My Resume (PDF)
                 {/* </a> */}
@@ -72,25 +68,33 @@ const AboutMe = () => {
             </motion.a>
           </Grid>
         </Grid>
-        <Grid sx={{ width: '60vw', backgroundColor: '#131314', color: 'black', marginLeft: '-5.1vw', width: '74.1vw' }}>
+        <Grid sx={{ width: '60vw', backgroundColor: '#131314', width: '100%' }}>
           <Box sx={{ p: 2 }}>
-            <Grid style={{ marginLeft: '4vw' }}>
+            <Grid style={{marginLeft: '4.2vw'}}>
               <Typography gutterBottom variant="h5" component="div" align='justify' fontWeight={800}>
                 Experience
               </Typography>
             </Grid>
-            <Grid>
+            <Grid style={{color: 'black'}}>
               <Experience />
             </Grid>
           </Box>
         </Grid>
-        <Grid style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', backgroundColor: 'black', textAlign: 'center', marginLeft: '-5.2vw', height: '40vh', width: '74.2vw' }}>
+        <Grid style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-evenly',
+          backgroundColor: 'black',
+          textAlign: 'center',
+          height: '40vh',
+          width: '100%'
+        }}>
           <Grid>
             <Typography variant='h5'>
               Testimonies
             </Typography>
           </Grid>
-          <Grid style={{ width: '70vw', marginLeft: '2vw' }}>
+          <Grid style={{width: '90%', marginLeft: '4vw'}}>
             <Testimonial />
           </Grid>
         </Grid>

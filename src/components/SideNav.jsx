@@ -9,24 +9,56 @@ import AccountTreeIcon from '@mui/icons-material/AccountTree';
 
 const SideNav = () => {
   return (
-    <Grid style={{ height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'black', color: 'white',}}>
-      <Grid style={{ margin: '10px' }}>
-        <Typography variant='h3' style={{ color: 'white', align: "center" }}>
+    <Grid
+      style={{
+        height: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'black',
+        color: 'white',
+      }}>
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="center"
+        sx={{
+          padding: '20px',
+          textAlign: 'center',
+          '@media (max-width:600px)': {
+            padding: '10px',
+          },
+        }}
+      >
+        <Typography
+          variant='h3'
+          sx={{
+            color: 'white',
+            maxWidth: '100%',
+            width: '100%',
+            '@media (max-width:600px)': {
+              fontSize: '24px',
+            },
+          }}
+        >
           Gowri Shankar
         </Typography>
       </Grid>
-      <Grid style={{cursor: 'pointer', }}>
+      <Grid style={{ cursor: 'pointer', }}>
         <Link to='/'>
-          <Grid style={{ padding: '1rem',transition: 'transform 0.3s', // Add a smooth transition for the transform effect
-                ":hover": {
-                  transform: 'scale(1.4)'
-                } }}>
+          <Grid style={{
+            padding: '1rem', transition: 'transform 0.3s', // Add a smooth transition for the transform effect
+            ":hover": {
+              transform: 'scale(1.4)'
+            }
+          }}>
             <Typography
               variant='body'
               style={{
                 color: 'white',
                 textAlign: "center",
-                
+
               }}
             >
 
@@ -61,7 +93,11 @@ const SideNav = () => {
         </Link>
       </Grid>
       <Grid style={{ padding: '1rem' }}>
-        <Typography variant='body' style={{ color: 'white' }}>CopyRighted to Gowri@2024 </Typography>
+        <Typography
+          variant='body'
+          style={{ color: 'white' }}>
+          CopyRighted to Gowri@2024
+        </Typography>
       </Grid>
     </Grid>
   )

@@ -18,7 +18,6 @@ const ProjectContainer = () => {
         animate="visible"
         variants={containerVariants}
         style={{
-          position: 'absolute',
           top: '100px',
           color: 'black',
         }}
