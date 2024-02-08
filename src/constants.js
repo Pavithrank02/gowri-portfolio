@@ -58,20 +58,54 @@ export const Testimonies = [
     name: 'Gowri Shankar',
     testimony: "I have been using this app for a few months now and I can honestly say that this guy is gay.for the last ten years designing, programming and operating WordPress sites. One of my specialties is ",
 
-  }, 
+  },
   {
     name: 'Gowri Shankar',
     testimony: "I have been using this app for a few months now and I can honestly say that this guy is gayfor the last ten years designing, programming and operating WordPress sites. One of my specialties is .",
 
-  }, 
+  },
   {
     name: 'Gowri Shankar',
     testimony: "I have been using this app for a few months now and I can honestly say that this guy is gayfor the last ten years designing, programming and operating WordPress sites. One of my specialties is .",
 
-  }, 
+  },
   {
     name: 'Gowri Shankar',
     testimony: "I have been using this app for a few months now and I can honestly say that this guy is gayfor the last ten years designing, programming and operating WordPress sites. One of my specialties is .",
 
-  }, 
+  },
 ]
+
+export const HomeDetailsCss = {
+  customBorder: {
+    border: '1px solid red',
+  },
+  containerVariants: {
+    hidden: { x: '-30%' },
+    visible: { x: 0, transition: { type: 'spring', stiffness: 60 } },
+  },
+  outerGrid: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: '30vh',
+    color: 'white'
+  },
+  imageSize: {
+    width: '300px',
+    borderRadius: '50%',
+    objectFit: 'cover',
+  },
+  h2Variants: {
+    color: 'white', 
+    fontWeight: 800, 
+    fontStyle: 'italic'
+  },
+  innerGrid:{
+    display: 'flex', 
+    flexDirection: 'row', 
+    alignItems: 'center', 
+    justifyContent: 'space-evenly', 
+  }
+  // Add more styles as needed
+};

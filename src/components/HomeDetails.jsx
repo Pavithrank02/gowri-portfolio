@@ -2,55 +2,31 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Grid, Typography, IconButton } from '@mui/material';
 import { GitHub, LinkedIn, Twitter, Instagram } from '@mui/icons-material';
-import { perSonalDetails } from '../constants';
+import { perSonalDetails, HomeDetailsCss } from '../constants';
 import img1 from '../assets/gowr.jpg';
 
 const HomeDetails = () => {
-  const containerVariants = {
-    hidden: { x: '-30%' },
-    visible: { x: 0, transition: { type: 'spring', stiffness: 60 } },
-  };
-
-  const imageContainerVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 1 } },
-  };
+  
 
   return (
     <Grid
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: '30vh'
-      }}>
-
+      style={HomeDetailsCss.outerGrid}>
       <motion.div
         initial="hidden"
         animate="visible"
-        variants={containerVariants}
-        style={{
-          height: '10vh',
-          color: 'white',
-        }}
+        // variants={containerVariants}
       >
-        <Grid xs={12} style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly', width: '60vw' }}>
-          <motion.div
-            variants={imageContainerVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            <Grid item xs={4}>
-              <img
-                style={{ width: '300px', borderRadius: '50%', objectFit: 'cover' }}
-                src={img1}
-                alt="Profile"
-              />
-            </Grid>
-          </motion.div>
-          <Grid container item xs={8} spacing={2} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center' }}>
-            <Grid item style={{ width: '30vw' }}>
-              <Typography variant="h2" style={{ color: 'white', fontWeight: 800, fontStyle: 'italic' }}>
+        <Grid xs={12} sx={{width: '55vw'}} style={HomeDetailsCss.innerGrid}>
+          <Grid item xs={4}>
+            <img
+              style={HomeDetailsCss.imageSize}
+              src={img1}
+              alt="Profile"
+            />
+          </Grid>
+          <Grid container item xs={8} spacing={2}  style={HomeDetailsCss.innerGrid}>
+            <Grid item >
+              <Typography variant="h2" style={HomeDetailsCss.h2Variants}>
                 {perSonalDetails.name}
               </Typography>
             </Grid>
@@ -59,18 +35,17 @@ const HomeDetails = () => {
                 {perSonalDetails.description}
               </Typography>
             </Grid>
-            <Grid item spacing={1}>
-              {/* Social Media Icons with adjusted size */}
-              <IconButton color="inherit" style={{ fontSize: '3rem' }}>
+            <Grid item spacing={1} style={{ fontSize: '2rem' }}>
+              <IconButton color="inherit" >
                 <GitHub />
               </IconButton>
-              <IconButton color="inherit" style={{ fontSize: '2rem' }}>
+              <IconButton color="inherit" >
                 <LinkedIn />
               </IconButton>
-              <IconButton color="inherit" style={{ fontSize: '2rem' }}>
+              <IconButton color="inherit" >
                 <Twitter />
               </IconButton>
-              <IconButton color="inherit" style={{ fontSize: '2rem' }}>
+              <IconButton color="inherit" >
                 <Instagram />
               </IconButton>
               {/* Add more icons as needed */}
