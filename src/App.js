@@ -11,7 +11,7 @@ import Section from './components/Scroll';
 function App() {
   return (
     <Grid container xs={12} >
-      <Grid item xs={3} style={{ height: '100vh', backgroundColor: 'black'}}>
+      <Grid item xs={3} style={{ display: 'flex', justifyContent: 'center', height: '100vh', backgroundColor: 'black'}}>
         <SideNav />
       </Grid>
       <Grid item xs={9} style={{ overflowY: 'auto', height: '100vh', backgroundColor: '#131314' }}>

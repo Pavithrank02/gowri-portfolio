@@ -97,22 +97,71 @@ export const HomeDetailsCss = {
     objectFit: 'cover',
   },
   h2Variants: {
-    color: 'white', 
-    fontWeight: 800, 
+    color: 'white',
+    fontWeight: 800,
     fontStyle: 'italic'
   },
-  innerGrid:{
-    display: 'flex', 
-    flexDirection: 'row', 
-    alignItems: 'center', 
-    justifyContent: 'center', 
+  innerGrid: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  innerGrid2:{
-    display: 'flex', 
-    flexDirection: 'row', 
-    justifyContent: 'left', 
-    alignItems: 'center', 
+  innerGrid2: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'left',
+    alignItems: 'center',
 
   },
   // Add more styles as needed
 };
+
+export const SideNavCss = {
+
+  outerGridCss: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: 'white',
+  },
+
+  textTransition: {
+    padding: '1rem',
+
+    color: '#B0B0B0',
+    transition: 'transform 0.1s', // Add a smooth transition for the transform effect
+    ":hover": {
+      transform: 'scale(1.2)',
+      color: 'white',
+    }
+  },
+  IconStyle: {
+    marginBottom: '-4px',
+    marginRight: '5px'
+  },
+
+  linkGrid: {
+    cursor: 'pointer',
+    width: '100%',
+    textAlign: 'center'
+  },
+  innerGrid: {
+    textAlign: 'center',
+    '@media (max-width:600px)': {
+      padding: '10px',
+    },
+
+  },
+  h3Variant: {
+    maxWidth: '100%',
+            width: '100%',
+            '@media (max-width:600px)': {
+              fontSize: '24px',
+            },
+  },
+  CopyGrid: {
+    padding: '1rem'
+  },
+}

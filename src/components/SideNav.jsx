@@ -1,104 +1,76 @@
-import { Grid, Typography } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Grid, Typography } from '@mui/material'
 import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
 import ContactsIcon from '@mui/icons-material/Contacts';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
-
+import { SideNavCss } from '../constants'
 
 const SideNav = () => {
   return (
     <Grid
-      style={{
-        height: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'black',
-        color: 'white',
-      }}>
+      style={
+        SideNavCss.outerGridCss
+      }>
       <Grid
-        container
-        sx={{
-          padding: '20px',
-          textAlign: 'center',
-          '@media (max-width:600px)': {
-            padding: '10px',
-          },
-        }}
+        sx={SideNavCss.innerGrid}
       >
         <Typography
           variant='h3'
-          sx={{
-            color: 'white',
-            maxWidth: '100%',
-            width: '100%',
-            '@media (max-width:600px)': {
-              fontSize: '24px',
-            },
-          }}
+          sx={SideNavCss.h3Variant}
         >
           Gowri Shankar
         </Typography>
       </Grid>
       <Grid
-        style={{
-          cursor: 'pointer',
-          transition: 'transform 1.3s', // Add a smooth transition for the transform effect
-          ":hover": {
-            transform: 'scale(1.4)'
-          }
-        }}>
+        style={SideNavCss.linkGrid}>
         <Link to='/'>
-          <Grid style={{
-            padding: '1rem',
-
-          }}>
+          <Grid
+            sx={SideNavCss.textTransition}>
             <Typography
               variant='body'
-              style={{
-                color: 'white',
-                textAlign: "left",
-
-              }}
             >
-
-              <HomeIcon style={{ marginBottom: '-4px', marginRight: '5px' }} />
+              <HomeIcon style={SideNavCss.IconStyle} />
               Home
             </Typography>
           </Grid>
         </Link>
         <Link to='/about'>
-          <Grid style={{ padding: '1rem' }}>
-            <Typography variant='body' style={{ color: 'white' }}>
-              <PersonIcon style={{ marginBottom: '-4px', marginRight: '5px' }} />
+          <Grid
+            sx={SideNavCss.textTransition}
+          >
+            <Typography
+              variant='body'
+            >
+              <PersonIcon style={SideNavCss.IconStyle} />
               About
             </Typography>
           </Grid>
         </Link>
         <Link to='/contact'>
-          <Grid style={{ padding: '1rem' }}>
-            <Typography variant='body' style={{ color: 'white' }}>
-              <ContactsIcon style={{ marginBottom: '-4px', marginRight: '5px' }} />
+          <Grid sx={SideNavCss.textTransition} >
+            <Typography
+              variant='body'
+            >
+              <ContactsIcon style={SideNavCss.IconStyle} />
               Contact
             </Typography>
           </Grid>
         </Link>
         <Link to='/project'>
-          <Grid style={{ padding: '1rem' }}>
-            <Typography variant='body' style={{ color: 'white' }}>
-              <AccountTreeIcon style={{ marginBottom: '-4px', marginRight: '5px' }} />
+          <Grid sx={SideNavCss.textTransition} >
+            <Typography variant='body' >
+              <AccountTreeIcon style={SideNavCss.IconStyle} />
               Project
             </Typography>
           </Grid>
         </Link>
       </Grid>
-      <Grid style={{ padding: '1rem' }}>
+      <Grid style={SideNavCss.CopyGrid}>
         <Typography
           variant='body'
-          style={{ color: 'white' }}>
+        >
           CopyRighted to Gowri@2024
         </Typography>
       </Grid>
