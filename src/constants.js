@@ -1,6 +1,6 @@
 import img1 from './assets/gowr.jpg'
 export const perSonalDetails = {
-  name: 'Gowri Shankar',
+  name: 'GOWRI SHANKAR',
   description: "  I'm a front end developer with five years of experience in web development.",
   experience: "",
 
@@ -12,7 +12,7 @@ export const projectDetails = {
 
 }
 export const About = {
-  name: 'Gowri Shankar',
+  name: 'GOWRI SHANKAR',
   description: " Hi, my name is Adriano Smith and I began using WordPress when it first began. \nI’ve spent most of my waking hours for the last ten years designing, programming and operating WordPress sites. One of my specialties is taking an idea from scratch and creating a full-fledged platform. I go beyond to produce sites with a unique, outstanding, contemporary look-and-feel. With extensive knowledge of web mechanics, I’m able to optimize complex integrations to require little-to-no maintenance while running on their own for years.",
   experience: "",
   Role: "Software Engineer",
@@ -105,7 +105,14 @@ export const HomeDetailsCss = {
     display: 'flex', 
     flexDirection: 'row', 
     alignItems: 'center', 
-    justifyContent: 'space-evenly', 
-  }
+    justifyContent: 'center', 
+  },
+  innerGrid2:{
+    display: 'flex', 
+    flexDirection: 'row', 
+    justifyContent: 'left', 
+    alignItems: 'center', 
+
+  },
   // Add more styles as needed
 };
