@@ -3,18 +3,18 @@ import { Grid, Typography } from '@mui/material'
 import { About, Testimonies } from '../constants'
 const PersonalDetails = () => {
   return (
-    <Grid xs={12} columnGap={30} style={{ display: 'flex', flexDirection: 'row', width: '50vw' }}>
-      <Grid xs={6} style={{ display: 'flex', flexDirection: 'column', }}>
+    <Grid xs={12} style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
+      <Grid xs={5} style={{ display: 'flex', flexDirection: 'column', }}>
         {Object.entries(About).slice(3, 8).map(([key, value]) => {
           return (
-            <Grid style={{ display: 'flex', flexDirection: 'row', }}>
+            <Grid style={{ display: 'flex', flexDirection: 'row',  justifyContent: 'space-between', padding: '5px'}}>
               <Grid>
-                <Typography gutterBottom variant="body" component="div" align='justify' fontWeight={800}>
+                <Typography gutterBottom variant="body" align='left' fontWeight={800}>
                   {key}:
                 </Typography>
               </Grid>
-              <Grid>
-                <Typography gutterBottom variant="body" component="div" align='justify' style={{ marginLeft: '10px', color: '#B0B0B0' }}>
+              <Grid >
+                <Typography gutterBottom variant="body" align='left' style={{ color: '#B0B0B0' }}>
                   {value}
                 </Typography>
               </Grid>
@@ -22,18 +22,18 @@ const PersonalDetails = () => {
           )
         })}
       </Grid>
-      <Grid xs={6} style={{ display: 'flex', flexDirection: 'column', }}>
-        <Grid style={{ display: 'flex', flexDirection: 'column', }}>
+      <Grid xs={5} style={{ display: 'flex', flexDirection: 'column',}}>
+        <Grid  style={{ display: 'flex', flexDirection: 'column', }}>
           {Object.entries(About).slice(8).map(([key, value]) => {
             return (
-              <Grid style={{ display: 'flex', flexDirection: 'row', }}>
+              <Grid style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '5px'}}>
                 <Grid>
-                  <Typography gutterBottom variant="body" component="div" align='justify' fontWeight={800}>
+                  <Typography  variant="body" component="div" align='left' fontWeight={800}>
                     {key}:
                   </Typography>
                 </Grid>
                 <Grid>
-                  <Typography gutterBottom variant="body" component="div" align='justify' style={{ marginLeft: '10px', color: '#B0B0B0' }}>
+                  <Typography variant="body" component="div" align='left' style={{ color: '#B0B0B0' }}>
                     {value}
                   </Typography>
                 </Grid>

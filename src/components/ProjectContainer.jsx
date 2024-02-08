@@ -2,6 +2,7 @@ import { Grid, Typography } from '@mui/material';
 import React from 'react';
 import img from '../assets/gowr.jpg';
 import ProjectCard from './ProjectCard';
+
 import { motion } from 'framer-motion';
 
 const ProjectContainer = () => {
@@ -29,6 +30,7 @@ const ProjectContainer = () => {
         </Grid>
         <Grid container style={{ display: "flex", flexDirection: "row", flexWrap: 'wrap', marginLeft: '-35px' }}>
           <Grid item xs={6}>
+            
             <ProjectCard img={img} />
           </Grid>
           <Grid item xs={6}>

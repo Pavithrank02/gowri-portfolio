@@ -14,7 +14,7 @@ const SideNav = () => {
         height: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'left',
+        alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'black',
         color: 'white',

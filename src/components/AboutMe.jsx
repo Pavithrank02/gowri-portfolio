@@ -17,18 +17,17 @@ const AboutMe = () => {
   };
 
   return (
-    <Grid style={{ marginTop: '15vh'}}>
+    <Grid style={{ marginTop: '15vh' }}>
       <motion.div
         initial="hidden"
         animate="visible"
         variants={containerVariants}
         style={{
           color: 'white',
-          scrollBehavior: 'smooth',
         }}
       >
-        <Grid style={{marginLeft: '5vw'}}>
-          <Grid style={{ marginBottom: '30px', backgroundColor: 'lightgray', padding: '10px', width: '16vh', borderRadius: '10px' }}>
+        <Grid style={{ marginLeft: '5vw',  }}>
+          <Grid style={{ marginBottom: '30px',backgroundColor: 'lightgray', padding: '10px', width: '16vh', borderRadius: '10px' }}>
             <Typography style={{ fontWeight: 800, color: 'black' }} variant='h6'>About Me </Typography>
           </Grid>
           <Grid style={{ marginBottom: '30px' }}>
@@ -37,30 +36,24 @@ const AboutMe = () => {
               src={img1} />
           </Grid>
         </Grid>
-        <Grid style={{ backgroundColor: 'black', width: "100%", display: 'flex', flexDirection: 'column', }}>
-          <Grid style={{ marginLeft: '5vw', marginTop: '10px', fontStyle: 'italic', }}>
-            <Typography style={{fontWeight: 800}} variant='h4'>{About.name} </Typography>
+        <Grid style={{ backgroundColor: 'black', width: "100%",height: '70vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', alignItems: 'flex-start'}}>
+          <Grid style={{ marginLeft: '5vw', marginTop: '10px', fontStyle: 'italic',borderBottom: '1px solid gray',width: '65vw'}}>
+            <Typography style={{ fontWeight: 800 }} variant='h4'>{About.name} </Typography>
+            <Typography style={{ fontStyle: 'italic', color: '#B0B0B0', }} variant='h6'>{About.Role} </Typography>
           </Grid>
-          <Grid style={{ marginLeft: '5vw', fontStyle: 'italic',color: '#B0B0B0',  }}>
-            <Typography variant='h6'>{About.Role} </Typography>
+          <Grid sx={{ marginLeft: '5vw',width: '65vw', backgroundColor: 'black', color: '#B0B0B0', borderBottom: '1px solid gray',}}>
+            <Typography gutterBottom variant="body" align='justify'>
+              {lines.map((line, index) => (
+                <p key={index}>{line}</p>
+              ))}
+            </Typography>
           </Grid>
-          <Grid variant="outlined" sx={{ width: '65vw', backgroundColor: 'black', color: '#B0B0B0', boxShadow: 'gray',}}>
-            <Box sx={{ p: 2, borderColor: 'white' , marginLeft: '4.2vw'}}>
-              <Typography gutterBottom variant="body" component="div" align='justify'>
-                {lines.map((line, index) => (
-                  <p key={index}>{line}</p>
-                ))}
-              </Typography>
-            </Box>
+          <Grid style={{marginLeft: '5vw',backgroundColor: 'black', color: 'white',width: '65vw',borderBottom: '1px solid gray', }}>
+            <PersonalDetails />
           </Grid>
-          <Card variant="outlined" style={{ backgroundColor: 'black', color: 'white' }}>
-            <Box sx={{ p: 2, marginLeft: '4.2vw' }}>
-              <PersonalDetails />
-            </Box>
-          </Card>
-          <Grid style={{}}>
+          <Grid style={{marginLeft: '5vw',}}>
             <motion.a animate={{ x: 0, scale: 1 }} initial={{ scale: 0 }} transition={{ type: "tween", duration: 2, delay: 1 }}>
-              <Button style={{ padding: '30px', color: 'white', marginLeft: '3.5vw' }}>
+              <Button style={{ padding: 0, color: 'white', }}>
                 {/* <a href={resumePdf} download="YourResume.pdf" style={{ textDecoration: 'none', color: 'black' }}> */}
                 Download My Resume (PDF)
                 {/* </a> */}
@@ -70,12 +63,12 @@ const AboutMe = () => {
         </Grid>
         <Grid sx={{ width: '60vw', backgroundColor: '#131314', width: '100%' }}>
           <Box sx={{ p: 2 }}>
-            <Grid style={{marginLeft: '4.2vw'}}>
+            <Grid style={{ marginLeft: '4.2vw' }}>
               <Typography gutterBottom variant="h5" component="div" align='justify' fontWeight={800}>
                 Experience
               </Typography>
             </Grid>
-            <Grid style={{color: 'black'}}>
+            <Grid style={{ color: 'black' }}>
               <Experience />
             </Grid>
           </Box>
@@ -94,7 +87,7 @@ const AboutMe = () => {
               Testimonies
             </Typography>
           </Grid>
-          <Grid style={{width: '90%', marginLeft: '4vw'}}>
+          <Grid style={{ width: '90%', marginLeft: '4vw' }}>
             <Testimonial />
           </Grid>
         </Grid>
