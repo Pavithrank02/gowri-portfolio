@@ -156,12 +156,41 @@ export const SideNavCss = {
   },
   h3Variant: {
     maxWidth: '100%',
-            width: '100%',
-            '@media (max-width:600px)': {
-              fontSize: '24px',
-            },
+    width: '100%',
+    '@media (max-width:600px)': {
+      fontSize: '24px',
+    },
   },
   CopyGrid: {
     padding: '1rem'
+  },
+}
+
+export const ProjectContainerCss = {
+
+  containerVariants: {
+    hidden: { x: '-30%' },
+    visible: { x: 0, transition: { type: 'spring', stiffness: 60 } },
+  },
+  outerGrid: {
+    display: "flex",
+    flexDirection: "column",
+    marginTop: '15vh',
+    width: '65vw ',
+    marginLeft: '5vw'
+  },
+
+  innerGrid1:{
+    padding: '0.7rem', 
+    backgroundColor: 'lightgray', 
+    borderRadius: '10px', 
+    width: '20vh', 
+    marginBottom: '19px',  
+    marginLeft: '20px'
+  },
+  innerGrid2:{
+    display: "flex", 
+    flexDirection: "row", 
+    flexWrap: 'wrap',
   },
 }
