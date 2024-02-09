@@ -14,7 +14,7 @@ const HomeDetails = () => {
       <motion.div
         initial="hidden"
         animate="visible"
-        // variants={containerVariants}
+        variants={HomeDetailsCss.containerVariants}
       >
         <Grid xs={12} sx={{width: '60vw'}} style={HomeDetailsCss.innerGrid}>
           <Grid item xs={5}>

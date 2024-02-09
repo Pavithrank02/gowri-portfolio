@@ -5,6 +5,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
 import ContactsIcon from '@mui/icons-material/Contacts';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
+import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 import { SideNavCss } from '../constants'
 
 const SideNav = () => {
@@ -63,6 +64,14 @@ const SideNav = () => {
             <Typography variant='body' >
               <AccountTreeIcon style={SideNavCss.IconStyle} />
               Project
+            </Typography>
+          </Grid>
+        </Link>
+        <Link to='/service'>
+          <Grid sx={SideNavCss.textTransition} >
+            <Typography variant='body' >
+              <SettingsSuggestIcon style={SideNavCss.IconStyle} />
+              Service
             </Typography>
           </Grid>
         </Link>

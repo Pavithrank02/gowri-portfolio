@@ -7,6 +7,7 @@ import Home from './view/Home';
 import Project from './view/Project';
 import { Grid } from '@mui/material';
 import Section from './components/Scroll';
+import Service from './view/Service';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/about' element={<About />} />
           <Route path='/s' element={<Section />} />
+          <Route path='/service' element={<Service />} />
         </Routes>
       </Grid>
     </Grid>
