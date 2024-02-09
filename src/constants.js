@@ -78,25 +78,25 @@ export const Testimonies = [
 
 export const ServicesProvided = [
   {
-    id: '1',
+    id: '01',
     serviceName: 'Web Design',
     description: "Web development is the most famous job in the world and it is very interesting... ",
 
   },
   {
-    id: '2',
+    id: '02',
     serviceName: 'Content Writing',
     description: "Web development is the most famous job in the world and it is very interesting... ",
 
   },
   {
-    id: '3',
+    id: '03',
     serviceName: 'Mentoring',
     description: "Web development is the most famous job in the world and it is very interesting... ",
 
   },
   {
-    id: '4',
+    id: '04',
     serviceName: 'Live Chat',
     description: "Web development is the most famous job in the world and it is very interesting... ",
 
@@ -228,17 +228,36 @@ export const ServicesCss= {
     flexDirection: "column",
     marginTop: '15vh',
     width: '65vw ',
-    marginLeft: '5vw',
+    marginLeft: '7vw',
     color: 'white',
   },
+  textGrid: {
+    marginBottom: '5vh',
+  },
+  servicesGrid:{
+    display: 'flex', 
+    flexDirection: 'row', 
+
+  }, 
   serviceGrid: {
     display: 'flex',
     flexDirection: 'column', 
     padding: '1rem',
     justifyContent: 'space-around',
-    backgroundColor: 'gray',
-    width: '20vw',
-    height: '40vh'
+    backgroundColor: '#333333',
+    width: '17vw',
+    height: '40vh',
+    padding: '1.4rem',
+    marginRight: '20px', 
+    marginBottom: '20px'
+  },
+  textContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    height: '20vh',
+    marginTop: '-1rem'
+
   }
 
 }
