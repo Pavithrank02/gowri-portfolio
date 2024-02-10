@@ -10,13 +10,8 @@ import { SideNavCss } from '../constants'
 
 const SideNav = () => {
   return (
-    <Grid
-      style={
-        SideNavCss.outerGridCss
-      }>
-      <Grid
-        sx={SideNavCss.innerGrid}
-      >
+    <Grid style={SideNavCss.outerGridCss}>
+      <Grid sx={SideNavCss.innerGrid}>
         <Typography
           variant='h3'
           sx={SideNavCss.h3Variant}
@@ -24,11 +19,9 @@ const SideNav = () => {
           Gowri Shankar
         </Typography>
       </Grid>
-      <Grid
-        style={SideNavCss.linkGrid}>
+      <Grid style={SideNavCss.linkGrid}>
         <Link to='/'>
-          <Grid
-            sx={SideNavCss.textTransition}>
+          <Grid sx={SideNavCss.textTransition}>
             <Typography
               variant='body'
             >
@@ -38,8 +31,7 @@ const SideNav = () => {
           </Grid>
         </Link>
         <Link to='/about'>
-          <Grid
-            sx={SideNavCss.textTransition}
+          <Grid sx={SideNavCss.textTransition}
           >
             <Typography
               variant='body'

@@ -8,14 +8,20 @@ import Project from './view/Project';
 import { Grid } from '@mui/material';
 import Section from './components/Scroll';
 import Service from './view/Service';
+import { useTheme } from './ThemeContext';
+import Toggle from './components/ToggleButton';
+
 
 function App() {
+  const { theme } = useTheme();
+
   return (
     <Grid container xs={12} >
-      <Grid item xs={3} style={{ display: 'flex', justifyContent: 'center', height: '100vh', backgroundColor: 'black'}}>
+      <Grid item xs={3} style={{ display: 'flex', justifyContent: 'center', height: '100vh', background: theme === 'light' ? '#FFF' : 'black', color: theme === 'light' ? 'black' : 'white'}}>
         <SideNav />
       </Grid>
-      <Grid item xs={9} style={{ overflowY: 'auto', height: '100vh', backgroundColor: '#131314' }}>
+      <Grid item xs={9} style={{ overflowY: 'auto', height: '100vh', background: theme === 'light' ? '#F7F7F7 ' : '#131314', color: theme === 'light' ? 'black' : '#FAFAFA' }}>
+        <Toggle />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/project' element={<Project />} />

@@ -101,6 +101,18 @@ export const ServicesProvided = [
     description: "Web development is the most famous job in the world and it is very interesting... ",
 
   },
+  {
+    id: '05',
+    serviceName: 'Live Chat',
+    description: "Web development is the most famous job in the world and it is very interesting... ",
+
+  },
+  {
+    id: '06',
+    serviceName: 'Live Chat',
+    description: "Web development is the most famous job in the world and it is very interesting... ",
+
+  },
 ]
 
 export const HomeDetailsCss = {
@@ -116,7 +128,6 @@ export const HomeDetailsCss = {
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: '30vh',
-    color: 'white'
   },
   imageSize: {
     width: '300px',
@@ -124,7 +135,6 @@ export const HomeDetailsCss = {
     objectFit: 'cover',
   },
   h2Variants: {
-    color: 'white',
     fontWeight: 800,
     fontStyle: 'italic'
   },
@@ -132,7 +142,7 @@ export const HomeDetailsCss = {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
   },
   innerGrid2: {
     display: 'flex',
@@ -151,17 +161,14 @@ export const SideNavCss = {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    color: 'white',
   },
 
   textTransition: {
     padding: '1rem',
-
     color: '#B0B0B0',
     transition: 'transform 0.1s', // Add a smooth transition for the transform effect
     ":hover": {
       transform: 'scale(1.2)',
-      color: 'white',
     }
   },
   IconStyle: {

@@ -6,7 +6,7 @@ import { perSonalDetails, HomeDetailsCss } from '../constants';
 import img1 from '../assets/gowr.jpg';
 
 const HomeDetails = () => {
-  
+
 
   return (
     <Grid
@@ -16,7 +16,7 @@ const HomeDetails = () => {
         animate="visible"
         variants={HomeDetailsCss.containerVariants}
       >
-        <Grid xs={12} sx={{width: '60vw'}} style={HomeDetailsCss.innerGrid}>
+        <Grid xs={12} style={HomeDetailsCss.innerGrid}>
           <Grid item xs={5}>
             <img
               style={HomeDetailsCss.imageSize}
@@ -24,7 +24,7 @@ const HomeDetails = () => {
               alt="Profile"
             />
           </Grid>
-          <Grid container item xs={7}  style={HomeDetailsCss.innerGrid2}>
+          <Grid container item xs={7} style={HomeDetailsCss.innerGrid2}>
             <Grid style={{ width: '40vw' }}>
               <Typography variant="h2" style={HomeDetailsCss.h2Variants}>
                 {perSonalDetails.name}
@@ -35,7 +35,7 @@ const HomeDetails = () => {
                 {perSonalDetails.description}
               </Typography>
             </Grid>
-            <Grid  style={{ fontSize: '2rem' }}>
+            <Grid style={{ fontSize: '2rem' }}>
               <IconButton color="inherit" >
                 <GitHub />
               </IconButton>

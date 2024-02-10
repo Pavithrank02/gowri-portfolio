@@ -8,8 +8,10 @@ import Testimonial from './Testimonial'
 import Experience from './Experience'
 import PersonalDetails from './PersonalDetails'
 import 'react-slideshow-image/dist/styles.css'
+import { useTheme } from '../ThemeContext'
 
 const AboutMe = () => {
+  const { theme } = useTheme();
   const lines = About.description.split('\n');
   const containerVariants = {
     hidden: { x: '-30%' },
@@ -36,24 +38,24 @@ const AboutMe = () => {
               src={img1} />
           </Grid>
         </Grid>
-        <Grid style={{ backgroundColor: 'black', width: "100%", height: '70vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', alignItems: 'flex-start' }}>
+        <Grid style={{ background: theme === 'light' ? '#EFEFEF ' : '#131314', color: theme === 'light' ? 'black' : '#FAFAFA', width: "100%", height: '70vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', alignItems: 'flex-start' }}>
           <Grid style={{ marginLeft: '5vw', marginTop: '10px', fontStyle: 'italic', borderBottom: '1px solid gray', width: '65vw' }}>
             <Typography style={{ fontWeight: 800 }} variant='h4'>{About.name} </Typography>
             <Typography style={{ fontStyle: 'italic', color: '#B0B0B0', }} variant='h6'>{About.Role} </Typography>
           </Grid>
-          <Grid sx={{ marginLeft: '5vw', width: '65vw', backgroundColor: 'black', color: '#B0B0B0', borderBottom: '1px solid gray', }}>
+          <Grid sx={{ marginLeft: '5vw', width: '65vw', color: '#B0B0B0', borderBottom: '1px solid gray', }}>
             <Typography gutterBottom variant="body" align='justify'>
               {lines.map((line, index) => (
                 <p key={index}>{line}</p>
               ))}
             </Typography>
           </Grid>
-          <Grid style={{ marginLeft: '5vw', backgroundColor: 'black', color: 'white', width: '65vw', borderBottom: '1px solid gray', }}>
+          <Grid style={{ marginLeft: '5vw',  width: '65vw', borderBottom: '1px solid gray', }}>
             <PersonalDetails />
           </Grid>
           <Grid style={{ marginLeft: '5vw', }}>
             <motion.a animate={{ x: 0, scale: 1 }} initial={{ scale: 0 }} transition={{ type: "tween", duration: 2, delay: 1 }}>
-              <Button style={{ padding: 0, color: 'white', }}>
+              <Button style={{ padding: 0, color: theme === 'light' ? 'black' : '#FAFAFA', }}>
                 {/* <a href={resumePdf} download="YourResume.pdf" style={{ textDecoration: 'none', color: 'black' }}> */}
                 Download My Resume (PDF)
                 {/* </a> */}
@@ -61,7 +63,8 @@ const AboutMe = () => {
             </motion.a>
           </Grid>
         </Grid>
-        <Grid sx={{ width: '60vw', backgroundColor: '#131314', width: '100%' }}>
+        <Grid sx={{ width: '60vw', background: theme === 'light' ? '#F7F7F7 ' : '#131314',
+          color: theme === 'light' ? 'black' : '#FAFAFA', width: '100%' }}>
           <Box sx={{ p: 2 }}>
             <Grid style={{ marginLeft: '4.2vw' }}>
               <Typography gutterBottom variant="h5" component="div" align='justify' fontWeight={800}>
@@ -77,7 +80,8 @@ const AboutMe = () => {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-evenly',
-          backgroundColor: 'black',
+          background: theme === 'light' ? '#EFEFEF ' : '#131314', 
+          color: theme === 'light' ? 'black' : '#FAFAFA',
           textAlign: 'center',
           height: '40vh',
           width: '100%'
