@@ -1,12 +1,13 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Grid, Typography } from '@mui/material'
+// SideNav.js
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Grid, Typography } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
 import ContactsIcon from '@mui/icons-material/Contacts';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
-import { SideNavCss } from '../constants'
+import { SideNavCss } from '../constants';
 
 const SideNav = () => {
   return (
@@ -14,54 +15,56 @@ const SideNav = () => {
       <Grid sx={SideNavCss.innerGrid}>
         <Typography
           variant='h3'
-          sx={SideNavCss.h3Variant}
+          sx={{ ...SideNavCss.h3Variant, textDecoration: 'none' }} // Remove text decoration for h3
         >
           Gowri Shankar
         </Typography>
       </Grid>
       <Grid style={SideNavCss.linkGrid}>
-        <Link to='/'>
+        <Link to='/' style={{ textDecoration: 'none' }}> {/* Remove text decoration for link */}
           <Grid sx={SideNavCss.textTransition}>
             <Typography
               variant='body'
+              sx={{ textDecoration: 'none' }} // Remove text decoration for body text
             >
               <HomeIcon style={SideNavCss.IconStyle} />
               Home
             </Typography>
           </Grid>
         </Link>
-        <Link to='/about'>
-          <Grid sx={SideNavCss.textTransition}
-          >
+        <Link to='/about' style={{ textDecoration: 'none' }}>
+          <Grid sx={SideNavCss.textTransition}>
             <Typography
               variant='body'
+              sx={{ textDecoration: 'none' }}
             >
               <PersonIcon style={SideNavCss.IconStyle} />
               About
             </Typography>
           </Grid>
         </Link>
-        <Link to='/contact'>
-          <Grid sx={SideNavCss.textTransition} >
+        <Link to='/contact' style={{ textDecoration: 'none' }}>
+          <Grid sx={SideNavCss.textTransition}>
             <Typography
               variant='body'
+              sx={{ textDecoration: 'none' }}
             >
               <ContactsIcon style={SideNavCss.IconStyle} />
               Contact
             </Typography>
           </Grid>
         </Link>
-        <Link to='/project'>
-          <Grid sx={SideNavCss.textTransition} >
-            <Typography variant='body' >
+        <Link to='/project' style={{ textDecoration: 'none' }}>
+          <Grid sx={SideNavCss.textTransition}>
+            <Typography variant='body' sx={{ textDecoration: 'none' }}>
               <AccountTreeIcon style={SideNavCss.IconStyle} />
               Project
             </Typography>
           </Grid>
         </Link>
-        <Link to='/service'>
-          <Grid sx={SideNavCss.textTransition} >
-            <Typography variant='body' >
+        <Link to='/service' style={{ textDecoration: 'none' }}>
+          <Grid sx={SideNavCss.textTransition}>
+            <Typography variant='body' sx={{ textDecoration: 'none' }}>
               <SettingsSuggestIcon style={SideNavCss.IconStyle} />
               Service
             </Typography>
@@ -71,12 +74,13 @@ const SideNav = () => {
       <Grid style={SideNavCss.CopyGrid}>
         <Typography
           variant='body'
+          sx={{ textDecoration: 'none' }} // Remove text decoration for body text
         >
           CopyRighted to Gowri@2024
         </Typography>
       </Grid>
     </Grid>
-  )
-}
+  );
+};
 
-export default SideNav
+export default SideNav;

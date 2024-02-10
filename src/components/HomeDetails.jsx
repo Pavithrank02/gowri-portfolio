@@ -17,7 +17,7 @@ const HomeDetails = () => {
         variants={HomeDetailsCss.containerVariants}
       >
         <Grid xs={12} style={HomeDetailsCss.innerGrid}>
-          <Grid item xs={5}>
+          <Grid item xs={4} style={HomeDetailsCss.innerGrid}>
             <img
               style={HomeDetailsCss.imageSize}
               src={img1}
@@ -25,7 +25,7 @@ const HomeDetails = () => {
             />
           </Grid>
           <Grid container item xs={7} style={HomeDetailsCss.innerGrid2}>
-            <Grid style={{ width: '40vw' }}>
+            <Grid style={{ width: '50vw' }}>
               <Typography variant="h2" style={HomeDetailsCss.h2Variants}>
                 {perSonalDetails.name}
               </Typography>
