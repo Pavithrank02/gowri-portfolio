@@ -250,22 +250,14 @@ export const ServicesCss= {
   textGrid: {
     marginBottom: '5vh',
   },
-  servicesGrid:{
-    display: 'flex', 
-    flexDirection: 'row', 
 
-  }, 
   serviceGrid: {
-    display: 'flex',
-    flexDirection: 'column', 
-    padding: '1rem',
-    justifyContent: 'space-around',
+    padding: '1.3rem',
     backgroundColor: '#333333',
-    width: '17vw',
-    height: '40vh',
-    padding: '1.4rem',
-    marginRight: '20px', 
-    marginBottom: '20px'
+    width: '100%',
+    height: '100%',
+    marginRight: '40px', 
+    marginBottom: '40px'
   },
   textContainer: {
     display: 'flex',
