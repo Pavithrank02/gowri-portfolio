@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { Avatar, Grid, Typography } from '@mui/material';
 import { ServicesCss, ServicesProvided } from '../constants';
 import { Button } from 'react-scroll';
+import { useTheme } from '../ThemeContext';
 
 const Services = () => {
   const [hovered, setHovered] = useState(false);
+  const { theme } = useTheme();
 
   const handleAvatarHover = () => {
     setHovered(true);
@@ -18,20 +20,26 @@ const Services = () => {
     <Grid container style={ServicesCss.outerGrid}>
       <Grid style={ServicesCss.textGrid}>
         <Grid>
-          <Typography style={{ padding: '0.8rem', backgroundColor: '#292828', width: '4vw', marginBottom: '10px', color: '#B0B0B0' }}>Services</Typography>
+          <Typography style={{ padding: '0.8rem', width: '4vw', marginBottom: '10px', background: theme === 'light' ? '#FFF' : '#292828', color: theme === 'light' ? 'black' : '#B0B0B0' }}>Services</Typography>
         </Grid>
         <Grid>
-          <Typography variant='h4' style={{ fontWeight: 800 }}>What I Do</Typography>
+          <Typography variant='h4' style={{ fontWeight: 800, color: theme === 'light' ? 'black' : 'white' }}>What I Do</Typography>
         </Grid>
       </Grid>
       <Grid container style={ServicesCss.servicesGrid}>
         {ServicesProvided.map((serv, i) => {
           return (
             <Grid
+            key={i}
               item
               xs={3} // 4 grid items for each row
+              sx={{
+              ...ServicesCss.serviceGrid,
+              }}
               style={{
-                ...ServicesCss.serviceGrid,
+                background: theme === 'light' ? '#FFF' : '#292828', 
+                color: theme === 'light' ? 'black' : '#B0B0B0'
+
               }}
               onMouseEnter={handleAvatarHover}
               onMouseLeave={handleAvatarLeave}
@@ -55,7 +63,8 @@ const Services = () => {
                   <Button
                     style={{
                       position: 'absolute',
-                      color: 'white',
+                      fontSize: '15px',
+                      color: theme === 'light' ? 'black' : '#B0B0B0',
                       left: hovered ? '0' : '-10%',
                       transition: 'left .3s ease',
                       opacity: hovered ? 1 : 0,

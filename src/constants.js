@@ -128,15 +128,19 @@ export const HomeDetailsCss = {
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: '30vh',
+    marginLeft: '10vw',
+    width: '60vw'
   },
   imageSize: {
     width: '300px',
     borderRadius: '50%',
     objectFit: 'cover',
   },
+  imageGrid: {
+    marginLeft: '10px'
+   },
   h2Variants: {
-    fontWeight: 800,
-    fontStyle: 'italic'
+    fontWeight: 800
   },
   innerGrid: {
     display: 'flex',
@@ -161,11 +165,13 @@ export const SideNavCss = {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
+    textDecoration: 'none',
   },
 
   textTransition: {
     padding: '1rem',
     color: '#B0B0B0',
+    textDecoration: 'none',
     transition: 'transform 0.1s', // Add a smooth transition for the transform effect
     ":hover": {
       transform: 'scale(1.2)',
@@ -179,9 +185,11 @@ export const SideNavCss = {
   linkGrid: {
     cursor: 'pointer',
     width: '100%',
-    textAlign: 'center'
+    textAlign: 'center',
+    
   },
   innerGrid: {
+    textDecoration: 'none',
     textAlign: 'center',
     '@media (max-width:600px)': {
       padding: '10px',
@@ -198,6 +206,7 @@ export const SideNavCss = {
   CopyGrid: {
     padding: '1rem'
   },
+  
 }
 
 export const ProjectContainerCss = {
