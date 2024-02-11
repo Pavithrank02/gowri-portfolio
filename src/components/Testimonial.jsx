@@ -20,7 +20,7 @@ const Testimonial = () => {
   };
 
   return (
-
+  // Grid container and item missing - please check for the root element || no inline css
     <Slider {...settings}>
       {Testimonies.map((testimonial, index) => (
         <Box

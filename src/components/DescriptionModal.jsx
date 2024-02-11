@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 
 const style = {
-  position: 'absolute',
+  position: 'absolute', // nope, please dont use this positioning with space split of 50%
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
@@ -22,8 +22,9 @@ export default function DescriptionModal() {
   const handleClose = () => setOpen(false);
 
   return (
-    <div>
-      <Button onClick={handleOpen} style={{ backgroundColor: 'black', padding: '10px' }}>Description</Button>
+    // Grid? missing - no inline css
+    <div> 
+      <Button onClick={handleOpen} style={{ backgroundColor: 'black', padding: '10px' }}>Description</Button> 
       <Modal
         open={open}
         onClose={handleClose}

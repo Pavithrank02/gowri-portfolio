@@ -2,6 +2,7 @@ import React from 'react'
 import { Grid, Typography } from '@mui/material'
 import { About, Testimonies } from '../constants'
 const PersonalDetails = () => {
+    // Grid container and item missing - please check for the root element
   return (
     <Grid xs={12} style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
       <Grid xs={5} style={{ display: 'flex', flexDirection: 'column', }}>
@@ -22,6 +23,7 @@ const PersonalDetails = () => {
           )
         })}
       </Grid>
+      {/* No inline css */}
       <Grid xs={5} style={{ display: 'flex', flexDirection: 'column',}}>
         <Grid  style={{ display: 'flex', flexDirection: 'column', }}>
           {Object.entries(About).slice(8).map(([key, value]) => {

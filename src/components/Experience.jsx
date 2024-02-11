@@ -15,6 +15,7 @@ const Experience = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
+  // use looping statement for rendering multiple VerticalTimeline components and data should be read from config object
   return (
     <motion.div
       initial="hidden"

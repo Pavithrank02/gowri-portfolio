@@ -8,6 +8,7 @@ import img1 from '../assets/gowr.jpg';
 const HomeDetails = () => {
 
 
+  // Grid container and item missing - please check for the root element
   return (
     <Grid
       style={HomeDetailsCss.outerGrid}>

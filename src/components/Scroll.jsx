@@ -4,6 +4,7 @@ import { Link } from 'react-scroll';
 const Section = () => {
   return (
     <div>
+      {/* Use typography instead of h1 */}
       <h1>Section</h1>
       <Link
         activeClass="active"

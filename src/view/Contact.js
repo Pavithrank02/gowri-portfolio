@@ -1,27 +1,27 @@
 // src/components/ContactForm.js
-import React, { useState } from 'react';
-import { TextField, Button, Typography, Grid } from '@mui/material';
-import { styled } from '@mui/system';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { TextField, Button, Typography, Grid } from "@mui/material";
+import { styled } from "@mui/system";
+import { motion } from "framer-motion";
 
 const StyledForm = styled(motion.form)({
-  maxWidth: '700px',
-  margin: '0 auto',
-  padding: '20px',
-  borderRadius: '8px',
-  backgroundColor: 'white', 
-  boxShadow: '0 4px 8px rgba(255, 255, 255, 0.1)',
-  transition: 'box-shadow 0.3s ease-in-out',
-  '&:hover': {
-    boxShadow: '0 6px 12px rgba(255, 255, 255, 0.2)',
+  maxWidth: "700px",
+  margin: "0 auto",
+  padding: "20px",
+  borderRadius: "8px",
+  backgroundColor: "white",
+  boxShadow: "0 4px 8px rgba(255, 255, 255, 0.1)",
+  transition: "box-shadow 0.3s ease-in-out",
+  "&:hover": {
+    boxShadow: "0 6px 12px rgba(255, 255, 255, 0.2)",
   },
 });
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleInputChange = (event) => {
@@ -34,32 +34,32 @@ const Contact = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
     setFormData({
-      name: '',
-      email: '',
-      message: '',
+      name: "",
+      email: "",
+      message: "",
     });
   };
 
   return (
     <>
-      <Grid style={{position: 'absolute', top: '20vh', left: '40vw', }}>
+    {/* Dont use abolute positioning */}
+      <Grid style={{ position: "absolute", top: "20vh", left: "40vw" }}> 
         <StyledForm
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           onSubmit={handleSubmit}
-
         >
-          <Typography variant="h5" gutterBottom >
+          <Typography variant="h5" gutterBottom>
             Contact Me
           </Typography>
-          <Grid container spacing={2} color={'white'}>
-            <Grid item xs={12} color={'white'}>
+          <Grid container spacing={2} color={"white"}>
+            <Grid item xs={12} color={"white"}>
               <TextField
                 required
-                color='secondary'
+                color="secondary"
                 fullWidth
                 label="Name"
                 name="name"

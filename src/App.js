@@ -15,6 +15,7 @@ import Toggle from './components/ToggleButton';
 function App() {
   const { theme } = useTheme();
 
+  // declare each component as its own folder along with index file for importing necessary functions and state, prop values.
   return (
     <Grid container xs={12} >
       <Grid item xs={3} style={{ display: 'flex',  textDecoration: 'none',justifyContent: 'center', height: '100vh', background: theme === 'light' ? '#FFF' : 'black', color: theme === 'light' ? 'black' : 'white'}}>
@@ -23,6 +24,7 @@ function App() {
       <Grid item xs={9} style={{ overflowY: 'auto', height: '100vh', background: theme === 'light' ? '#F7F7F7 ' : '#131314', color: theme === 'light' ? 'black' : '#FAFAFA' }}>
         <Toggle />
         <Routes>
+          {/* you can also use the component directly instead of view file */}
           <Route path='/' element={<Home />} />
           <Route path='/project' element={<Project />} />
           <Route path='/contact' element={<Contact />} />

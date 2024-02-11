@@ -10,6 +10,7 @@ import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 import { SideNavCss } from '../constants';
 
 const SideNav = () => {
+    // Grid container and item missing - please check for the root element
   return (
     <Grid style={SideNavCss.outerGridCss}>
       <Grid sx={SideNavCss.innerGrid}>
