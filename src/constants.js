@@ -157,12 +157,14 @@ export const HomeDetailsCss = {
 export const SideNavCss = {
 
   outerGridCss: {
-    position: 'fixed',
     display: 'flex',
+    position: 'fixed',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     textDecoration: 'none',
+    height: '100vh',
+    width: '25vw',
   },
 
   textTransition: {
@@ -181,7 +183,6 @@ export const SideNavCss = {
 
   linkGrid: {
     cursor: 'pointer',
-    width: '100%',
     textAlign: 'center',
 
   },
@@ -205,7 +206,12 @@ export const SideNavCss = {
   },
 
 }
-
+export const AboutCss = {
+  outerGrid: {
+    display: 'flex',
+    flexDirection: 'column'
+  }
+}
 export const ProjectContainerCss = {
 
   containerVariants: {
@@ -239,20 +245,22 @@ export const ServicesCss = {
   outerGrid: {
     display: "flex",
     flexDirection: "column",
-    marginTop: '15vh',
-    width: '65vw ',
-    marginLeft: '7vw',
+
     color: 'white',
   },
   textGrid: {
     marginBottom: '5vh',
   },
+  servicesGrid: {
+    display: 'flex',
+    flexDirection: 'row',
+
+  },
 
   serviceGrid: {
     padding: '1.3rem',
     backgroundColor: '#333333',
-    width: '100%',
-    height: '100%',
+    width: '50vw',
     marginRight: '40px',
     marginBottom: '40px'
   },

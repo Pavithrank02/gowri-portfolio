@@ -11,17 +11,16 @@ import Service from './view/Service';
 import { useTheme } from './ThemeContext';
 import Toggle from './components/ToggleButton';
 
-
 function App() {
   const { theme } = useTheme();
 
   return (
-    <Grid container xs={12} >
-      <Grid item xs={3} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', background: theme === 'light' ? '#FFF' : 'black', color: theme === 'light' ? 'black' : 'white' }}>
+    <Grid container xs={12} style={{ height: '100vh', display: 'flex', flexDirection: 'row' }}>
+      <Grid item xs={3} style={{ overflowY: 'auto', background: theme === 'light' ? '#FFF' : 'black', color: theme === 'light' ? 'black' : 'white' }}>
         <SideNav />
       </Grid>
-      <Grid item xs={9} style={{ display: 'flex', justifyContent: 'center', height: '100vh', background: theme === 'light' ? '#F7F7F7 ' : '#131314', color: theme === 'light' ? 'black' : '#FAFAFA' }}>
-
+      <Grid item xs={9} style={{ display: 'flex', justifyContent: 'center', overflowY: 'auto', background: theme === 'light' ? '#F7F7F7 ' : '#131314', color: theme === 'light' ? 'black' : '#FAFAFA' }}>
+        {/* <Toggle /> */}
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/project' element={<Project />} />
@@ -31,10 +30,7 @@ function App() {
           <Route path='/service' element={<Service />} />
         </Routes>
       </Grid>
-    </Grid>
-
-
-
+    </Grid >
   );
 }
 

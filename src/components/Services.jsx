@@ -17,8 +17,8 @@ const Services = () => {
   };
 
   return (
-    <Grid container style={ServicesCss.outerGrid}>
-      <Grid style={ServicesCss.textGrid}>
+    <Grid container xs={12} style={ServicesCss.outerGrid}>
+      <Grid item xs={3} style={ServicesCss.textGrid}>
         <Grid>
           <Typography style={{ padding: '0.8rem', width: '4vw', marginBottom: '10px', background: theme === 'light' ? '#FFF' : '#292828', color: theme === 'light' ? 'black' : '#B0B0B0' }}>Services</Typography>
         </Grid>
@@ -26,25 +26,22 @@ const Services = () => {
           <Typography variant='h4' style={{ fontWeight: 800, color: theme === 'light' ? 'black' : 'white' }}>What I Do</Typography>
         </Grid>
       </Grid>
-      <Grid container style={ServicesCss.servicesGrid}>
+      <Grid item xs={9} style={ServicesCss.servicesGrid}>
         {ServicesProvided.map((serv, i) => {
           return (
             <Grid
               key={i}
               item
-              xs={3} // 4 grid items for each row
+              xs={2}
               sx={{
-                ...ServicesCss.serviceGrid,
-              }}
-              style={{
                 background: theme === 'light' ? '#FFF' : '#292828',
                 color: theme === 'light' ? 'black' : '#B0B0B0',
-
-              }}
+              }}// 4 grid items for each row
+              style={ServicesCss.serviceGrid}
               onMouseEnter={() => handleAvatarHover(i)}
               onMouseLeave={handleAvatarLeave}
             >
-              <Grid sx={{marginBottom: '40px', marginTop: '30px'}}>
+              <Grid sx={{ marginBottom: '40px', marginTop: '30px' }}>
                 <Avatar style={{
                   ...(hoveredIndex === i && {
                     backgroundColor: hoveredIndex ? '#575757' : '#434343', // Change background color when hovered
@@ -52,9 +49,9 @@ const Services = () => {
                 }} sx={{ width: 60, height: 60, fontSize: '18px' }}>
                   {serv.id}</Avatar>
               </Grid>
-              <Grid  style={ServicesCss.textContainer}>
+              <Grid style={ServicesCss.textContainer}>
                 <Grid>
-                  <Typography variant='h6' sx={{ fontWeight: 800, marginBottom: '10px', color: theme === 'light' ? 'black' : 'white',}}>
+                  <Typography variant='h6' sx={{ fontWeight: 800, marginBottom: '10px', color: theme === 'light' ? 'black' : 'white', }}>
                     {serv.serviceName}
                   </Typography>
                 </Grid>
@@ -63,10 +60,9 @@ const Services = () => {
                     {serv.description}
                   </Typography>
                 </Grid>
-                <Grid sx={{ color: '#B0B0B0', position: 'relative',marginBottom: '1rem'}}>
+                <Grid sx={{ color: '#B0B0B0', position: 'relative', marginBottom: '1rem' }}>
                   <Button
                     style={{
-                      position: 'absolute',
                       fontSize: '15px',
                       color: theme === 'light' ? 'black' : 'white',
                       left: hoveredIndex === i ? '0' : '-10%',
@@ -81,7 +77,7 @@ const Services = () => {
                   >
                     Read More...
                   </Button>
-                  <span style={{ opacity: hoveredIndex === i ? 0 : 1, fontSize: '30px',  }}>...</span>
+                  <span style={{ opacity: hoveredIndex === i ? 0 : 1, fontSize: '30px', }}>...</span>
                 </Grid>
               </Grid>
             </Grid>
