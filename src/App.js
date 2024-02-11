@@ -17,11 +17,11 @@ function App() {
 
   return (
     <Grid container xs={12} >
-      <Grid item xs={3} style={{ display: 'flex',  textDecoration: 'none',justifyContent: 'center', height: '100vh', background: theme === 'light' ? '#FFF' : 'black', color: theme === 'light' ? 'black' : 'white'}}>
+      <Grid item xs={3} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', background: theme === 'light' ? '#FFF' : 'black', color: theme === 'light' ? 'black' : 'white' }}>
         <SideNav />
       </Grid>
-      <Grid item xs={9} style={{ overflowY: 'auto', height: '100vh', background: theme === 'light' ? '#F7F7F7 ' : '#131314', color: theme === 'light' ? 'black' : '#FAFAFA' }}>
-        <Toggle />
+      <Grid item xs={9} style={{ display: 'flex', justifyContent: 'center', height: '100vh', background: theme === 'light' ? '#F7F7F7 ' : '#131314', color: theme === 'light' ? 'black' : '#FAFAFA' }}>
+
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/project' element={<Project />} />

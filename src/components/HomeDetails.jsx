@@ -9,51 +9,49 @@ const HomeDetails = () => {
 
 
   return (
-    <Grid
-      style={HomeDetailsCss.outerGrid}>
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={HomeDetailsCss.containerVariants}
-      >
-        <Grid xs={12} style={HomeDetailsCss.innerGrid}>
-          <Grid item xs={4} style={HomeDetailsCss.innerGrid}>
-            <img
-              style={HomeDetailsCss.imageSize}
-              src={img1}
-              alt="Profile"
-            />
-          </Grid>
-          <Grid container item xs={7} style={HomeDetailsCss.innerGrid2}>
-            <Grid style={{ width: '50vw' }}>
-              <Typography variant="h2" style={HomeDetailsCss.h2Variants}>
-                {perSonalDetails.name}
-              </Typography>
-            </Grid>
-            <Grid style={{ width: '40vw' }}>
-              <Typography variant="h6" style={{ color: '#B0B0B0', marginLeft: '5px' }}>
-                {perSonalDetails.description}
-              </Typography>
-            </Grid>
-            <Grid style={{ fontSize: '2rem' }}>
-              <IconButton color="inherit" >
-                <GitHub />
-              </IconButton>
-              <IconButton color="inherit" >
-                <LinkedIn />
-              </IconButton>
-              <IconButton color="inherit" >
-                <Twitter />
-              </IconButton>
-              <IconButton color="inherit" >
-                <Instagram />
-              </IconButton>
-              {/* Add more icons as needed */}
-            </Grid>
-          </Grid>
+    <motion.Grid
+      initial="hidden"
+      animate="visible"
+      container
+      xs={12}
+      style={HomeDetailsCss.outerGrid}
+      variants={HomeDetailsCss.containerVariants}
+    >
+      <Grid item xs={3} style={HomeDetailsCss.innerGrid}>
+        <img
+          style={HomeDetailsCss.imageSize}
+          src={img1}
+          alt="Profile"
+        />
+      </Grid>
+      <Grid item xs={6} style={HomeDetailsCss.innerGrid2}>
+        <Grid style={{}}>
+          <Typography variant="h2" style={HomeDetailsCss.h2Variants}>
+            {perSonalDetails.name}
+          </Typography>
         </Grid>
-      </motion.div>
-    </Grid>
+        <Grid style={{}}>
+          <Typography variant="h6" style={{ color: '#B0B0B0', }}>
+            {perSonalDetails.description}
+          </Typography>
+        </Grid>
+        <Grid style={{ fontSize: '2rem' }}>
+          <IconButton color="inherit" >
+            <GitHub />
+          </IconButton>
+          <IconButton color="inherit" >
+            <LinkedIn />
+          </IconButton>
+          <IconButton color="inherit" >
+            <Twitter />
+          </IconButton>
+          <IconButton color="inherit" >
+            <Instagram />
+          </IconButton>
+          {/* Add more icons as needed */}
+        </Grid>
+      </Grid>
+    </motion.Grid>
   );
 };
 

@@ -125,11 +125,10 @@ export const HomeDetailsCss = {
   },
   outerGrid: {
     display: 'flex',
-    justifyContent: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
-    marginTop: '30vh',
-    marginLeft: '10vw',
-    width: '60vw'
+    width: '100%'
   },
   imageSize: {
     width: '300px',
@@ -138,21 +137,18 @@ export const HomeDetailsCss = {
   },
   imageGrid: {
     marginLeft: '10px'
-   },
+  },
   h2Variants: {
     fontWeight: 800
   },
   innerGrid: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-around',
   },
   innerGrid2: {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'left',
-    alignItems: 'center',
+    alignItems: 'left',
+    width: '30vw'
 
   },
   // Add more styles as needed
@@ -161,6 +157,7 @@ export const HomeDetailsCss = {
 export const SideNavCss = {
 
   outerGridCss: {
+    position: 'fixed',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -186,7 +183,7 @@ export const SideNavCss = {
     cursor: 'pointer',
     width: '100%',
     textAlign: 'center',
-    
+
   },
   innerGrid: {
     textDecoration: 'none',
@@ -206,7 +203,7 @@ export const SideNavCss = {
   CopyGrid: {
     padding: '1rem'
   },
-  
+
 }
 
 export const ProjectContainerCss = {
@@ -223,22 +220,22 @@ export const ProjectContainerCss = {
     marginLeft: '5vw'
   },
 
-  innerGrid1:{
-    padding: '0.7rem', 
-    backgroundColor: 'lightgray', 
-    borderRadius: '10px', 
-    width: '20vh', 
-    marginBottom: '19px',  
+  innerGrid1: {
+    padding: '0.7rem',
+    backgroundColor: 'lightgray',
+    borderRadius: '10px',
+    width: '20vh',
+    marginBottom: '19px',
     marginLeft: '20px'
   },
-  innerGrid2:{
-    display: "flex", 
-    flexDirection: "row", 
+  innerGrid2: {
+    display: "flex",
+    flexDirection: "row",
     flexWrap: 'wrap',
   },
 }
 
-export const ServicesCss= {
+export const ServicesCss = {
   outerGrid: {
     display: "flex",
     flexDirection: "column",
@@ -256,7 +253,7 @@ export const ServicesCss= {
     backgroundColor: '#333333',
     width: '100%',
     height: '100%',
-    marginRight: '40px', 
+    marginRight: '40px',
     marginBottom: '40px'
   },
   textContainer: {

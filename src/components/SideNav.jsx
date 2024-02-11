@@ -11,8 +11,8 @@ import { SideNavCss } from '../constants';
 
 const SideNav = () => {
   return (
-    <Grid style={SideNavCss.outerGridCss}>
-      <Grid sx={SideNavCss.innerGrid}>
+    <Grid container style={SideNavCss.outerGridCss}>
+      <Grid item sx={SideNavCss.innerGrid}>
         <Typography
           variant='h3'
           sx={{ ...SideNavCss.h3Variant, textDecoration: 'none' }} // Remove text decoration for h3
@@ -20,7 +20,7 @@ const SideNav = () => {
           Gowri Shankar
         </Typography>
       </Grid>
-      <Grid style={SideNavCss.linkGrid}>
+      <Grid item style={SideNavCss.linkGrid}>
         <Link to='/' style={{ textDecoration: 'none' }}> {/* Remove text decoration for link */}
           <Grid sx={SideNavCss.textTransition}>
             <Typography
@@ -71,7 +71,7 @@ const SideNav = () => {
           </Grid>
         </Link>
       </Grid>
-      <Grid style={SideNavCss.CopyGrid}>
+      <Grid item style={SideNavCss.CopyGrid}>
         <Typography
           variant='body'
           sx={{ textDecoration: 'none' }} // Remove text decoration for body text
