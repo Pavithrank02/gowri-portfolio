@@ -209,7 +209,9 @@ export const SideNavCss = {
 export const AboutCss = {
   outerGrid: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center,'
   }
 }
 export const ProjectContainerCss = {

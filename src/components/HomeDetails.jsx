@@ -4,6 +4,8 @@ import { Grid, Typography, IconButton } from '@mui/material';
 import { GitHub, LinkedIn, Twitter, Instagram } from '@mui/icons-material';
 import { perSonalDetails, HomeDetailsCss } from '../constants';
 import img1 from '../assets/gowr.jpg';
+import Lottie from 'lottie-react';
+import animationData from '../assets/gowri.json'
 
 const HomeDetails = () => {
 
@@ -17,13 +19,12 @@ const HomeDetails = () => {
       style={HomeDetailsCss.outerGrid}
       variants={HomeDetailsCss.containerVariants}
     >
-      <Grid item xs={3} style={HomeDetailsCss.innerGrid}>
-        <img
-          style={HomeDetailsCss.imageSize}
-          src={img1}
-          alt="Profile"
-        />
-      </Grid>
+      <Lottie
+        animationData={animationData}
+        loop
+        autoplay
+        style={{ width: 400, height: 400 }}
+      />
       <Grid item xs={6} style={HomeDetailsCss.innerGrid2}>
         <Grid style={{}}>
           <Typography variant="h2" style={HomeDetailsCss.h2Variants}>

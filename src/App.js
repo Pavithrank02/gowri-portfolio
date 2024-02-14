@@ -19,16 +19,22 @@ function App() {
       <Grid item xs={3} style={{ overflowY: 'auto', background: theme === 'light' ? '#FFF' : 'black', color: theme === 'light' ? 'black' : 'white' }}>
         <SideNav />
       </Grid>
-      <Grid item xs={9} style={{ display: 'flex', justifyContent: 'center', overflowY: 'auto', background: theme === 'light' ? '#F7F7F7 ' : '#131314', color: theme === 'light' ? 'black' : '#FAFAFA' }}>
-        {/* <Toggle /> */}
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/project' element={<Project />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/s' element={<Section />} />
-          <Route path='/service' element={<Service />} />
-        </Routes>
+      <Grid item xs={9} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', overflowY: 'auto', background: theme === 'light' ? '#F7F7F7 ' : '#131314', color: theme === 'light' ? 'black' : '#FAFAFA' }}>
+        <Grid>
+          <Toggle />
+
+        </Grid>
+        <Grid>
+
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/project' element={<Project />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/s' element={<Section />} />
+            <Route path='/service' element={<Service />} />
+          </Routes>
+        </Grid>
       </Grid>
     </Grid >
   );
