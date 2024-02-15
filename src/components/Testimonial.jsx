@@ -27,9 +27,9 @@ const Testimonial = () => {
           key={index}
         >
           <Grid style={{ marginLeft: '20px', width: '30vw', height: '24vh', textAlign: 'justify', padding: '10px', backgroundColor: 'transparent', border: '1px solid gray' }}>
-            <Grid style={{ display: 'flex', flexDirection: 'row', justifyContent: 'left', marginBottom: '10px'}}> 
+            <Grid style={{ display: 'flex', flexDirection: 'row', justifyContent: 'left', marginBottom: '10px' }}>
               <Avatar alt="Remy Sharp" src={img1} />
-              <Typography variant="h6" gutterBottom style={{marginLeft: '10px', marginTop: '5px'}}>
+              <Typography variant="h6" gutterBottom style={{ marginLeft: '10px', marginTop: '5px' }}>
                 {testimonial.name}
               </Typography>
             </Grid>

@@ -16,16 +16,14 @@ function App() {
 
   return (
     <Grid container xs={12} style={{ height: '100vh', display: 'flex', flexDirection: 'row' }}>
-      <Grid item xs={3} style={{ overflowY: 'auto', background: theme === 'light' ? '#FFF' : 'black', color: theme === 'light' ? 'black' : 'white' }}>
+      <Grid item xs={3} style={{ background: theme === 'light' ? '#FFF' : 'black', color: theme === 'light' ? 'black' : 'white' }}>
         <SideNav />
       </Grid>
       <Grid item xs={9} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', overflowY: 'auto', background: theme === 'light' ? '#F7F7F7 ' : '#131314', color: theme === 'light' ? 'black' : '#FAFAFA' }}>
-        <Grid>
+        <Grid item>
           <Toggle />
-
         </Grid>
-        <Grid>
-
+        <Grid item>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/project' element={<Project />} />
