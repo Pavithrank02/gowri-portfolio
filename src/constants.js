@@ -210,9 +210,49 @@ export const AboutCss = {
   outerGrid: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     alignItems: 'center',
-  }
+    overflow: "hidden"
+  },
+  imgCss: {
+    width: '65vw',
+    height: '70vh',
+    objectFit: 'cover',
+
+  },
+  item1Grid: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-evenly',
+    alignItems: 'flex-start',
+    height: '100vh',
+  },
+
+  item2Grid: {
+    width: "100%",
+    height: '70vh',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+  },
+  item3Grid: {
+    width: '65vw',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    height: '100%'
+  },
+  item4Grid: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    height: '40vh',
+    width: '100%'
+  },
+  testimonyGrid: { width: '90%', textAlign: 'center', },
+  perSonalDetailGrid: { width: '65vw', borderBottom: '1px solid gray', }
 }
 export const ProjectContainerCss = {
 
@@ -247,8 +287,8 @@ export const ServicesCss = {
   outerGrid: {
     display: "flex",
     flexDirection: "column",
-
     color: 'white',
+    width: '100%'
   },
   textGrid: {
     marginBottom: '5vh',
@@ -261,17 +301,13 @@ export const ServicesCss = {
 
   serviceGrid: {
     padding: '1.3rem',
+    height: '100%',
+    width: '100%',
     backgroundColor: '#333333',
-    width: '50vw',
     marginRight: '40px',
     marginBottom: '40px'
   },
   textContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-around',
-    height: '20vh',
-    marginTop: '-1rem'
 
   }
 

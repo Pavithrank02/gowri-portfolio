@@ -3,10 +3,11 @@ import React from 'react';
 import img from '../assets/gowr.jpg';
 import ProjectCard from './ProjectCard';
 import { motion } from 'framer-motion';
-import {ProjectContainerCss} from '../constants'
+import { ProjectContainerCss } from '../constants'
+import { useTheme } from '../ThemeContext';
 
 const ProjectContainer = () => {
-
+  const { theme } = useTheme();
 
   return (
     <Grid style={ProjectContainerCss.outerGrid}>
@@ -15,11 +16,13 @@ const ProjectContainer = () => {
         animate="visible"
         variants={ProjectContainerCss.containerVariants}
         style={{
-          top: '100px',
-          color: 'black',
         }}
       >
-        <Grid style={ProjectContainerCss.innerGrid1}>
+        <Grid sx={{ background: theme === 'light' ? '#FFF' : '#292828', color: theme === 'light' ? 'black' : '#B0B0B0' }} style={{
+          padding: '0.8rem',
+          width: '10vw',
+          marginBottom: '10px',
+        }}>
           <Typography variant='h5'>
             My Project
           </Typography>

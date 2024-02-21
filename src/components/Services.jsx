@@ -17,8 +17,8 @@ const Services = () => {
   };
 
   return (
-    <Grid container xs={12} style={ServicesCss.outerGrid}>
-      <Grid item xs={3} style={ServicesCss.textGrid}>
+    <Grid container style={ServicesCss.outerGrid}>
+      <Grid item style={ServicesCss.textGrid}>
         <Grid>
           <Typography style={{ padding: '0.8rem', width: '4vw', marginBottom: '10px', background: theme === 'light' ? '#FFF' : '#292828', color: theme === 'light' ? 'black' : '#B0B0B0' }}>Services</Typography>
         </Grid>
@@ -26,41 +26,44 @@ const Services = () => {
           <Typography variant='h4' style={{ fontWeight: 800, color: theme === 'light' ? 'black' : 'white' }}>What I Do</Typography>
         </Grid>
       </Grid>
-      <Grid item xs={9} style={ServicesCss.servicesGrid}>
+      <Grid item style={ServicesCss.servicesGrid}>
         {ServicesProvided.map((serv, i) => {
           return (
             <Grid
               key={i}
               item
-              xs={2}
+              xs={6} // Each grid item takes up 6 units of space on extra small screens
+              md={3} // Adjust grid size for medium screens
+              lg={2} // Adjust grid size for large screens
               sx={{
                 background: theme === 'light' ? '#FFF' : '#292828',
                 color: theme === 'light' ? 'black' : '#B0B0B0',
-              }}// 4 grid items for each row
+              }}
               style={ServicesCss.serviceGrid}
               onMouseEnter={() => handleAvatarHover(i)}
               onMouseLeave={handleAvatarLeave}
             >
-              <Grid sx={{ marginBottom: '40px', marginTop: '30px' }}>
-                <Avatar style={{
-                  ...(hoveredIndex === i && {
-                    backgroundColor: hoveredIndex ? '#575757' : '#434343', // Change background color when hovered
-                  }), fontWeight: 800
-                }} sx={{ width: 60, height: 60, fontSize: '18px' }}>
-                  {serv.id}</Avatar>
+              <Grid>
+                <Avatar
+                  style={{
+                    backgroundColor: hoveredIndex === i ? '#575757' : '#434343',
+                    width: 60,
+                    height: 60,
+                    fontSize: '18px',
+                    fontWeight: 800
+                  }}
+                >
+                  {serv.id}
+                </Avatar>
               </Grid>
               <Grid style={ServicesCss.textContainer}>
-                <Grid>
-                  <Typography variant='h6' sx={{ fontWeight: 800, marginBottom: '10px', color: theme === 'light' ? 'black' : 'white', }}>
-                    {serv.serviceName}
-                  </Typography>
-                </Grid>
-                <Grid>
-                  <Typography variant='body1' sx={{ color: '#B0B0B0' }}>
-                    {serv.description}
-                  </Typography>
-                </Grid>
-                <Grid sx={{ color: '#B0B0B0', position: 'relative', marginBottom: '1rem' }}>
+                <Typography variant='h6' sx={{ fontWeight: 800, marginBottom: '10px', color: theme === 'light' ? 'black' : 'white', }}>
+                  {serv.serviceName}
+                </Typography>
+                <Typography variant='body1' sx={{ color: '#B0B0B0' }}>
+                  {serv.description}
+                </Typography>
+                <Grid sx={{ color: '#B0B0B0', marginBottom: '1rem' }}>
                   <Button
                     style={{
                       fontSize: '15px',
@@ -84,6 +87,7 @@ const Services = () => {
           )
         })}
       </Grid>
+
     </Grid>
   );
 };
