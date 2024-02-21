@@ -287,8 +287,9 @@ export const ServicesCss = {
   outerGrid: {
     display: "flex",
     flexDirection: "column",
+    justifyContent: 'space-around',
     color: 'white',
-    width: '100%'
+    height: '100%'
   },
   textGrid: {
     marginBottom: '5vh',
@@ -296,13 +297,12 @@ export const ServicesCss = {
   servicesGrid: {
     display: 'flex',
     flexDirection: 'row',
+    justifyContent: 'center'
 
   },
 
   serviceGrid: {
     padding: '1.3rem',
-    height: '100%',
-    width: '100%',
     backgroundColor: '#333333',
     marginRight: '40px',
     marginBottom: '40px'
