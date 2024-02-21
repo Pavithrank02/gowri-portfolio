@@ -27,8 +27,6 @@ const Services = () => {
       animate="visible"
       variants={containerVariants}
     >
-
-
       <Grid
         container
         xs={10}
