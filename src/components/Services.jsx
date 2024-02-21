@@ -19,7 +19,7 @@ const Services = () => {
   return (
     <Grid
       container
-      xs={12}
+      xs={10}
       style={ServicesCss.outerGrid}
     >
       <Grid item
@@ -47,10 +47,10 @@ const Services = () => {
           <Grid
             key={i}
             item
-            xs={12} // Each grid item takes up full width on extra small screens (stacks vertically)
+            xs={3}// Each grid item takes up full width on extra small screens (stacks vertically)
             sm={4} // Each grid item takes up half width on small screens (two items per row)
-            md={4} // Each grid item takes up one-third width on medium screens (three items per row)
-            lg={4} // Each grid item takes up one-third width on large screens (three items per row)
+            md={3} // Each grid item takes up one-third width on medium screens (three items per row)
+            lg={3} // Each grid item takes up one-third width on large screens (three items per row)
             style={{
               background: theme === 'light' ? '#FFF' : '#292828',
               color: theme === 'light' ? 'black' : '#B0B0B0',
@@ -59,7 +59,7 @@ const Services = () => {
             onMouseEnter={() => handleAvatarHover(i)}
             onMouseLeave={handleAvatarLeave}
           >
-            <Grid container alignItems="center" justifyContent="center">
+            <Grid container >
               <Avatar
                 style={{
                   backgroundColor: hoveredIndex === i ? '#575757' : '#434343',
@@ -84,8 +84,8 @@ const Services = () => {
                   style={{
                     fontSize: '15px',
                     color: theme === 'light' ? 'black' : 'white',
-                    left: hoveredIndex === i ? '0' : '-10%',
-                    transition: 'left .3s ease',
+                    left: hoveredIndex === i ? '-10%' : '-10%',
+                    transition: 'right 0.3s ease',
                     opacity: hoveredIndex === i ? 1 : 0,
                     backgroundColor: 'transparent',
                     border: 'none',
@@ -96,7 +96,7 @@ const Services = () => {
                 >
                   Read More...
                 </Button>
-                <span style={{ opacity: hoveredIndex === i ? 0 : 1, fontSize: '30px', }}>...</span>
+                <span style={{ opacity: hoveredIndex === i ? 0 : 1, fontSize: '30px', justifyContent: 'left' }}>...</span>
               </Grid>
             </Grid>
           </Grid>

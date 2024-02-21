@@ -19,7 +19,7 @@ function App() {
       <Grid item xs={3} style={{ background: theme === 'light' ? '#FFF' : 'black', color: theme === 'light' ? 'black' : 'white' }}>
         <SideNav />
       </Grid>
-      <Grid item xs={9} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', overflowY: 'auto', background: theme === 'light' ? '#F7F7F7 ' : '#131314', color: theme === 'light' ? 'black' : '#FAFAFA' }}>
+      <Grid item xs={9} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', background: theme === 'light' ? '#F7F7F7 ' : '#131314', color: theme === 'light' ? 'black' : '#FAFAFA' }}>
         <Grid item>
           <Toggle />
         </Grid>

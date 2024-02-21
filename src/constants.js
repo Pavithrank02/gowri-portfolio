@@ -113,6 +113,12 @@ export const ServicesProvided = [
     description: "Web development is the most famous job in the world and it is very interesting... ",
 
   },
+  {
+    id: '07',
+    serviceName: 'Live Chat',
+    description: "Web development is the most famous job in the world and it is very interesting... ",
+
+  },
 ]
 
 export const HomeDetailsCss = {
@@ -251,6 +257,7 @@ export const AboutCss = {
     height: '40vh',
     width: '100%'
   },
+
   testimonyGrid: { width: '90%', textAlign: 'center', },
   perSonalDetailGrid: { width: '65vw', borderBottom: '1px solid gray', }
 }
@@ -263,22 +270,19 @@ export const ProjectContainerCss = {
   outerGrid: {
     display: "flex",
     flexDirection: "column",
-    marginTop: '15vh',
-    width: '65vw ',
-    marginLeft: '5vw'
+    justifyContent: "space-between",
+
   },
 
   innerGrid1: {
-    padding: '0.7rem',
     backgroundColor: 'lightgray',
     borderRadius: '10px',
-    width: '20vh',
     marginBottom: '19px',
-    marginLeft: '20px'
   },
   innerGrid2: {
     display: "flex",
     flexDirection: "row",
+    justifyContent: 'left',
     flexWrap: 'wrap',
   },
 }
@@ -289,15 +293,17 @@ export const ServicesCss = {
     flexDirection: "column",
     justifyContent: 'space-around',
     color: 'white',
-    height: '100%'
+    marginLeft: '8vw',
+    marginTop: '15vh'
   },
   textGrid: {
-    marginBottom: '5vh',
+    marginBottom: '5vh'
   },
   servicesGrid: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'center'
+    justifyContent: 'left',
+    alignItems: 'flex-end',
 
   },
 
@@ -305,7 +311,8 @@ export const ServicesCss = {
     padding: '1.3rem',
     backgroundColor: '#333333',
     marginRight: '40px',
-    marginBottom: '40px'
+    marginBottom: '40px',
+
   },
   textContainer: {
 
