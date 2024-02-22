@@ -272,10 +272,11 @@ export const ProjectContainerCss = {
     flexDirection: "column",
     justifyContent: "space-between",
     alignItems: 'flex-start',
-    backgroundColor: 'white',
     height: '100%',
-    width: '55vw',
+    width: '65vw',
     padding: '10px',
+    marginLeft: '5vw',
+    marginTop: '10vh'
 
 
   },
