@@ -10,16 +10,17 @@ import Section from './components/Scroll';
 import Service from './view/Service';
 import { useTheme } from './ThemeContext';
 import Toggle from './components/ToggleButton';
+import { AppCss } from './constants';
 
 function App() {
   const { theme } = useTheme();
 
   return (
-    <Grid container xs={12} style={{ height: '100vh', display: 'flex', flexDirection: 'row' }}>
-      <Grid item xs={3} style={{ background: theme === 'light' ? '#FFF' : 'black', color: theme === 'light' ? 'black' : 'white' }}>
+    <Grid container xs={12} style={AppCss.outerGrid}>
+      <Grid item xs={3} sx={{ background: theme === 'light' ? '#FFF' : 'black', color: theme === 'light' ? 'black' : 'white' }}>
         <SideNav />
       </Grid>
-      <Grid item xs={9} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', background: theme === 'light' ? '#F7F7F7 ' : '#131314', color: theme === 'light' ? 'black' : '#FAFAFA' }}>
+      <Grid item xs={9} sx={{ background: theme === 'light' ? '#F7F7F7 ' : '#131314', color: theme === 'light' ? 'black' : '#FAFAFA' }} style={AppCss.innerGrid}>
         <Grid item>
           <Toggle />
         </Grid>

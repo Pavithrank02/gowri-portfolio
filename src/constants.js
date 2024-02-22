@@ -121,6 +121,11 @@ export const ServicesProvided = [
   },
 ]
 
+export const AppCss = {
+  outerGrid: { height: '100vh', display: 'flex', flexDirection: 'row' },
+  innerGrid: { display: 'flex', flexDirection: 'column', justifyContent: 'center', }
+}
+
 export const HomeDetailsCss = {
   customBorder: {
     border: '1px solid red',
@@ -264,7 +269,7 @@ export const AboutCss = {
 export const ProjectContainerCss = {
 
   containerVariants: {
-    hidden: { x: '-30%' },
+    hidden: { x: '-10%' },
     visible: { x: 0, transition: { type: 'spring', stiffness: 60 } },
   },
   outerGrid: {
