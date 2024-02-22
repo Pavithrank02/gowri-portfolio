@@ -3,7 +3,9 @@ import Services from '../components/Services'
 
 const Service = () => {
   return (
-    <><Services /></>
+    <>
+      <Services />
+    </>
   )
 }
 

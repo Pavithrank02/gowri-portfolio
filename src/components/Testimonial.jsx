@@ -24,16 +24,16 @@ const Testimonial = () => {
     <Slider {...settings}>
       {Testimonies.map((testimonial, index) => (
         <Box
-          key={index}
+          sx={{ marginLeft: '30px' }}
         >
-          <Grid style={{ marginLeft: '20px', width: '30vw', height: '24vh', textAlign: 'justify', padding: '10px', backgroundColor: 'transparent', border: '1px solid gray' }}>
-            <Grid style={{ display: 'flex', flexDirection: 'row', justifyContent: 'left', marginBottom: '10px' }}>
+          <Grid key={index} container style={{ display: 'flex', flexDirection: 'row', width: '30vw', height: '100%', textAlign: 'justify', padding: '10px', backgroundColor: 'transparent', border: '1px solid gray' }}>
+            <Grid item style={{ display: 'flex', flexDirection: 'row', justifyContent: 'left', marginBottom: '10px' }}>
               <Avatar alt="Remy Sharp" src={img1} />
               <Typography variant="h6" gutterBottom style={{ marginLeft: '10px', marginTop: '5px' }}>
                 {testimonial.name}
               </Typography>
             </Grid>
-            <Grid>
+            <Grid item >
               <Typography variant="body1" style={{ color: '#B0B0B0', fontStyle: 'italic' }} gutterBottom>
                 {testimonial.testimony}
               </Typography>

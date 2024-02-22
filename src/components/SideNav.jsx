@@ -8,10 +8,14 @@ import ContactsIcon from '@mui/icons-material/Contacts';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 import { SideNavCss } from '../constants';
+import Toggle from './ToggleButton';
 
 const SideNav = () => {
   return (
     <Grid container style={SideNavCss.outerGridCss}>
+      <Grid item>
+        <Toggle />
+      </Grid>
       <Grid item sx={SideNavCss.innerGrid}>
         <Typography
           variant='h3'
@@ -43,17 +47,7 @@ const SideNav = () => {
             </Typography>
           </Grid>
         </Link>
-        <Link to='/contact' style={{ textDecoration: 'none' }}>
-          <Grid sx={SideNavCss.textTransition}>
-            <Typography
-              variant='body'
-              sx={{ textDecoration: 'none' }}
-            >
-              <ContactsIcon style={SideNavCss.IconStyle} />
-              Contact
-            </Typography>
-          </Grid>
-        </Link>
+
         <Link to='/project' style={{ textDecoration: 'none' }}>
           <Grid sx={SideNavCss.textTransition}>
             <Typography variant='body' sx={{ textDecoration: 'none' }}>
@@ -67,6 +61,17 @@ const SideNav = () => {
             <Typography variant='body' sx={{ textDecoration: 'none' }}>
               <SettingsSuggestIcon style={SideNavCss.IconStyle} />
               Service
+            </Typography>
+          </Grid>
+        </Link>
+        <Link to='/contact' style={{ textDecoration: 'none' }}>
+          <Grid sx={SideNavCss.textTransition}>
+            <Typography
+              variant='body'
+              sx={{ textDecoration: 'none' }}
+            >
+              <ContactsIcon style={SideNavCss.IconStyle} />
+              Contact
             </Typography>
           </Grid>
         </Link>

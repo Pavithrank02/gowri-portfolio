@@ -271,14 +271,18 @@ export const ProjectContainerCss = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
+    alignItems: 'flex-start',
+    backgroundColor: 'white',
+    height: '100%',
+    width: '55vw',
+    padding: '10px',
+
 
   },
-
   innerGrid1: {
-    backgroundColor: 'lightgray',
-    borderRadius: '10px',
-    marginBottom: '19px',
+    padding: '0.8rem',
   },
+
   innerGrid2: {
     display: "flex",
     flexDirection: "row",

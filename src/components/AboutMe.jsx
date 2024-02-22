@@ -34,7 +34,8 @@ const AboutMe = () => {
           <Grid>
             <Typography
               sx={{
-                background: theme === 'light' ? '#FFF' : '#292828', color: theme === 'light' ? 'black' : '#B0B0B0'
+                background: theme === 'light' ? '#FFF' : '#292828',
+                color: theme === 'light' ? 'black' : '#B0B0B0'
               }}
               style={{
                 padding: '0.8rem',
