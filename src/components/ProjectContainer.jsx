@@ -43,7 +43,7 @@ const ProjectContainer = () => {
           <Grid xs={5}>
             <ProjectCard img={img} />
           </Grid>
-          {/* Add more pairs of ProjectCards as needed */}
+
         </Grid>
       </Grid>
     </motion.div>
