@@ -6,7 +6,7 @@ import { perSonalDetails, HomeDetailsCss } from '../constants';
 import img1 from '../assets/gowr.jpg';
 import Lottie from 'lottie-react';
 import animationData from '../assets/gowri.json'
-
+import '../index.css'
 const HomeDetails = () => {
 
 
@@ -30,11 +30,21 @@ const HomeDetails = () => {
           <Typography variant="h2" style={HomeDetailsCss.h2Variants}>
             {perSonalDetails.name}
           </Typography>
+          {/* <Typography variant="h2" className="typewriter">
+            {perSonalDetails.name.split('').map((letter, index) => (
+              <span key={index}>{letter}</span>
+            ))}
+          </Typography> */}
         </Grid>
         <Grid style={{}}>
           <Typography variant="h6" style={{ color: '#B0B0B0', }}>
             {perSonalDetails.description}
           </Typography>
+          {/* <Typography variant="h2" style={{ color: '#B0B0B0', }} className="typewriter">
+            {perSonalDetails.description.split('').map((letter, index) => (
+              <span key={index}>{letter}</span>
+            ))}
+          </Typography> */}
         </Grid>
         <Grid style={{ fontSize: '2rem' }}>
           <IconButton color="inherit" >

@@ -1,10 +1,57 @@
 import img1 from './assets/gowr.jpg'
+export const name = [
+  {
+    text: "GOWRI",
+  },
+  {
+    text: "SHANKAR",
+  },
+
+]
+export const description = [
+  {
+    text: "I'm",
+  },
+  {
+    text: "a",
+  },
+  {
+    text: "front end ",
+  },
+  {
+    text: "developer",
+  },
+  {
+    text: "with",
+  },
+  {
+    text: "five",
+  },
+  {
+    text: "years",
+  },
+  {
+    text: "of",
+  },
+  {
+    text: "experience",
+  },
+  {
+    text: "in",
+  },
+  {
+    text: "web development",
+  },
+
+]
 export const perSonalDetails = {
-  name: 'GOWRI SHANKAR',
+
+  name: 'GOWRI SHANKAR ',
   description: "  I'm a front end developer with five years of experience in web development.",
   experience: "",
-
 }
+
+// }
 
 export const projectDetails = {
   title: "E-Commerce Website",
