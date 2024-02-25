@@ -2,6 +2,7 @@
 
 import { cn } from "../../utils/cn.ts";
 import Image from "../../assets/gowr.jpg";
+import '../../index.css'
 import React, {
   createContext,
   useState,
@@ -47,27 +48,13 @@ export const CardContainer = ({
   };
   return (
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
-      <div
-        className={cn(
-          "py-20 flex items-center justify-center",
-          containerClassName
-        )}
-        style={{
-          perspective: "1000px",
-        }}
-      >
+      <div className={cn("container", containerClassName)}>
         <div
           ref={containerRef}
           onMouseEnter={handleMouseEnter}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
-          className={cn(
-            "flex items-center justify-center relative transition-all duration-200 ease-linear",
-            className
-          )}
-          style={{
-            transformStyle: "preserve-3d",
-          }}
+          className={cn("innerContainer", className)}
         >
           {children}
         </div>
@@ -86,7 +73,7 @@ export const CardBody = ({
   return (
     <div
       className={cn(
-        "h-96 w-96 [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
+        "custom-div",
         className
       )}
     >
@@ -136,7 +123,7 @@ export const CardItem = ({
   return (
     <Tag
       ref={ref}
-      className={cn("w-fit transition duration-200 ease-linear", className)}
+      className={cn("tag", className)}
       {...rest}
     >
       {children}

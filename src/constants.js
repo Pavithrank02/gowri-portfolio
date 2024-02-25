@@ -287,13 +287,16 @@ export const ProjectContainerCss = {
   },
   innerGrid1: {
     padding: '0.8rem',
+    marginLeft: '3.5vw'
   },
 
   innerGrid2: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: 'left',
+    justifyContent: 'space-evenly',
+    alignItems: 'flex-start',
     flexWrap: 'wrap',
+    marginRight: '10px'
   },
 }
 

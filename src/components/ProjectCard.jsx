@@ -42,7 +42,7 @@ const ProjectCard = ({ img }) => {
     justifyContent: 'space-around',
     borderRadius: '10px',
     cursor: 'pointer',
-    ...(isHovered && { transform: 'scale(1.1)', }), // Apply transform on hover
+    ...(isHovered && { transform: 'scale(1)', }), // Apply transform on hover
     transition: 'transform 0.15s ease-in-out',
   };
 
@@ -59,7 +59,6 @@ const ProjectCard = ({ img }) => {
       style={gridStyle}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      padding={2}
     >
       <ThreeDCardDemo onClick={handleImageClick} />
       {isHovered && (
