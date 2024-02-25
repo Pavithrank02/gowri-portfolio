@@ -11,6 +11,7 @@ import Service from './view/Service';
 import { useTheme } from './ThemeContext';
 import Toggle from './components/ToggleButton';
 import { AppCss } from './constants';
+import { ThreeDCardDemo } from './components/P';
 
 function App() {
   const { theme } = useTheme();
@@ -30,7 +31,7 @@ function App() {
             <Route path='/project' element={<Project />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/about' element={<About />} />
-            <Route path='/s' element={<Section />} />
+            <Route path='/p' element={<ThreeDCardDemo />} />
             <Route path='/service' element={<Service />} />
           </Routes>
         </Grid>

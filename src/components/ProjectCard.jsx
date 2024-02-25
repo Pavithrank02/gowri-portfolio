@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Grid, Typography, Dialog, DialogContent, DialogTitle } from '@mui/material';
+import { ThreeDCardDemo } from './P';
 
 const ProjectCard = ({ img }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -60,7 +61,7 @@ const ProjectCard = ({ img }) => {
       onMouseLeave={handleMouseLeave}
       padding={2}
     >
-      <img src={img} alt='img' style={{ width: '30vw', height: '50vh', borderRadius: '10px', objectFit: 'cover' }} onClick={handleImageClick} />
+      <ThreeDCardDemo onClick={handleImageClick} />
       {isHovered && (
         <div style={textContainerStyle}>
           <Typography variant='h6' style={{ textAlign: 'center', color: 'white' }}>
