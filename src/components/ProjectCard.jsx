@@ -30,6 +30,7 @@ const ProjectCard = ({ img }) => {
   };
 
   const handleImageClick = () => {
+    console.log("truye")
     setIsModalOpen(true);
   };
 
@@ -60,7 +61,12 @@ const ProjectCard = ({ img }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <ThreeDCardDemo onClick={handleImageClick} />
+      <Grid
+        onClick={handleImageClick}
+        onBlur={handleCloseModal}
+        open={isModalOpen}>
+        <ThreeDCardDemo />
+      </Grid>
       {isHovered && (
         <div style={textContainerStyle}>
           <Typography variant='h6' style={{ textAlign: 'center', color: 'white' }}>
