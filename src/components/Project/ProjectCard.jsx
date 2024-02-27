@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Grid, Typography, Dialog, DialogContent, DialogTitle } from '@mui/material';
 import { ImageAnimateProject } from './ImageAnimateProject';
+import { useTheme } from '../../ThemeContext';
 
 const ProjectCard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const { theme } = useTheme();
 
   useEffect(() => {
     const handleMouseMove = (event) => {
@@ -69,7 +71,7 @@ const ProjectCard = () => {
       </Grid>
       {isHovered && (
         <div style={textContainerStyle}>
-          <Typography variant='h6' style={{ textAlign: 'center', color: 'white' }}>
+          <Typography variant='h6' style={{ textAlign: 'center', color: theme === 'light' ? 'black' : '#B0B0B0' }}>
             Project
           </Typography>
         </div>

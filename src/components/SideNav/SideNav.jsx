@@ -9,6 +9,7 @@ import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 import Toggle from './ToggleButton';
 import { SideNavCss } from '../../constants';
+// import Gowrilogo1 from '../../assets/Gowrilogo1.png'
 
 const SideNav = () => {
   return (
@@ -17,6 +18,11 @@ const SideNav = () => {
         <Toggle />
       </Grid>
       <Grid item sx={SideNavCss.innerGrid}>
+        {/* <img
+          src={Gowrilogo1}
+          alt='logo-white'
+          style={{ height: '100px' }}
+        /> */}
         <Typography
           variant='h3'
           sx={{ ...SideNavCss.h3Variant, textDecoration: 'none' }} // Remove text decoration for h3
