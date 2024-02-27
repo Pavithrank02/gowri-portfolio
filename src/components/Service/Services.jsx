@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Avatar, Grid, Typography } from '@mui/material';
-import { ServicesCss, ServicesProvided } from '../constants';
-import { Button } from 'react-scroll';
-import { useTheme } from '../ThemeContext';
 import { motion } from 'framer-motion'
+import { Button } from 'react-scroll';
+import { useTheme } from '../../ThemeContext';
+import { ServicesCss, ServicesProvided } from '../../constants';
 
 const Services = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);

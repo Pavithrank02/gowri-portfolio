@@ -1,7 +1,6 @@
 "use client";
 
 import { cn } from "../../utils/cn.ts";
-import Image from "../../assets/gowr.jpg";
 import '../../index.css'
 import React, {
   createContext,

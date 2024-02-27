@@ -1,9 +1,9 @@
 import React from 'react';
 import { Typography, Box, Grid } from '@mui/material';
-import { Testimonies } from '../constants';
-import Slider from 'react-slick';
 import Avatar from '@mui/material/Avatar';
-import img1 from '../assets/gowr.jpg'
+import Slider from 'react-slick';
+import { Testimonies } from '../../constants';
+import img1 from '../../assets/gowr.jpg'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 

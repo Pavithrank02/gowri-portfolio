@@ -7,8 +7,8 @@ import PersonIcon from '@mui/icons-material/Person';
 import ContactsIcon from '@mui/icons-material/Contacts';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
-import { SideNavCss } from '../constants';
 import Toggle from './ToggleButton';
+import { SideNavCss } from '../../constants';
 
 const SideNav = () => {
   return (

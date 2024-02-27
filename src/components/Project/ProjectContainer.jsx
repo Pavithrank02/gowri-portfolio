@@ -1,11 +1,10 @@
-import { Grid, Typography } from '@mui/material';
 import React from 'react';
-import img from '../assets/gowr.jpg';
-import ProjectCard from './ProjectCard';
+import { Grid, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
-import { ProjectContainerCss } from '../constants'
-import { useTheme } from '../ThemeContext';
-import { ThreeDCardDemo } from './ImageAnimateProject';
+import ProjectCard from './ProjectCard';
+import img from '../../assets/gowr.jpg';
+import { ProjectContainerCss } from '../../constants'
+import { useTheme } from '../../ThemeContext';
 
 const ProjectContainer = () => {
   const { theme } = useTheme();

@@ -1,16 +1,14 @@
 import React from 'react'
 import { Button, Grid, Typography } from '@mui/material'
-import img1 from '../assets/gowr.jpg'
-import { About, AboutCss } from '../constants'
 import { motion } from 'framer-motion'
-import Testimonial from './Testimonial'
-import Experience from './Experience'
-import PersonalDetails from './PersonalDetails'
+import Testimonial from './Testimonial.jsx'
+import Experience from './Experience.jsx'
+import PersonalDetails from './PersonalDetails.jsx'
+import { useTheme } from '../../ThemeContext.js'
+import img1 from '../../assets/gowr.jpg'
+import { About, AboutCss } from '../../constants.js'
 import 'react-slideshow-image/dist/styles.css'
-import { useTheme } from '../ThemeContext'
 
-
-import { cn } from "../utils/cn.ts";
 const AboutMe = () => {
   const { theme } = useTheme();
   const lines = About.description.split('\n');

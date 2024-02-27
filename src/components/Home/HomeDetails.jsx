@@ -1,12 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Grid, Typography, IconButton } from '@mui/material';
 import { GitHub, LinkedIn, Twitter, Instagram } from '@mui/icons-material';
-import { perSonalDetails, HomeDetailsCss } from '../constants';
-import img1 from '../assets/gowr.jpg';
+import { motion } from 'framer-motion';
 import Lottie from 'lottie-react';
-import animationData from '../assets/gowri.json'
-import '../index.css'
+import { perSonalDetails, HomeDetailsCss } from '../../constants';
+import animationData from '../../assets/gowri.json'
+import '../../index.css'
 const HomeDetails = () => {
 
 

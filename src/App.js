@@ -1,5 +1,5 @@
 import './App.css';
-import SideNav from './components/SideNav';
+import SideNav from './components/SideNav/SideNav';
 import { Routes, Route } from 'react-router-dom'
 import About from './view/About';
 import Contact from './view/Contact';
@@ -8,7 +8,7 @@ import Project from './view/Project';
 import { Grid } from '@mui/material';
 import Service from './view/Service';
 import { useTheme } from './ThemeContext';
-import Toggle from './components/ToggleButton';
+import Toggle from './components/SideNav/ToggleButton';
 import { AppCss } from './constants';
 
 

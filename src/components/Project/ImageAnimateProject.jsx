@@ -1,9 +1,8 @@
 "use client";
 
 import React from "react";
-import { CardBody, CardContainer, CardItem } from "./ui/Card.tsx";
-import { Typography, Dialog, DialogContent, DialogTitle } from '@mui/material';
-import '../index.css'
+import { CardBody, CardContainer, CardItem } from "../ui/Card.tsx";
+import '../../index.css'
 
 export function ImageAnimateProject() {
   return (
