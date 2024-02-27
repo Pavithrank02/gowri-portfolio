@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Grid, Typography, Dialog, DialogContent, DialogTitle } from '@mui/material';
-import { ThreeDCardDemo } from './P';
+import { ImageAnimateProject } from './ImageAnimateProject';
 
 const ProjectCard = ({ img }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -65,7 +65,7 @@ const ProjectCard = ({ img }) => {
         onClick={handleImageClick}
         onBlur={handleCloseModal}
         open={isModalOpen}>
-        <ThreeDCardDemo />
+        <ImageAnimateProject />
       </Grid>
       {isHovered && (
         <div style={textContainerStyle}>

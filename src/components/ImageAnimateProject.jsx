@@ -5,7 +5,7 @@ import { CardBody, CardContainer, CardItem } from "./ui/Card.tsx";
 import { Typography, Dialog, DialogContent, DialogTitle } from '@mui/material';
 import '../index.css'
 
-export function ThreeDCardDemo({ isModalOpen, handleCloseModal }) {
+export function ImageAnimateProject() {
   return (
     <CardContainer className="  inter-var">
       <CardBody className="pallete">
@@ -18,15 +18,6 @@ export function ThreeDCardDemo({ isModalOpen, handleCloseModal }) {
             alt="thumbnail"
           />
         </CardItem>
-        <Dialog open={isModalOpen} onClose={handleCloseModal} >
-          <DialogTitle>Project Description</DialogTitle>
-          <DialogContent>
-            {/* Add your project description content here */}
-            <Typography variant="body1">
-              This is the project description.
-            </Typography>
-          </DialogContent>
-        </Dialog>
         {/* <div className="container" >
           <p
             className="button"
