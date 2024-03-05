@@ -77,9 +77,9 @@ const ProjectCard = () => {
           </Typography>
         </div>
       )}
-      <Dialog open={isModalOpen} onClose={handleCloseModal}>
+      <Dialog open={isModalOpen} onClose={handleCloseModal} >
         <DialogTitle>Project Description</DialogTitle>
-        <DialogContent>
+        <DialogContent >
           {/* Add your project description content here */}
           <ProjectDescription />
         </DialogContent>
