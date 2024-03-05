@@ -2,6 +2,7 @@ import { GitHub } from '@mui/icons-material'
 import { Grid, IconButton, Typography } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
+import LaunchIcon from '@mui/icons-material/Launch';
 
 const ProjectDescription = () => {
   return (
@@ -43,9 +44,12 @@ const ProjectDescription = () => {
         </Grid>
         <Grid >
           <Link to="" style={{ textDecoration: 'none', color: "black" }}>
-            <Typography variant="body1" sx={{ textDecoration: 'none' }}>
-              Live Link
-            </Typography>
+            <IconButton color="inherit" >
+              <Typography variant="body1">
+                Link
+              </Typography>
+              <LaunchIcon />
+            </IconButton>
           </Link>
         </Grid>
       </Grid>
