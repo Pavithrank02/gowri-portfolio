@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Grid, Typography, Dialog, DialogContent, DialogTitle } from '@mui/material';
 import { ImageAnimateProject } from './ImageAnimateProject';
 import { useTheme } from '../../ThemeContext';
+import ProjectDescription from './ProjectDescription';
 
 const ProjectCard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -80,9 +81,7 @@ const ProjectCard = () => {
         <DialogTitle>Project Description</DialogTitle>
         <DialogContent>
           {/* Add your project description content here */}
-          <Typography variant="body1">
-            This is the project description.
-          </Typography>
+          <ProjectDescription />
         </DialogContent>
       </Dialog>
     </Grid>
