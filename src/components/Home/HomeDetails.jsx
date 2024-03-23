@@ -22,11 +22,11 @@ const HomeDetails = () => {
         animationData={animationData}
         loop
         autoplay
-        style={{ width: 400, height: 400 }}
+        style={{ maxWidth: 400, height: 400 }}
       />
       <Grid item xs={6} style={HomeDetailsCss.innerGrid2}>
-        <Grid style={{}}>
-          <Typography variant="h2" style={HomeDetailsCss.h2Variants}>
+        <Grid >
+          <Typography style={HomeDetailsCss.h2Variants}>
             {perSonalDetails.name}
           </Typography>
           {/* <Typography variant="h2" className="typewriter">
@@ -35,7 +35,7 @@ const HomeDetails = () => {
             ))}
           </Typography> */}
         </Grid>
-        <Grid style={{}}>
+        <Grid >
           <Typography variant="h6" style={{ color: '#B0B0B0', }}>
             {perSonalDetails.description}
           </Typography>

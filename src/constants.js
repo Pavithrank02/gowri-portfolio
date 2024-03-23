@@ -172,45 +172,106 @@ export const AppCss = {
   outerGrid: { height: '100vh', display: 'flex', flexDirection: 'row' },
   innerGrid: { display: 'flex', flexDirection: 'column', justifyContent: 'center', }
 }
-
 export const HomeDetailsCss = {
   customBorder: {
     border: '1px solid red',
   },
   containerVariants: {
-    hidden: { x: '-10%' },
-    visible: { x: 0, transition: { type: 'spring', stiffness: 60 } },
+    hidden: { x: '-10vw' },
+    visible: {
+      x: 0,
+      transition: { type: 'spring', stiffness: 60 },
+    },
   },
   outerGrid: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     alignItems: 'center',
-    width: '100%'
+    flexWrap: 'wrap',
   },
   imageSize: {
-    width: '300px',
+    width: '75vw',
+    maxWidth: '300px',
     borderRadius: '50%',
     objectFit: 'cover',
   },
   imageGrid: {
-    marginLeft: '10px'
+    marginLeft: '10px',
   },
   h2Variants: {
-    fontWeight: 800
+    fontWeight: 800,
+    fontSize: '40px',
+    // Assuming default alignment is left for larger screens
+    textAlign: 'left', // Default alignment // Default font size for larger screens
+    // Responsive styles
+    '@media (max-width: 768px)': {
+      textAlign: 'center', // Center alignment on medium screens
+      fontSize: '55px', // Slightly smaller text on medium screens
+    },
+    '@media (max-width: 600px)': {
+      textAlign: 'center', // Center alignment on small screens
+      fontSize: '50px', // Reduced text size for mobile view
+    },
   },
-  innerGrid: {
-  },
+  innerGrid: {},
   innerGrid2: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'left',
     alignItems: 'left',
-    width: '30vw'
-
+    width: '90vw',
+    maxWidth: '30vw',
   },
-  // Add more styles as needed
+  // responsiveStyle: {
+  //   '@media (max-width: 768px)': {
+  //     imageSize: {
+  //       width: '50vw',
+  //     },
+  //     innerGrid2: {
+  //       width: '80vw',
+  //     },
+  //   },
+  //   '@media (max-width: 480px)': {
+  //     outerGrid: {
+  //       flexDirection: 'row',
+  //     },
+  //     h2Variants: {
+  //       fontSize: '20px'
+  //     },
+  //     imageSize: {
+  //       width: '80vw',
+  //     },
+  //     innerGrid2: {
+  //       width: '95vw',
+  //     },
+  //   },
+  // },
 };
+
+// Usage with styled-components or Emotion
+// Example with styled-components for the imageSize
+
+/*
+import styled from 'styled-components';
+
+const Image = styled.div`
+  width: ${HomeDetailsCss.imageSize.width};
+  max-width: ${HomeDetailsCss.imageSize.maxWidth};
+  border-radius: ${HomeDetailsCss.imageSize.borderRadius};
+  object-fit: ${HomeDetailsCss.imageSize.objectFit};
+  @media (max-width: 768px) {
+    width: ${HomeDetailsCss.responsiveStyle['@media (max-width: 768px)'].imageSize.width};
+  }
+  @media (max-width: 480px) {
+    width: ${HomeDetailsCss.responsiveStyle['@media (max-width: 480px)'].imageSize.width};
+  }
+`;
+*/
+
+// Note: The above usage is just an example. Adapt it based on your actual component structure and styling approach.
+
+// Add more styles as needed
 
 export const SideNavCss = {
 
