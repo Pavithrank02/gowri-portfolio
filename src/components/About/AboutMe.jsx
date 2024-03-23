@@ -35,12 +35,11 @@ const AboutMe = () => {
           <Grid>
             <Typography
               sx={{
-                background: theme === 'light' ? '#FFF' : '#292828',
-                color: theme === 'light' ? 'black' : '#B0B0B0'
+                ...AboutCss.h6Variant
               }}
               style={{
-                padding: '0.8rem',
-                width: '6vw',
+                background: theme === 'light' ? '#FFF' : '#292828',
+                color: theme === 'light' ? 'black' : '#B0B0B0'
               }}
               variant='h6'>
               About Me
@@ -95,7 +94,7 @@ const AboutMe = () => {
           <Grid style={AboutCss.perSonalDetailGrid}>
             <PersonalDetails />
           </Grid>
-          <Grid style={{}}>
+          <Grid sx={{ ...AboutCss.downloadGrid }}>
             <motion.a
               animate={{ x: 0, scale: 1 }}
               initial={{ scale: 0 }}
@@ -114,11 +113,10 @@ const AboutMe = () => {
           sx={{
             background: theme === 'light' ? '#F7F7F7 ' : '#131314',
             color: theme === 'light' ? 'black' : '#FAFAFA',
+            ...AboutCss.item3Grid
 
           }}
-          style={AboutCss.item3Grid}
         >
-
           <Grid >
             <Typography variant="h5" fontWeight={800}>
               Experience
@@ -133,8 +131,8 @@ const AboutMe = () => {
           sx={{
             background: theme === 'light' ? '#EFEFEF ' : 'black',
             color: theme === 'light' ? 'black' : '#FAFAFA',
+            ...AboutCss.item4Grid
           }}
-          style={AboutCss.item4Grid}
         >
           <Grid>
             <Typography variant='h5'>

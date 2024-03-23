@@ -26,7 +26,7 @@ const HomeDetails = () => {
       />
       <Grid item xs={6} style={HomeDetailsCss.innerGrid2}>
         <Grid >
-          <Typography style={HomeDetailsCss.h2Variants}>
+          <Typography variant="h2" sx={{ ...HomeDetailsCss.h2Variants }}>
             {perSonalDetails.name}
           </Typography>
           {/* <Typography variant="h2" className="typewriter">

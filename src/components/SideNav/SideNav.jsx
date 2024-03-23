@@ -85,7 +85,7 @@ const SideNav = () => {
       <Grid item style={SideNavCss.CopyGrid}>
         <Typography
           variant='body'
-          sx={{ textDecoration: 'none' }} // Remove text decoration for body text
+          sx={{ ...SideNavCss.bodyVariant }} // Remove text decoration for body text
         >
           CopyRighted to Gowri@2024
         </Typography>
