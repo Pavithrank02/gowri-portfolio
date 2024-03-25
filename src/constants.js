@@ -173,33 +173,32 @@ export const AppCss = {
     height: '100vh',
     display: 'flex',
     flexDirection: 'row',
-    '@media (max-width:600px)': {
-      display: 'flex',
-      flexDirection: 'column',
-      height: '100vh',
-      width: '100vw'
-    },
+    // '@media (max-width:600px)': {
+    //   display: 'flex',
+    //   flexDirection: 'column',
+    //   height: '100%',
+    //   width: '100vw'
+    // },
 
   },
   innerGrid: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'right',
-    '@media (max-width:600px)': {
-      width: '100vw'
-
-    },
+    // '@media (max-width:600px)': {
+    //   width: '100vw',
+    //   marginTop: '10vh',
+    // },
 
   },
   innerGrid2: {
 
-    '@media (max-width:600px)': {
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'center',
-      height: '6vh',
-    },
+    // '@media (max-width:600px)': {
+    //   display: 'flex',
+    //   flexDirection: 'row',
+    //   justifyContent: 'center',
+    //   height: '6vh',
+    // },
 
   }
 }
@@ -274,13 +273,13 @@ export const SideNavCss = {
     textDecoration: 'none',
     height: '100vh',
     width: '25vw',
-    '@media (max-width:600px)': {
+    // '@media (max-width:600px)': {
 
-      height: '5vh',
-      display: 'flex',
-      flexDirection: 'row',
-      width: '100vw',
-    },
+    //   height: '5vh',
+    //   display: 'flex',
+    //   flexDirection: 'row',
+    //   width: '100vw',
+    // },
 
   },
 
@@ -301,19 +300,19 @@ export const SideNavCss = {
   linkGrid: {
     cursor: 'pointer',
     textAlign: 'center',
-    '@media (max-width:600px)': {
-      backgroundColor: 'black',
-      display: 'flex'
-    },
+    // '@media (max-width:600px)': {
+    //   backgroundColor: 'black',
+    //   display: 'flex'
+    // },
 
   },
   innerGrid: {
     textDecoration: 'none',
     textAlign: 'center',
 
-    '@media (max-width:600px)': {
-      display: 'none'
-    },
+    // '@media (max-width:600px)': {
+    //   display: 'none'
+    // },
 
   },
   h3Variant: {
@@ -323,15 +322,15 @@ export const SideNavCss = {
       textAlign: 'center', // Center alignment on medium screens
       fontSize: '26px', // Slightly smaller text on medium screens
     },
-    '@media (max-width:600px)': {
-      display: 'none'
-    },
+    // '@media (max-width:600px)': {
+    //   display: 'none'
+    // },
   },
   CopyGrid: {
     padding: '1rem',
-    '@media (max-width:600px)': {
-      display: 'none'
-    },
+    // '@media (max-width:600px)': {
+    //   display: 'none'
+    // },
   },
   bodyVariant: {
     maxWidth: '100%',
@@ -345,7 +344,9 @@ export const SideNavCss = {
       // Center alignment on medium screens
       fontSize: '20px', // Slightly smaller text on medium screens
     },
-
+    '@media (max-width:600px)': {
+      fontSize: '20px',
+    },
 
   }
 }
