@@ -1,11 +1,162 @@
-html, body {
+html,
+body {
   margin: 0;
   font-family: 'Playfair Display', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.pallete {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #000000;
+  border: 1px solid #000;
+  border-radius: 16px;
+  padding: 24px;
+  transform: translateZ(100px);
+  /* Adjust as needed for your layout */
+}
+
+.pallete:hover {
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  /* Adjust as needed */
+}
+
+.card_Item {
+  width: '300px';
+  transform: translateZ(100px);
+}
+
+.element {
+  height: 15rem;
+  /* Equivalent to h-60 (assuming 1rem = 16px) */
+  width: 100%;
+  /* Equivalent to w-1/2 */
+  object-fit: cover;
+  /* Equivalent to object-cover */
+  border-radius: 0.75rem;
+  /* Equivalent to rounded-xl (assuming 1rem = 16px) */
+}
+
+/* Hover styles */
+.element:hover {
+  box-shadow: 0px 0px 20px rgba(24, 23, 23, 0.25);
+  /* Equivalent to group-hover:shadow-xl */
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  /* Equivalent to justify-between */
+  align-items: center;
+  /* Equivalent to items-center */
+  margin-top: 1rem;
+  /* Equivalent to mt-20 (assuming 1rem = 16px) */
+  transform: translateZ(200px);
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  /* Equivalent to px-4 py-2 (assuming 1rem = 16px) */
+  border-radius: 0.75rem;
+  /* Equivalent to rounded-xl (assuming 1rem = 16px) */
+  font-size: 1rem;
+  /* Equivalent to text-xs (assuming 1rem = 16px) */
+  font-weight: normal;
+  /* Equivalent to font-normal */
+  background-color: #000;
+  color: white;
+}
+
+/* Dark mode */
+.dark-mode .button {
+  color: #000000;
+  /* Equivalent to dark:text-white */
+}
+
+.button2 {
+  padding: 0.5rem 1rem;
+  /* Equivalent to px-4 py-2 (assuming 1rem = 16px) */
+  border-radius: 0.75rem;
+  /* Equivalent to rounded-xl (assuming 1rem = 16px) */
+  background-color: #000;
+  /* Equivalent to bg-black */
+  color: #fff;
+  /* Equivalent to text-white */
+  font-size: 0.75rem;
+  /* Equivalent to text-xs (assuming 1rem = 16px) */
+  font-weight: bold;
+  /* Equivalent to font-bold */
+}
+
+/* Dark mode */
+.dark-mode .button2 {
+  background-color: #fff;
+  /* Equivalent to dark:bg-white */
+  color: #000;
+  /* Equivalent to dark:text-black */
+}
+
+/* MyComponent.css */
+.containers {
+  padding-top: 5rem;
+  /* Equivalent to py-20 (assuming 1rem = 16px) */
+  display: flex;
+  align-items: center;
+  /* Equivalent to items-center */
+  justify-content: center;
+  /* Equivalent to justify-center */
+  perspective: 1000px;
+}
+
+.innerContainer {
+  position: relative;
+  transition: all 200ms linear;
+  display: flex;
+  align-items: center;
+  /* Equivalent to items-center */
+  justify-content: center;
+  /* Equivalent to justify-center */
+  transform-style: preserve-3d;
+}
+
+.custom-div {
+  /* Equivalent to h-96 */
+  /* Equivalent to w-96 */
+  transform-style: preserve-3d;
+}
+
+.custom-div>* {
+  transform-style: preserve-3d;
+}
+
+.tag {
+  width: fit-content;
+  transition-property: all;
+  transition-duration: 0.2s;
+  /* Equivalent to duration-200 (200 milliseconds) */
+  transition-timing-function: linear;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: auto;
+  }
+}
+
+.typewriter>span {
+  display: inline-block;
+  overflow: hidden;
+  animation: typewriter 0.5s steps(30, end) forwards;
 }

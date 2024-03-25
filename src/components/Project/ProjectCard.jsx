@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Grid, Typography, Dialog, DialogContent, DialogTitle } from '@mui/material';
+import { ImageAnimateProject } from './ImageAnimateProject';
+import { useTheme } from '../../ThemeContext';
+import ProjectDescription from './ProjectDescription';
 
-const ProjectCard = ({ img }) => {
+const ProjectCard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const { theme } = useTheme();
 
   useEffect(() => {
     const handleMouseMove = (event) => {
@@ -29,6 +33,7 @@ const ProjectCard = ({ img }) => {
   };
 
   const handleImageClick = () => {
+    console.log("truye")
     setIsModalOpen(true);
   };
 
@@ -41,7 +46,7 @@ const ProjectCard = ({ img }) => {
     justifyContent: 'space-around',
     borderRadius: '10px',
     cursor: 'pointer',
-    ...(isHovered && { transform: 'scale(1.1)', }), // Apply transform on hover
+    ...(isHovered && { transform: 'scale(1)', }), // Apply transform on hover
     transition: 'transform 0.15s ease-in-out',
   };
 
@@ -58,23 +63,25 @@ const ProjectCard = ({ img }) => {
       style={gridStyle}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      padding={2}
     >
-      <img src={img} alt='img' style={{ width: '30vw', height: '50vh', borderRadius: '10px', objectFit: 'cover' }} onClick={handleImageClick} />
+      <Grid
+        onClick={handleImageClick}
+        onBlur={handleCloseModal}
+        open={isModalOpen}>
+        <ImageAnimateProject />
+      </Grid>
       {isHovered && (
         <div style={textContainerStyle}>
-          <Typography variant='h6' style={{ textAlign: 'center', color: 'white' }}>
+          <Typography variant='h6' style={{ textAlign: 'center', color: theme === 'light' ? 'black' : '#B0B0B0' }}>
             Project
           </Typography>
         </div>
       )}
-      <Dialog open={isModalOpen} onClose={handleCloseModal}>
+      <Dialog open={isModalOpen} onClose={handleCloseModal} >
         <DialogTitle>Project Description</DialogTitle>
-        <DialogContent>
+        <DialogContent >
           {/* Add your project description content here */}
-          <Typography variant="body1">
-            This is the project description.
-          </Typography>
+          <ProjectDescription />
         </DialogContent>
       </Dialog>
     </Grid>

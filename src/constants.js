@@ -1,10 +1,57 @@
 import img1 from './assets/gowr.jpg'
+export const name = [
+  {
+    text: "GOWRI",
+  },
+  {
+    text: "SHANKAR",
+  },
+
+]
+export const description = [
+  {
+    text: "I'm",
+  },
+  {
+    text: "a",
+  },
+  {
+    text: "front end ",
+  },
+  {
+    text: "developer",
+  },
+  {
+    text: "with",
+  },
+  {
+    text: "five",
+  },
+  {
+    text: "years",
+  },
+  {
+    text: "of",
+  },
+  {
+    text: "experience",
+  },
+  {
+    text: "in",
+  },
+  {
+    text: "web development",
+  },
+
+]
 export const perSonalDetails = {
-  name: 'GOWRI SHANKAR',
+
+  name: 'GOWRI SHANKAR ',
   description: "  I'm a front end developer with five years of experience in web development.",
   experience: "",
-
 }
+
+// }
 
 export const projectDetails = {
   title: "E-Commerce Website",
@@ -113,58 +160,126 @@ export const ServicesProvided = [
     description: "Web development is the most famous job in the world and it is very interesting... ",
 
   },
+  {
+    id: '07',
+    serviceName: 'Live Chat',
+    description: "Web development is the most famous job in the world and it is very interesting... ",
+
+  },
 ]
 
+export const AppCss = {
+  outerGrid: {
+    height: '100vh',
+    display: 'flex',
+    flexDirection: 'row',
+    // '@media (max-width:600px)': {
+    //   display: 'flex',
+    //   flexDirection: 'column',
+    //   height: '100%',
+    //   width: '100vw'
+    // },
+
+  },
+  innerGrid: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    // '@media (max-width:600px)': {
+    //   width: '100vw',
+    //   marginTop: '10vh',
+    // },
+
+  },
+  innerGrid2: {
+
+    // '@media (max-width:600px)': {
+    //   display: 'flex',
+    //   flexDirection: 'row',
+    //   justifyContent: 'center',
+    //   height: '6vh',
+    // },
+
+  }
+}
 export const HomeDetailsCss = {
   customBorder: {
     border: '1px solid red',
   },
   containerVariants: {
-    hidden: { x: '-30%' },
-    visible: { x: 0, transition: { type: 'spring', stiffness: 60 } },
+    hidden: { x: '-10vw' },
+    visible: {
+      x: 0,
+      transition: { type: 'spring', stiffness: 60 },
+    },
   },
   outerGrid: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     alignItems: 'center',
-    width: '100%'
+    flexWrap: 'wrap',
+    '@media (max-width:600px)': {
+      marginTop: '10vh'
+    },
   },
   imageSize: {
-    width: '300px',
+    width: '75vw',
+    maxWidth: '300px',
     borderRadius: '50%',
     objectFit: 'cover',
   },
   imageGrid: {
-    marginLeft: '10px'
+    marginLeft: '10px',
   },
   h2Variants: {
-    fontWeight: 800
+    fontWeight: 800,
+    fontSize: '40px',
+    // Assuming default alignment is left for larger screens
+    textAlign: 'left', // Default alignment // Default font size for larger screens
+    // Responsive styles
+    '@media (max-width: 768px)': {
+      textAlign: 'center', // Center alignment on medium screens
+      fontSize: '30px', // Slightly smaller text on medium screens
+    },
+    '@media (max-width:600px)': {
+      fontSize: '35px',
+    },
   },
-  innerGrid: {
-  },
+  innerGrid: {},
   innerGrid2: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'left',
     alignItems: 'left',
-    width: '30vw'
-
+    width: '90vw',
+    maxWidth: '30vw',
   },
-  // Add more styles as needed
+
 };
+
+// Note: The above usage is just an example. Adapt it based on your actual component structure and styling approach.
+
+// Add more styles as needed
 
 export const SideNavCss = {
 
   outerGridCss: {
-    display: 'flex',
     position: 'fixed',
+    display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     textDecoration: 'none',
     height: '100vh',
     width: '25vw',
+    // '@media (max-width:600px)': {
+    //   height: '5vh',
+    //   display: 'flex',
+    //   flexDirection: 'row',
+    //   width: '100vw',
+    // },
+
   },
 
   textTransition: {
@@ -184,27 +299,56 @@ export const SideNavCss = {
   linkGrid: {
     cursor: 'pointer',
     textAlign: 'center',
+    '@media (max-width:600px)': {
+      cursor: 'pointer',
+      // display: 'flex',
+
+    },
 
   },
   innerGrid: {
     textDecoration: 'none',
     textAlign: 'center',
-    '@media (max-width:600px)': {
-      padding: '10px',
-    },
+
+    // '@media (max-width:600px)': {
+    //   display: 'none'
+    // },
 
   },
   h3Variant: {
     maxWidth: '100%',
     width: '100%',
-    '@media (max-width:600px)': {
-      fontSize: '24px',
+    '@media (max-width: 768px)': {
+      textAlign: 'center', // Center alignment on medium screens
+      fontSize: '26px', // Slightly smaller text on medium screens
     },
+    // '@media (max-width:600px)': {
+    //   display: 'none'
+    // },
   },
   CopyGrid: {
-    padding: '1rem'
+    padding: '1rem',
+    // '@media (max-width:600px)': {
+    //   display: 'none'
+    // },
   },
+  bodyVariant: {
+    maxWidth: '100%',
+    width: '100%',
+    textAlign: 'center',
+    '@media (max-width: 900px)': {
+      // Center alignment on medium screens
+      fontSize: '22px', // Slightly smaller text on medium screens
+    },
+    '@media (max-width: 768px)': {
+      // Center alignment on medium screens
+      fontSize: '20px', // Slightly smaller text on medium screens
+    },
+    '@media (max-width:600px)': {
+      fontSize: '20px',
+    },
 
+  }
 }
 export const AboutCss = {
   outerGrid: {
@@ -219,6 +363,9 @@ export const AboutCss = {
     height: '70vh',
     objectFit: 'cover',
 
+  },
+  h6Variant: {
+    padding: '0.8rem',
   },
   item1Grid: {
     display: 'flex',
@@ -235,13 +382,31 @@ export const AboutCss = {
     flexDirection: 'column',
     justifyContent: 'space-evenly',
     alignItems: 'center',
+    '@media (max-width: 768px)': {
+      // Center alignment on medium screens
+      height: '100vh',
+      marginBottom: "5vh"// Slightly smaller text on medium screens
+    },
+    '@media (max-width:600px)': {
+      height: '100vh',
+
+    },
   },
   item3Grid: {
     width: '65vw',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-around',
-    height: '100%'
+    height: '100%',
+    '@media (max-width: 768px)': {
+      // Center alignment on medium screens
+      height: '90%', // Slightly smaller text on medium screens
+    },
+    '@media (max-width:660px)': {
+      height: '90%',
+      marginTop: '5vh'
+
+    },
   },
   item4Grid: {
     display: 'flex',
@@ -249,39 +414,83 @@ export const AboutCss = {
     justifyContent: 'space-evenly',
     alignItems: 'center',
     height: '40vh',
-    width: '100%'
+    width: '100%',
+
+
   },
-  testimonyGrid: { width: '90%', textAlign: 'center', },
+  testimonyGrid: {
+    width: '90%',
+    textAlign: 'center',
+    '@media (max-width:509px)': {
+      width: '20vw'
+
+    },
+  },
+  testimonyGrid2: {
+    '@media (max-width:509px)': {
+      height: "30vh"
+    },
+
+
+  },
+  testimonyGrid3: {
+    display: 'flex',
+    flexDirection: 'row',
+    width: '30vw',
+    height: '100%',
+    textAlign: 'justify',
+    padding: '10px',
+    backgroundColor: 'transparent',
+    border: '1px solid gray',
+  },
+  testimonyGrid4: { display: 'flex', flexDirection: 'row', justifyContent: 'left', marginBottom: '10px' },
   perSonalDetailGrid: { width: '65vw', borderBottom: '1px solid gray', }
 }
 export const ProjectContainerCss = {
-
   containerVariants: {
-    hidden: { x: '-30%' },
+    hidden: { x: '-10%' },
     visible: { x: 0, transition: { type: 'spring', stiffness: 60 } },
   },
   outerGrid: {
     display: "flex",
     flexDirection: "column",
-    marginTop: '15vh',
-    width: '65vw ',
-    marginLeft: '5vw'
+    justifyContent: "space-between",
+    alignItems: 'flex-start',
+    height: '100%',
+    width: '65vw',
+    padding: '10px',
+    marginLeft: '5vw',
+    marginTop: '10vh',
+    '@media (max-width: 509px)': {
+      width: '100%', // Adjust for smaller screens
+      marginLeft: '0', // Adjust for smaller screens
+      padding: '5px', // Optional, adjust padding for smaller screens
+    }
   },
-
   innerGrid1: {
-    padding: '0.7rem',
-    backgroundColor: 'lightgray',
-    borderRadius: '10px',
-    width: '20vh',
-    marginBottom: '19px',
-    marginLeft: '20px'
+    padding: '0.8rem',
+    marginLeft: '3.5vw',
+    '@media (max-width: 509px)': {
+      padding: '0.5rem', // Adjust for smaller screens
+      marginLeft: '2vw', // Adjust for smaller screens
+    }
   },
   innerGrid2: {
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "row", // Default to row layout for wider screens
+    justifyContent: 'space-evenly',
+    alignItems: 'flex-start',
     flexWrap: 'wrap',
+    marginRight: '10px',
+    // Media query for mobile devices
+    '@media (max-width: 509px)': {
+      flexDirection: 'column', // Stack items vertically on mobile
+      alignItems: 'center',
+      color: 'red' // Center items if needed
+    }
   },
 }
+
 
 export const ServicesCss = {
   outerGrid: {
@@ -289,15 +498,17 @@ export const ServicesCss = {
     flexDirection: "column",
     justifyContent: 'space-around',
     color: 'white',
-    height: '100%'
+    marginLeft: '8vw',
+    marginTop: '15vh'
   },
   textGrid: {
-    marginBottom: '5vh',
+    marginBottom: '5vh'
   },
   servicesGrid: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'center'
+    justifyContent: 'left',
+    alignItems: 'flex-end',
 
   },
 
@@ -305,10 +516,8 @@ export const ServicesCss = {
     padding: '1.3rem',
     backgroundColor: '#333333',
     marginRight: '40px',
-    marginBottom: '40px'
-  },
-  textContainer: {
+    marginBottom: '40px',
 
-  }
+  },
 
 }

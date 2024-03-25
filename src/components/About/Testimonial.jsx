@@ -1,9 +1,9 @@
 import React from 'react';
 import { Typography, Box, Grid } from '@mui/material';
-import { Testimonies } from '../constants';
-import Slider from 'react-slick';
 import Avatar from '@mui/material/Avatar';
-import img1 from '../assets/gowr.jpg'
+import Slider from 'react-slick';
+import { Testimonies, AboutCss } from '../../constants';
+import img1 from '../../assets/gowr.jpg'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -24,16 +24,16 @@ const Testimonial = () => {
     <Slider {...settings}>
       {Testimonies.map((testimonial, index) => (
         <Box
-          key={index}
+          sx={{ ...AboutCss.testimonyGrid2 }}
         >
-          <Grid style={{ marginLeft: '20px', width: '30vw', height: '24vh', textAlign: 'justify', padding: '10px', backgroundColor: 'transparent', border: '1px solid gray' }}>
-            <Grid style={{ display: 'flex', flexDirection: 'row', justifyContent: 'left', marginBottom: '10px' }}>
+          <Grid key={index} container sx={{ ...AboutCss.testimonyGrid3 }}>
+            <Grid item sx={{ ...AboutCss.testimonyGrid4 }}>
               <Avatar alt="Remy Sharp" src={img1} />
               <Typography variant="h6" gutterBottom style={{ marginLeft: '10px', marginTop: '5px' }}>
                 {testimonial.name}
               </Typography>
             </Grid>
-            <Grid>
+            <Grid item >
               <Typography variant="body1" style={{ color: '#B0B0B0', fontStyle: 'italic' }} gutterBottom>
                 {testimonial.testimony}
               </Typography>

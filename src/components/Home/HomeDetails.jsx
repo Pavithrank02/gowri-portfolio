@@ -1,12 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Grid, Typography, IconButton } from '@mui/material';
 import { GitHub, LinkedIn, Twitter, Instagram } from '@mui/icons-material';
-import { perSonalDetails, HomeDetailsCss } from '../constants';
-import img1 from '../assets/gowr.jpg';
+import { motion } from 'framer-motion';
 import Lottie from 'lottie-react';
-import animationData from '../assets/gowri.json'
-
+import { perSonalDetails, HomeDetailsCss } from '../../constants';
+import animationData from '../../assets/gowri.json'
+import '../../index.css'
 const HomeDetails = () => {
 
 
@@ -16,25 +15,35 @@ const HomeDetails = () => {
       animate="visible"
       container
       xs={12}
-      style={HomeDetailsCss.outerGrid}
+      style={{ ...HomeDetailsCss.outerGrid }}
       variants={HomeDetailsCss.containerVariants}
     >
       <Lottie
         animationData={animationData}
         loop
         autoplay
-        style={{ width: 400, height: 400 }}
+        style={{ maxWidth: 400, height: 400 }}
       />
-      <Grid item xs={6} style={HomeDetailsCss.innerGrid2}>
-        <Grid style={{}}>
-          <Typography variant="h2" style={HomeDetailsCss.h2Variants}>
+      <Grid item xs={6} sx={{ ...HomeDetailsCss.innerGrid2 }}>
+        <Grid >
+          <Typography variant="h2" sx={{ ...HomeDetailsCss.h2Variants }}>
             {perSonalDetails.name}
           </Typography>
+          {/* <Typography variant="h2" className="typewriter">
+            {perSonalDetails.name.split('').map((letter, index) => (
+              <span key={index}>{letter}</span>
+            ))}
+          </Typography> */}
         </Grid>
-        <Grid style={{}}>
+        <Grid >
           <Typography variant="h6" style={{ color: '#B0B0B0', }}>
             {perSonalDetails.description}
           </Typography>
+          {/* <Typography variant="h2" style={{ color: '#B0B0B0', }} className="typewriter">
+            {perSonalDetails.description.split('').map((letter, index) => (
+              <span key={index}>{letter}</span>
+            ))}
+          </Typography> */}
         </Grid>
         <Grid style={{ fontSize: '2rem' }}>
           <IconButton color="inherit" >

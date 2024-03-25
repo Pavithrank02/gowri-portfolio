@@ -7,12 +7,22 @@ import PersonIcon from '@mui/icons-material/Person';
 import ContactsIcon from '@mui/icons-material/Contacts';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
-import { SideNavCss } from '../constants';
+import Toggle from './ToggleButton';
+import { SideNavCss } from '../../constants';
+// import Gowrilogo1 from '../../assets/Gowrilogo1.png'
 
 const SideNav = () => {
   return (
-    <Grid container style={SideNavCss.outerGridCss}>
-      <Grid item sx={SideNavCss.innerGrid}>
+    <Grid container sx={{ ...SideNavCss.outerGridCss }}>
+      <Grid item>
+        <Toggle />
+      </Grid>
+      <Grid item >
+        {/* <img
+          src={Gowrilogo1}
+          alt='logo-white'
+          style={{ height: '100px' }}
+        /> */}
         <Typography
           variant='h3'
           sx={{ ...SideNavCss.h3Variant, textDecoration: 'none' }} // Remove text decoration for h3
@@ -20,7 +30,7 @@ const SideNav = () => {
           Gowri Shankar
         </Typography>
       </Grid>
-      <Grid item style={SideNavCss.linkGrid}>
+      <Grid item sx={{ ...SideNavCss.linkGrid }}>
         <Link to='/' style={{ textDecoration: 'none' }}> {/* Remove text decoration for link */}
           <Grid sx={SideNavCss.textTransition}>
             <Typography
@@ -43,17 +53,7 @@ const SideNav = () => {
             </Typography>
           </Grid>
         </Link>
-        <Link to='/contact' style={{ textDecoration: 'none' }}>
-          <Grid sx={SideNavCss.textTransition}>
-            <Typography
-              variant='body'
-              sx={{ textDecoration: 'none' }}
-            >
-              <ContactsIcon style={SideNavCss.IconStyle} />
-              Contact
-            </Typography>
-          </Grid>
-        </Link>
+
         <Link to='/project' style={{ textDecoration: 'none' }}>
           <Grid sx={SideNavCss.textTransition}>
             <Typography variant='body' sx={{ textDecoration: 'none' }}>
@@ -70,11 +70,22 @@ const SideNav = () => {
             </Typography>
           </Grid>
         </Link>
+        <Link to='/contact' style={{ textDecoration: 'none' }}>
+          <Grid sx={SideNavCss.textTransition}>
+            <Typography
+              variant='body'
+              sx={{ textDecoration: 'none' }}
+            >
+              <ContactsIcon style={SideNavCss.IconStyle} />
+              Contact
+            </Typography>
+          </Grid>
+        </Link>
       </Grid>
-      <Grid item style={SideNavCss.CopyGrid}>
+      <Grid item sx={{ ...SideNavCss.CopyGrid }}>
         <Typography
           variant='body'
-          sx={{ textDecoration: 'none' }} // Remove text decoration for body text
+          sx={{ ...SideNavCss.bodyVariant }} // Remove text decoration for body text
         >
           CopyRighted to Gowri@2024
         </Typography>
