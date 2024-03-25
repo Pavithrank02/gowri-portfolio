@@ -274,7 +274,6 @@ export const SideNavCss = {
     height: '100vh',
     width: '25vw',
     // '@media (max-width:600px)': {
-
     //   height: '5vh',
     //   display: 'flex',
     //   flexDirection: 'row',
@@ -300,10 +299,11 @@ export const SideNavCss = {
   linkGrid: {
     cursor: 'pointer',
     textAlign: 'center',
-    // '@media (max-width:600px)': {
-    //   backgroundColor: 'black',
-    //   display: 'flex'
-    // },
+    '@media (max-width:600px)': {
+      cursor: 'pointer',
+      // display: 'flex',
+
+    },
 
   },
   innerGrid: {

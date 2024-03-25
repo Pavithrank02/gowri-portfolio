@@ -26,7 +26,8 @@ function App() {
       </Grid>
       <Grid item xs={9}
         style={{ background: theme === 'light' ? '#F7F7F7 ' : '#131314', color: theme === 'light' ? 'black' : '#FAFAFA' }}
-        sx={{ ...AppCss.innerGrid }}>
+        sx={{ ...AppCss.innerGrid }}
+      >
         <Grid item>
           <Routes>
             <Route path='/' element={<Home />} />
