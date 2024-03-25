@@ -13,11 +13,11 @@ import { SideNavCss } from '../../constants';
 
 const SideNav = () => {
   return (
-    <Grid container style={SideNavCss.outerGridCss}>
+    <Grid container sx={{ ...SideNavCss.outerGridCss }}>
       <Grid item>
         <Toggle />
       </Grid>
-      <Grid item sx={SideNavCss.innerGrid}>
+      <Grid item >
         {/* <img
           src={Gowrilogo1}
           alt='logo-white'
@@ -30,7 +30,7 @@ const SideNav = () => {
           Gowri Shankar
         </Typography>
       </Grid>
-      <Grid item style={SideNavCss.linkGrid}>
+      <Grid item sx={{ ...SideNavCss.linkGrid }}>
         <Link to='/' style={{ textDecoration: 'none' }}> {/* Remove text decoration for link */}
           <Grid sx={SideNavCss.textTransition}>
             <Typography
@@ -82,7 +82,7 @@ const SideNav = () => {
           </Grid>
         </Link>
       </Grid>
-      <Grid item style={SideNavCss.CopyGrid}>
+      <Grid item sx={{ ...SideNavCss.CopyGrid }}>
         <Typography
           variant='body'
           sx={{ ...SideNavCss.bodyVariant }} // Remove text decoration for body text

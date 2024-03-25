@@ -169,8 +169,39 @@ export const ServicesProvided = [
 ]
 
 export const AppCss = {
-  outerGrid: { height: '100vh', display: 'flex', flexDirection: 'row' },
-  innerGrid: { display: 'flex', flexDirection: 'column', justifyContent: 'center', }
+  outerGrid: {
+    height: '100vh',
+    display: 'flex',
+    flexDirection: 'row',
+    '@media (max-width:600px)': {
+      display: 'flex',
+      flexDirection: 'column',
+      height: '100vh',
+      width: '100vw'
+    },
+
+  },
+  innerGrid: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'right',
+    '@media (max-width:600px)': {
+      width: '100vw'
+
+    },
+
+  },
+  innerGrid2: {
+
+    '@media (max-width:600px)': {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'center',
+      height: '6vh',
+    },
+
+  }
 }
 export const HomeDetailsCss = {
   customBorder: {
@@ -189,6 +220,9 @@ export const HomeDetailsCss = {
     justifyContent: 'space-evenly',
     alignItems: 'center',
     flexWrap: 'wrap',
+    '@media (max-width:600px)': {
+      marginTop: '10vh'
+    },
   },
   imageSize: {
     width: '75vw',
@@ -207,11 +241,10 @@ export const HomeDetailsCss = {
     // Responsive styles
     '@media (max-width: 768px)': {
       textAlign: 'center', // Center alignment on medium screens
-      fontSize: '55px', // Slightly smaller text on medium screens
+      fontSize: '30px', // Slightly smaller text on medium screens
     },
-    '@media (max-width: 600px)': {
-      textAlign: 'center', // Center alignment on small screens
-      fontSize: '50px', // Reduced text size for mobile view
+    '@media (max-width:600px)': {
+      fontSize: '35px',
     },
   },
   innerGrid: {},
@@ -223,51 +256,8 @@ export const HomeDetailsCss = {
     width: '90vw',
     maxWidth: '30vw',
   },
-  // responsiveStyle: {
-  //   '@media (max-width: 768px)': {
-  //     imageSize: {
-  //       width: '50vw',
-  //     },
-  //     innerGrid2: {
-  //       width: '80vw',
-  //     },
-  //   },
-  //   '@media (max-width: 480px)': {
-  //     outerGrid: {
-  //       flexDirection: 'row',
-  //     },
-  //     h2Variants: {
-  //       fontSize: '20px'
-  //     },
-  //     imageSize: {
-  //       width: '80vw',
-  //     },
-  //     innerGrid2: {
-  //       width: '95vw',
-  //     },
-  //   },
-  // },
+
 };
-
-// Usage with styled-components or Emotion
-// Example with styled-components for the imageSize
-
-/*
-import styled from 'styled-components';
-
-const Image = styled.div`
-  width: ${HomeDetailsCss.imageSize.width};
-  max-width: ${HomeDetailsCss.imageSize.maxWidth};
-  border-radius: ${HomeDetailsCss.imageSize.borderRadius};
-  object-fit: ${HomeDetailsCss.imageSize.objectFit};
-  @media (max-width: 768px) {
-    width: ${HomeDetailsCss.responsiveStyle['@media (max-width: 768px)'].imageSize.width};
-  }
-  @media (max-width: 480px) {
-    width: ${HomeDetailsCss.responsiveStyle['@media (max-width: 480px)'].imageSize.width};
-  }
-`;
-*/
 
 // Note: The above usage is just an example. Adapt it based on your actual component structure and styling approach.
 
@@ -276,14 +266,22 @@ const Image = styled.div`
 export const SideNavCss = {
 
   outerGridCss: {
-    display: 'flex',
     position: 'fixed',
+    display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     textDecoration: 'none',
     height: '100vh',
     width: '25vw',
+    '@media (max-width:600px)': {
+
+      height: '5vh',
+      display: 'flex',
+      flexDirection: 'row',
+      width: '100vw',
+    },
+
   },
 
   textTransition: {
@@ -303,27 +301,53 @@ export const SideNavCss = {
   linkGrid: {
     cursor: 'pointer',
     textAlign: 'center',
+    '@media (max-width:600px)': {
+      backgroundColor: 'black',
+      display: 'flex'
+    },
 
   },
   innerGrid: {
     textDecoration: 'none',
     textAlign: 'center',
+
     '@media (max-width:600px)': {
-      padding: '10px',
+      display: 'none'
     },
 
   },
   h3Variant: {
     maxWidth: '100%',
     width: '100%',
+    '@media (max-width: 768px)': {
+      textAlign: 'center', // Center alignment on medium screens
+      fontSize: '26px', // Slightly smaller text on medium screens
+    },
     '@media (max-width:600px)': {
-      fontSize: '24px',
+      display: 'none'
     },
   },
   CopyGrid: {
-    padding: '1rem'
+    padding: '1rem',
+    '@media (max-width:600px)': {
+      display: 'none'
+    },
   },
+  bodyVariant: {
+    maxWidth: '100%',
+    width: '100%',
+    textAlign: 'center',
+    '@media (max-width: 900px)': {
+      // Center alignment on medium screens
+      fontSize: '22px', // Slightly smaller text on medium screens
+    },
+    '@media (max-width: 768px)': {
+      // Center alignment on medium screens
+      fontSize: '20px', // Slightly smaller text on medium screens
+    },
 
+
+  }
 }
 export const AboutCss = {
   outerGrid: {
@@ -338,6 +362,9 @@ export const AboutCss = {
     height: '70vh',
     objectFit: 'cover',
 
+  },
+  h6Variant: {
+    padding: '0.8rem',
   },
   item1Grid: {
     display: 'flex',
@@ -354,13 +381,31 @@ export const AboutCss = {
     flexDirection: 'column',
     justifyContent: 'space-evenly',
     alignItems: 'center',
+    '@media (max-width: 768px)': {
+      // Center alignment on medium screens
+      height: '100vh',
+      marginBottom: "5vh"// Slightly smaller text on medium screens
+    },
+    '@media (max-width:600px)': {
+      height: '100vh',
+
+    },
   },
   item3Grid: {
     width: '65vw',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-around',
-    height: '100%'
+    height: '100%',
+    '@media (max-width: 768px)': {
+      // Center alignment on medium screens
+      height: '90%', // Slightly smaller text on medium screens
+    },
+    '@media (max-width:660px)': {
+      height: '90%',
+      marginTop: '5vh'
+
+    },
   },
   item4Grid: {
     display: 'flex',
@@ -368,14 +413,39 @@ export const AboutCss = {
     justifyContent: 'space-evenly',
     alignItems: 'center',
     height: '40vh',
-    width: '100%'
-  },
+    width: '100%',
 
-  testimonyGrid: { width: '90%', textAlign: 'center', },
+
+  },
+  testimonyGrid: {
+    width: '90%',
+    textAlign: 'center',
+    '@media (max-width:509px)': {
+      width: '20vw'
+
+    },
+  },
+  testimonyGrid2: {
+    '@media (max-width:509px)': {
+      height: "30vh"
+    },
+
+
+  },
+  testimonyGrid3: {
+    display: 'flex',
+    flexDirection: 'row',
+    width: '30vw',
+    height: '100%',
+    textAlign: 'justify',
+    padding: '10px',
+    backgroundColor: 'transparent',
+    border: '1px solid gray',
+  },
+  testimonyGrid4: { display: 'flex', flexDirection: 'row', justifyContent: 'left', marginBottom: '10px' },
   perSonalDetailGrid: { width: '65vw', borderBottom: '1px solid gray', }
 }
 export const ProjectContainerCss = {
-
   containerVariants: {
     hidden: { x: '-10%' },
     visible: { x: 0, transition: { type: 'spring', stiffness: 60 } },
@@ -389,24 +459,37 @@ export const ProjectContainerCss = {
     width: '65vw',
     padding: '10px',
     marginLeft: '5vw',
-    marginTop: '10vh'
-
-
+    marginTop: '10vh',
+    '@media (max-width: 509px)': {
+      width: '100%', // Adjust for smaller screens
+      marginLeft: '0', // Adjust for smaller screens
+      padding: '5px', // Optional, adjust padding for smaller screens
+    }
   },
   innerGrid1: {
     padding: '0.8rem',
-    marginLeft: '3.5vw'
+    marginLeft: '3.5vw',
+    '@media (max-width: 509px)': {
+      padding: '0.5rem', // Adjust for smaller screens
+      marginLeft: '2vw', // Adjust for smaller screens
+    }
   },
-
   innerGrid2: {
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "row", // Default to row layout for wider screens
     justifyContent: 'space-evenly',
     alignItems: 'flex-start',
     flexWrap: 'wrap',
-    marginRight: '10px'
+    marginRight: '10px',
+    // Media query for mobile devices
+    '@media (max-width: 509px)': {
+      flexDirection: 'column', // Stack items vertically on mobile
+      alignItems: 'center',
+      color: 'red' // Center items if needed
+    }
   },
 }
+
 
 export const ServicesCss = {
   outerGrid: {
@@ -435,8 +518,5 @@ export const ServicesCss = {
     marginBottom: '40px',
 
   },
-  textContainer: {
-
-  }
 
 }

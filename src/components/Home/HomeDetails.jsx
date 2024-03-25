@@ -15,7 +15,7 @@ const HomeDetails = () => {
       animate="visible"
       container
       xs={12}
-      style={HomeDetailsCss.outerGrid}
+      style={{ ...HomeDetailsCss.outerGrid }}
       variants={HomeDetailsCss.containerVariants}
     >
       <Lottie
@@ -24,7 +24,7 @@ const HomeDetails = () => {
         autoplay
         style={{ maxWidth: 400, height: 400 }}
       />
-      <Grid item xs={6} style={HomeDetailsCss.innerGrid2}>
+      <Grid item xs={6} sx={{ ...HomeDetailsCss.innerGrid2 }}>
         <Grid >
           <Typography variant="h2" sx={{ ...HomeDetailsCss.h2Variants }}>
             {perSonalDetails.name}

@@ -8,7 +8,6 @@ import Project from './view/Project';
 import { Grid } from '@mui/material';
 import Service from './view/Service';
 import { useTheme } from './ThemeContext';
-import Toggle from './components/SideNav/ToggleButton';
 import { AppCss } from './constants';
 
 
@@ -16,14 +15,18 @@ function App() {
   const { theme } = useTheme();
 
   return (
-    <Grid container xs={12} style={AppCss.outerGrid}>
-      <Grid item xs={3} sx={{ background: theme === 'light' ? '#FFF' : 'black', color: theme === 'light' ? 'black' : 'white' }}>
+    <Grid container xs={12}
+      sx={{ ...AppCss.outerGrid }}
+    >
+      <Grid item xs={3}
+        sx={{ ...AppCss.innerGrid2 }}
+        style={{ background: theme === 'light' ? '#FFF' : 'black', color: theme === 'light' ? 'black' : 'white' }}
+      >
         <SideNav />
       </Grid>
-      <Grid item xs={9} sx={{ background: theme === 'light' ? '#F7F7F7 ' : '#131314', color: theme === 'light' ? 'black' : '#FAFAFA' }} style={AppCss.innerGrid}>
-        <Grid item>
-          <Toggle />
-        </Grid>
+      <Grid item xs={9}
+        style={{ background: theme === 'light' ? '#F7F7F7 ' : '#131314', color: theme === 'light' ? 'black' : '#FAFAFA' }}
+        sx={{ ...AppCss.innerGrid }}>
         <Grid item>
           <Routes>
             <Route path='/' element={<Home />} />
