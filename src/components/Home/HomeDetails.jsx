@@ -10,7 +10,7 @@ const HomeDetails = () => {
 
 
   return (
-    <motion.Grid
+    <motion.div
       initial="hidden"
       animate="visible"
       container
@@ -69,7 +69,7 @@ const HomeDetails = () => {
           </Grid>
         </Grid>
       </Grid>
-    </motion.Grid>
+    </motion.div>
   );
 };
 
