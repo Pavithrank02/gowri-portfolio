@@ -375,6 +375,11 @@ export const HomeDetailsCss = {
     justifyContent: 'space-evenly',
     alignItems: 'center',
     height: '100vh',
+    '@media (max-width:968px)': {
+      flexDirection: 'column',
+      justifyContent: 'space-around',
+      width: '100vw',
+    },
     '@media (max-width:768px)': {
       flexDirection: 'column',
       justifyContent: 'space-around',
@@ -392,6 +397,11 @@ export const HomeDetailsCss = {
 
   },
   lottieGrid: {
+    '@media (max-width:768px)': {
+      maxWidth: 300,
+      height: 300,
+      // display: 'none'
+    },
     '@media (max-width:600px)': {
       maxWidth: 300,
       height: 300,
@@ -413,8 +423,13 @@ export const HomeDetailsCss = {
     // Assuming default alignment is left for larger screens
     textAlign: 'left', // Default alignment // Default font size for larger screens
     // Responsive styles
-    '@media (max-width: 768px)': {
+    '@media (max-width: 968px)': {
+      width: '100%',
       textAlign: 'center', // Center alignment on medium screens
+      fontSize: '50px', // Slightly smaller text on medium screens
+    },
+    '@media (max-width: 768px)': {
+      textAlign: 'left', // Center alignment on medium screens
       fontSize: '30px', // Slightly smaller text on medium screens
     },
     '@media (max-width:600px)': {
@@ -423,8 +438,16 @@ export const HomeDetailsCss = {
     },
   },
   h3Variants: {
-    '@media (max-width:600px)': {
+    '@media (max-width:968px)': {
       width: '40vw',
+      textAlign: 'justify'
+    },
+    '@media (max-width:768px)': {
+      width: '40vw',
+      textAlign: 'justify'
+    },
+    '@media (max-width:600px)': {
+      width: '60vw',
       textAlign: 'justify'
     },
   },
@@ -439,13 +462,35 @@ export const HomeDetailsCss = {
   innerGrid2: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'left',
+    justifyContent: 'space-around',
     alignItems: 'left',
     width: '90vw',
     maxWidth: '30vw',
-    '@media (max-width:600px)': {
+    '@media (max-width:968px)': {
       display: 'flex',
       flexDirection: 'column',
+      maxWidth: '40vw',
+      alignItems: 'center',
+    },
+    '@media (max-width:900px)': {
+      display: 'flex',
+      flexDirection: 'column',
+      maxWidth: '70vw',
+      alignItems: 'center',
+    },
+    '@media (max-width:768px)': {
+      display: 'flex',
+      flexDirection: 'column',
+      maxWidth: '70vw',
+      alignItems: 'center',
+    },
+    '@media (max-width:600px)': {
+
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      maxWidth: '70vw',
+      alignItems: 'center',
     },
   },
 
