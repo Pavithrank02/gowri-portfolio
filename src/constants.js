@@ -626,7 +626,17 @@ export const AboutCss = {
     padding: '10px',
     backgroundColor: 'transparent',
     border: '1px solid gray',
-    '@media (max-width:509px)': {
+    '@media (max-width:900px)': {
+      height: "35vh",
+      width: '40vw',
+
+    },
+    '@media (max-width:768px)': {
+      height: "35vh",
+      width: '40vw',
+
+    },
+    '@media (max-width:600px)': {
       height: "35vh",
       width: '60vw',
 
