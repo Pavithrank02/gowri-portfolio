@@ -479,6 +479,7 @@ export const AboutCss = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     padding: '5px',
+    width: '30vw',
     '@media (max-width:600px)': {
       width: '50vw',
     },
@@ -493,14 +494,16 @@ export const AboutCss = {
   },
   h6Variant: {
     padding: '0.8rem',
+    width: '12vh'
   },
   item1Grid: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-evenly',
-    alignItems: 'center',
+    alignItems: 'left',
     height: '100vh',
     '@media (max-width:600px)': {
+      alignItems: 'center',
       width: '90vw',
       height: '100vh',
     },

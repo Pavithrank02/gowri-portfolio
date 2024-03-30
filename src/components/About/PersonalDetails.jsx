@@ -22,8 +22,8 @@ const PersonalDetails = () => {
           )
         })}
       </Grid>
-      <Grid style={{ display: 'flex', flexDirection: 'column', }}>
-        <Grid style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
+      <Grid sx={{ ...AboutCss.PersonGrid }}>
+        <Grid style={{ display: 'flex', flexDirection: 'column', }}>
           {Object.entries(About).slice(8).map(([key, value]) => {
             return (
               <Grid sx={{ ...AboutCss.Persons }}>
