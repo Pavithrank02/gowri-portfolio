@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Box, Grid } from '@mui/material';
+import { Typography, Box, Grid, useTheme, useMediaQuery } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import Slider from 'react-slick';
 import { Testimonies, AboutCss } from '../../constants';
@@ -8,11 +8,13 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const Testimonial = () => {
+  const theme = useTheme();
+  const isXs = useMediaQuery(theme.breakpoints.down('sm')); // Adjust breakpoint as needed
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 2, // Display two testimonies at a time
+    slidesToShow: isXs ? 1 : 2, // Display one testimony on small screens, two otherwise
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,

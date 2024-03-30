@@ -4,12 +4,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import LaunchIcon from '@mui/icons-material/Launch';
 import MasonryImageList from './ImageList';
+import { ProjectContainerCss } from '../../constants'
 
 const ProjectDescription = () => {
   return (
     <Grid container
-      style={{ display: 'flex', flexDirection: "column", width: "30vw", }}>
-      <Grid item>
+      sx={{ ...ProjectContainerCss.description }}>
+      <Grid item
+        sx={{ ...ProjectContainerCss.descriptionImage }}>
         <img
           src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           height="800"
@@ -29,15 +31,18 @@ const ProjectDescription = () => {
         </Typography>
       </Grid>
       <Grid item
+        sx={{ ...ProjectContainerCss.descriptionImage }}
       >
         <Typography variant="body1" style={{ fontStyle: "italic" }}>
           MERN Stack based chat application which is used by user for chatting and once the user are registered they can able to chat with other registered users. All user information and chats will be handled in Mongodb. User interaction will be made through Socket.io.
         </Typography>
       </Grid>
-      <Grid item>
+      <Grid item
+        sx={{ ...ProjectContainerCss.descriptionImage }}
+      >
         <MasonryImageList />
       </Grid>
-      <Grid item style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' }}>
+      <Grid item sx={{ ...ProjectContainerCss.descriptionOuter }}>
         <Grid style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' }}>
           <IconButton color="inherit" >
             <Typography variant="body1">

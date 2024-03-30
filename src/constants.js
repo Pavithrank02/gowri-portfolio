@@ -170,98 +170,52 @@ export const ServicesProvided = [
 
 export const AppCss = {
   outerGrid: {
-    height: '100vh',
+
     display: 'flex',
-    flexDirection: 'row',
-    // '@media (max-width:600px)': {
-    //   display: 'flex',
-    //   flexDirection: 'column',
-    //   height: '100%',
-    //   width: '100vw'
-    // },
+    flexDirection: { xs: 'column', md: 'row', sm: 'column', lg: 'column' }, // Column layout for xs, row layout for md and up
+    width: '100%',
+    minHeight: '100vh',
+    //     height: '100vh',
+    //     display: 'flex',
+    //     flexDirection: 'row',
+    //     '@media (max-width:600px)': {
+    //       display: 'flex',
+    //       flexDirection: 'column',
+    //       height: '100%',
+    //       width: '100vw'
+    //     },
 
   },
   innerGrid: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    // '@media (max-width:600px)': {
-    //   width: '100vw',
-    //   marginTop: '10vh',
-    // },
+    position: { md: 'fixed' },
+    height: { xs: 'auto', }, // Full height only on md screens and up
+    width: { lg: '25vw' }, // Fixed width for md screens and up
+    zIndex: 1, // Ensure it sits above other content
+    //     display: 'flex',
+    //     flexDirection: 'column',
+    //     justifyContent: 'center',
+    //     backgroundColor: 'black',
+    //     width: '75vw',
+    //     marginLeft: '25vw',
+    //     '@media (max-width:600px)': {
+    //       width: '100vw',
+    //       marginTop: '15vh',
+    //       flexDirection: 'row',
+    //       marginLeft: '-25vw',
+    //     },
 
   },
   innerGrid2: {
-
-    // '@media (max-width:600px)': {
-    //   display: 'flex',
-    //   flexDirection: 'row',
-    //   justifyContent: 'center',
-    //   height: '6vh',
-    // },
+    marginLeft: { md: '25vw', }, // Compensate for the SideNav width on md screens and up
+    width: { xs: '100%', }, // Ensure it uses the correct width based on the screen size
+    minHeight: '100vh',
+    '@media (max-width:968px)': {
+      maxWidth: '100%',
+      marginLeft: '0'
+    },
 
   }
 }
-export const HomeDetailsCss = {
-  customBorder: {
-    border: '1px solid red',
-  },
-  containerVariants: {
-    hidden: { x: '-10vw' },
-    visible: {
-      x: 0,
-      transition: { type: 'spring', stiffness: 60 },
-    },
-  },
-  outerGrid: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    alignItems: 'center',
-    flexWrap: 'wrap',
-    '@media (max-width:600px)': {
-      marginTop: '10vh'
-    },
-  },
-  imageSize: {
-    width: '75vw',
-    maxWidth: '300px',
-    borderRadius: '50%',
-    objectFit: 'cover',
-  },
-  imageGrid: {
-    marginLeft: '10px',
-  },
-  h2Variants: {
-    fontWeight: 800,
-    fontSize: '40px',
-    // Assuming default alignment is left for larger screens
-    textAlign: 'left', // Default alignment // Default font size for larger screens
-    // Responsive styles
-    '@media (max-width: 768px)': {
-      textAlign: 'center', // Center alignment on medium screens
-      fontSize: '30px', // Slightly smaller text on medium screens
-    },
-    '@media (max-width:600px)': {
-      fontSize: '35px',
-    },
-  },
-  innerGrid: {},
-  innerGrid2: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'left',
-    alignItems: 'left',
-    width: '90vw',
-    maxWidth: '30vw',
-  },
-
-};
-
-// Note: The above usage is just an example. Adapt it based on your actual component structure and styling approach.
-
-// Add more styles as needed
-
 export const SideNavCss = {
 
   outerGridCss: {
@@ -273,12 +227,43 @@ export const SideNavCss = {
     textDecoration: 'none',
     height: '100vh',
     width: '25vw',
-    // '@media (max-width:600px)': {
-    //   height: '5vh',
-    //   display: 'flex',
-    //   flexDirection: 'row',
-    //   width: '100vw',
-    // },
+    zIndex: "9999",
+    '@media (max-width:968px)': {
+      height: '10vh',
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-evenly',
+      width: '100vw',
+      padding: '10px'
+
+    },
+    '@media (max-width:900px)': {
+      height: '10vh',
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-evenly',
+      width: '100vw',
+      padding: '10px'
+
+    },
+    '@media (max-width:768px)': {
+      height: '12vh',
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-evenly',
+      width: '100vw',
+      padding: '10px'
+
+    },
+    '@media (max-width:600px)': {
+      height: '15vh',
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      width: '100vw',
+      padding: '10px'
+
+    },
 
   },
 
@@ -299,9 +284,14 @@ export const SideNavCss = {
   linkGrid: {
     cursor: 'pointer',
     textAlign: 'center',
+    '@media (max-width:968px)': {
+      cursor: 'pointer',
+      display: 'flex',
+
+    },
     '@media (max-width:600px)': {
       cursor: 'pointer',
-      // display: 'flex',
+      display: 'flex',
 
     },
 
@@ -310,14 +300,22 @@ export const SideNavCss = {
     textDecoration: 'none',
     textAlign: 'center',
 
-    // '@media (max-width:600px)': {
-    //   display: 'none'
-    // },
+    '@media (max-width:768px)': {
+      display: 'none'
+    },
 
   },
   h3Variant: {
     maxWidth: '100%',
     width: '100%',
+    '@media (max-width: 1270px)': {
+      textAlign: 'center', // Center alignment on medium screens
+      fontSize: '26px', // Slightly smaller text on medium screens
+    },
+    '@media (max-width: 900px)': {
+      textAlign: 'center', // Center alignment on medium screens
+      fontSize: '26px', // Slightly smaller text on medium screens
+    },
     '@media (max-width: 768px)': {
       textAlign: 'center', // Center alignment on medium screens
       fontSize: '26px', // Slightly smaller text on medium screens
@@ -328,9 +326,18 @@ export const SideNavCss = {
   },
   CopyGrid: {
     padding: '1rem',
-    // '@media (max-width:600px)': {
-    //   display: 'none'
-    // },
+    '@media (max-width:968px)': {
+      display: 'none'
+    },
+    '@media (max-width:900px)': {
+      display: 'none'
+    },
+    '@media (max-width:768px)': {
+      display: 'none'
+    },
+    '@media (max-width:600px)': {
+      display: 'none'
+    },
   },
   bodyVariant: {
     maxWidth: '100%',
@@ -350,19 +357,139 @@ export const SideNavCss = {
 
   }
 }
+
+export const HomeDetailsCss = {
+  customBorder: {
+    border: '1px solid red',
+  },
+  containerVariants: {
+    hidden: { x: '-10vw' },
+    visible: {
+      x: 0,
+      transition: { type: 'spring', stiffness: 60 },
+    },
+  },
+  outerGrid: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    height: '100vh',
+    '@media (max-width:768px)': {
+      flexDirection: 'column',
+      justifyContent: 'space-around',
+      width: '100vw',
+    },
+    '@media (max-width:600px)': {
+      flexDirection: 'column',
+      justifyContent: 'space-around',
+      width: '100vw',
+    },
+  },
+  lottie: {
+    maxWidth: 400,
+    height: 400,
+
+  },
+  lottieGrid: {
+    '@media (max-width:600px)': {
+      maxWidth: 300,
+      height: 300,
+      // display: 'none'
+    },
+  },
+  imageSize: {
+    width: '75vw',
+    maxWidth: '300px',
+    borderRadius: '50%',
+    objectFit: 'cover',
+  },
+  imageGrid: {
+    // marginLeft: '10px',
+  },
+  h2Variants: {
+    fontWeight: 800,
+    fontSize: '40px',
+    // Assuming default alignment is left for larger screens
+    textAlign: 'left', // Default alignment // Default font size for larger screens
+    // Responsive styles
+    '@media (max-width: 768px)': {
+      textAlign: 'center', // Center alignment on medium screens
+      fontSize: '30px', // Slightly smaller text on medium screens
+    },
+    '@media (max-width:600px)': {
+      fontSize: '35px',
+      textAlign: 'left',
+    },
+  },
+  h3Variants: {
+    '@media (max-width:600px)': {
+      width: '40vw',
+      textAlign: 'justify'
+    },
+  },
+  iconStyle: {
+    fontSize: '2rem',
+    '@media (max-width:600px)': {
+      width: '40vw',
+      textAlign: 'justify'
+    },
+  },
+  innerGrid: {},
+  innerGrid2: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'left',
+    alignItems: 'left',
+    width: '90vw',
+    maxWidth: '30vw',
+    '@media (max-width:600px)': {
+      display: 'flex',
+      flexDirection: 'column',
+    },
+  },
+
+};
+
 export const AboutCss = {
   outerGrid: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-around',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
-    overflow: "hidden"
+    // width: '73.5vw',
+    '@media (max-width:600px)': {
+      width: '100%',
+      marginTop: '10vh'
+    },
+  },
+  PersonGrid: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    '@media (max-width:600px)': {
+      flexDirection: 'column',
+      justifyContent: 'space-around',
+      height: '100%',
+    },
+  },
+  Persons: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: '5px',
+    '@media (max-width:600px)': {
+      width: '50vw',
+    },
   },
   imgCss: {
     width: '65vw',
     height: '70vh',
     objectFit: 'cover',
-
+    '@media (max-width:600px)': {
+      width: '50vw',
+    },
   },
   h6Variant: {
     padding: '0.8rem',
@@ -371,8 +498,12 @@ export const AboutCss = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-evenly',
-    alignItems: 'flex-start',
+    alignItems: 'center',
     height: '100vh',
+    '@media (max-width:600px)': {
+      width: '90vw',
+      height: '100vh',
+    },
   },
 
   item2Grid: {
@@ -382,6 +513,7 @@ export const AboutCss = {
     flexDirection: 'column',
     justifyContent: 'space-evenly',
     alignItems: 'center',
+
     '@media (max-width: 768px)': {
       // Center alignment on medium screens
       height: '100vh',
@@ -416,19 +548,23 @@ export const AboutCss = {
     height: '40vh',
     width: '100%',
 
-
   },
   testimonyGrid: {
     width: '90%',
     textAlign: 'center',
+
     '@media (max-width:509px)': {
-      width: '20vw'
+      width: '70vw',
+      height: '100%',
 
     },
   },
   testimonyGrid2: {
+    height: "25vh",
+    marginLeft: '30px',
     '@media (max-width:509px)': {
-      height: "30vh"
+      height: "35vh",
+
     },
 
 
@@ -442,9 +578,20 @@ export const AboutCss = {
     padding: '10px',
     backgroundColor: 'transparent',
     border: '1px solid gray',
+    '@media (max-width:509px)': {
+      height: "35vh",
+      width: '60vw',
+
+    },
   },
   testimonyGrid4: { display: 'flex', flexDirection: 'row', justifyContent: 'left', marginBottom: '10px' },
-  perSonalDetailGrid: { width: '65vw', borderBottom: '1px solid gray', }
+  perSonalDetailGrid: {
+    width: '65vw',
+    borderBottom: '1px solid gray',
+    '@media (max-width:600px)': {
+      height: "100%"
+    },
+  }
 }
 export const ProjectContainerCss = {
   containerVariants: {
@@ -465,6 +612,8 @@ export const ProjectContainerCss = {
       width: '100%', // Adjust for smaller screens
       marginLeft: '0', // Adjust for smaller screens
       padding: '5px', // Optional, adjust padding for smaller screens
+      marginTop: '15vh',
+      alignItems: 'center',
     }
   },
   innerGrid1: {
@@ -484,10 +633,33 @@ export const ProjectContainerCss = {
     marginRight: '10px',
     // Media query for mobile devices
     '@media (max-width: 509px)': {
-      flexDirection: 'column', // Stack items vertically on mobile
+      // flexDirection: 'row', // Stack items vertically on mobile
       alignItems: 'center',
       color: 'red' // Center items if needed
     }
+  },
+  description: {
+    display: 'flex',
+    flexDirection: "column",
+    width: "30vw",
+    '@media (max-width: 600px)': {
+      // flexDirection: 'row', // Stack items vertically on mobile
+      width: "70vw",
+    }
+  },
+  descriptionOuter: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    '@media (max-width: 600px)': {
+      // flexDirection: 'row', // Stack items vertically on mobile
+      width: "70vw",
+    }
+  },
+  descriptionImage: {
+    width: "70vw",
+    textAlign: 'justify'
   },
 }
 
@@ -499,7 +671,9 @@ export const ServicesCss = {
     justifyContent: 'space-around',
     color: 'white',
     marginLeft: '8vw',
-    marginTop: '15vh'
+    marginTop: '15vh',
+    width: '100vw',
+
   },
   textGrid: {
     marginBottom: '5vh'
@@ -512,12 +686,45 @@ export const ServicesCss = {
 
   },
 
+  head: {
+    padding: '0.8rem',
+    width: '5vw',
+    marginBottom: '10px',
+    '@media (max-width: 968px)': {
+      // flexDirection: 'row', // Stack items vertically on mobile
+      width: '15vw',
+    },
+    '@media (max-width: 900px)': {
+      // flexDirection: 'row', // Stack items vertically on mobile
+      width: '15vw',
+    },
+    '@media (max-width: 768px)': {
+      // flexDirection: 'row', // Stack items vertically on mobile
+      width: '15vw',
+    },
+    '@media (max-width: 600px)': {
+      // flexDirection: 'row', // Stack items vertically on mobile
+      width: '15vw',
+    }
+  },
+
   serviceGrid: {
+    // width: '20vw',
     padding: '1.3rem',
     backgroundColor: '#333333',
     marginRight: '40px',
     marginBottom: '40px',
 
   },
+
+}
+export const ContactCss = {
+  contactForm: {
+    marginTop: '20vh',
+    '@media (max-width: 768px)': {
+      // flexDirection: 'row', // Stack items vertically on mobile
+
+    }
+  }
 
 }

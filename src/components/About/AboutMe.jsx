@@ -26,11 +26,11 @@ const AboutMe = () => {
 
       <Grid
         container
-        style={AboutCss.outerGrid}
-        xs={12}
+        sx={{ ...AboutCss.outerGrid }}
+
       >
         <Grid item
-          style={AboutCss.item1Grid}
+          sx={{ ...AboutCss.item1Grid }}
         >
           <Grid>
             <Typography
@@ -55,8 +55,9 @@ const AboutMe = () => {
           sx={{
             background: theme === 'light' ? '#EFEFEF ' : 'black',
             color: theme === 'light' ? 'black' : '#FAFAFA',
+            ...AboutCss.item2Grid
           }}
-          style={AboutCss.item2Grid}
+
         >
           <Grid
             style={{
@@ -91,7 +92,7 @@ const AboutMe = () => {
               ))}
             </Typography>
           </Grid>
-          <Grid style={AboutCss.perSonalDetailGrid}>
+          <Grid sx={{ ...AboutCss.perSonalDetailGrid }}>
             <PersonalDetails />
           </Grid>
           <Grid sx={{ ...AboutCss.downloadGrid }}>
@@ -139,7 +140,7 @@ const AboutMe = () => {
               Testimonies
             </Typography>
           </Grid>
-          <Grid style={AboutCss.testimonyGrid}>
+          <Grid sx={{ ...AboutCss.testimonyGrid }}>
             <Testimonial />
           </Grid>
         </Grid>

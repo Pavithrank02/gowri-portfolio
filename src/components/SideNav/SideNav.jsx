@@ -9,11 +9,13 @@ import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 import Toggle from './ToggleButton';
 import { SideNavCss } from '../../constants';
+import { useTheme } from '../../ThemeContext';
 // import Gowrilogo1 from '../../assets/Gowrilogo1.png'
 
 const SideNav = () => {
+  const { theme } = useTheme();
   return (
-    <Grid container sx={{ ...SideNavCss.outerGridCss }}>
+    <Grid container sx={{ ...SideNavCss.outerGridCss }} style={{ background: theme === 'light' ? '#FFF' : 'black', color: theme === 'light' ? 'black' : 'white' }}>
       <Grid item>
         <Toggle />
       </Grid>

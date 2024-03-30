@@ -3,8 +3,12 @@ import React, { useState } from 'react';
 import { TextField, Button, Typography, Grid } from '@mui/material';
 import { styled } from '@mui/system';
 import { motion } from 'framer-motion';
+import { ContactCss } from '../constants'
 
 const StyledForm = styled(motion.form)({
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
   maxWidth: '700px',
   margin: '0 auto',
   padding: '20px',
@@ -44,7 +48,9 @@ const Contact = () => {
 
   return (
     <>
-      <Grid style={{ color: 'black' }}>
+      <Grid style={{ color: 'black' }}
+        sx={{ ...ContactCss.contactForm }}
+      >
         <StyledForm
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}

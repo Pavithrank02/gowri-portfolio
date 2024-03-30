@@ -30,17 +30,16 @@ const Services = () => {
       <Grid
         container
         xs={10}
-        style={ServicesCss.outerGrid}
+        sx={{ ...ServicesCss.outerGrid }}
       >
         <Grid item
-          style={ServicesCss.textGrid}
+          sx={{ ...ServicesCss.textGrid }}
         >
           <Grid>
             <Typography
-              style={{
-                padding: '0.8rem',
-                width: '4vw',
-                marginBottom: '10px',
+              variant='h6'
+              sx={{
+                ...ServicesCss.head,
                 background: theme === 'light' ? '#FFF' : '#292828',
                 color: theme === 'light' ? 'black' : '#B0B0B0'
               }}
@@ -52,14 +51,14 @@ const Services = () => {
             <Typography variant='h4' style={{ fontWeight: 800, color: theme === 'light' ? 'black' : 'white' }}>What I Do</Typography>
           </Grid>
         </Grid>
-        <Grid container spacing={1} style={ServicesCss.servicesGrid}>
+        <Grid container spacing={1} sx={{ ...ServicesCss.servicesGrid }}>
           {ServicesProvided.map((serv, i) => (
             <Grid
               key={i}
               item
-              xs={3}// Each grid item takes up full width on extra small screens (stacks vertically)
-              sm={4} // Each grid item takes up half width on small screens (two items per row)
-              md={3} // Each grid item takes up one-third width on medium screens (three items per row)
+              // xs={3}// Each grid item takes up full width on extra small screens (stacks vertically)
+              // sm={4} // Each grid item takes up half width on small screens (two items per row)
+              // md={3} // Each grid item takes up one-third width on medium screens (three items per row)
               lg={3} // Each grid item takes up one-third width on large screens (three items per row)
               style={{
                 background: theme === 'light' ? '#FFF' : '#292828',
