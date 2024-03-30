@@ -8,20 +8,34 @@ import { motion } from 'framer-motion';
 import { useTheme } from '../../ThemeContext';
 
 const Experience = () => {
-
   const { theme } = useTheme();
-  const containerVariants = {
-    hidden: { opacity: 0, },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
+  const [scrollDirection, setScrollDirection] = useState('down');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      if (currentScrollPos > 0) {
+        setScrollDirection(currentScrollPos > window._scrollPos ? 'down' : 'up');
+        window._scrollPos = currentScrollPos;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <motion.div
       initial="hidden"
-      animate="visible"
-      variants={containerVariants}
+      animate={scrollDirection === 'down' ? "visible" : "reverse"}
+      variants={{
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+        reverse: { opacity: 1, y: 0, transition: { duration: 0.5, reverse: true } }
+      }}
     >
       <VerticalTimeline>
+        {/* You can wrap the VerticalTimelineElement in motion.div if you want animation for each element */}
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{
@@ -133,7 +147,7 @@ const Experience = () => {
           </p>
         </VerticalTimelineElement>
       </VerticalTimeline>
-    </motion.div>
+    </motion.div >
   )
 }
 
