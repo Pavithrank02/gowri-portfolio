@@ -33,7 +33,6 @@ const ProjectCard = () => {
   };
 
   const handleImageClick = () => {
-    console.log("truye")
     setIsModalOpen(true);
   };
 
