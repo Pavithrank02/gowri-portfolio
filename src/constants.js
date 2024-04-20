@@ -666,7 +666,7 @@ export const ProjectContainerCss = {
     padding: '10px',
     marginLeft: '5vw',
     marginTop: '10vh',
-    '@media (max-width: 509px)': {
+    '@media (max-width: 600px)': {
       width: '100%', // Adjust for smaller screens
       marginLeft: '0', // Adjust for smaller screens
       padding: '5px', // Optional, adjust padding for smaller screens
