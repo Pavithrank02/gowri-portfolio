@@ -5,44 +5,64 @@ import SchoolIcon from '@mui/icons-material/School';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import WorkIcon from '@mui/icons-material/Work';
 import { motion } from 'framer-motion';
-import { useTheme } from '../ThemeContext';
+import { useTheme } from '../../ThemeContext';
 
 const Experience = () => {
-
   const { theme } = useTheme();
-  const containerVariants = {
-    hidden: { opacity: 0,  },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
+  const [scrollDirection, setScrollDirection] = useState('down');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      if (currentScrollPos > 0) {
+        setScrollDirection(currentScrollPos > window._scrollPos ? 'down' : 'up');
+        window._scrollPos = currentScrollPos;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <motion.div
       initial="hidden"
-      animate="visible"
-      variants={containerVariants}
+      animate={scrollDirection === 'down' ? "visible" : "reverse"}
+      variants={{
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+        reverse: { opacity: 1, y: 0, transition: { duration: 0.5, reverse: true } }
+      }}
     >
       <VerticalTimeline>
+        {/* You can wrap the VerticalTimelineElement in motion.div if you want animation for each element */}
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: theme === 'light' ? '#F7F7F7 ' : '#131314',
-          color: theme === 'light' ? 'black' : '#FAFAFA', }}
+          contentStyle={{
+            background: theme === 'light' ? '#F7F7F7 ' : '#131314',
+            color: theme === 'light' ? 'black' : '#FAFAFA',
+          }}
           contentArrowStyle={{ borderRight: '7px solid black' }}
           date="2011 - present"
-          iconStyle={{ background: theme === 'light' ? '#F7F7F7 ' : '#131314',
-          color: theme === 'light' ? 'black' : '#FAFAFA', }}
+          iconStyle={{
+            background: theme === 'light' ? '#F7F7F7 ' : '#131314',
+            color: theme === 'light' ? 'black' : '#FAFAFA',
+          }}
           icon={<WorkIcon />}
         >
           <h3 className="vertical-timeline-element-title">Creative Director</h3>
           <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-          <p style={{color: '#B0B0B0'}}>
+          <p style={{ color: '#B0B0B0' }}>
             Creative Direction, User Experience, Visual Design, Project Management, Team Leading
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           date="2010 - 2011"
-          iconStyle={{ background: theme === 'light' ? '#F7F7F7 ' : '#131314',
-          color: theme === 'light' ? 'black' : '#FAFAFA', }}
+          iconStyle={{
+            background: theme === 'light' ? '#F7F7F7 ' : '#131314',
+            color: theme === 'light' ? 'black' : '#FAFAFA',
+          }}
           icon={<WorkHistoryIcon />}
         >
           <h3 className="vertical-timeline-element-title">Art Director</h3>
@@ -54,8 +74,10 @@ const Experience = () => {
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           date="2008 - 2010"
-          iconStyle={{ background: theme === 'light' ? '#F7F7F7 ' : '#131314',
-          color: theme === 'light' ? 'black' : '#FAFAFA', }}
+          iconStyle={{
+            background: theme === 'light' ? '#F7F7F7 ' : '#131314',
+            color: theme === 'light' ? 'black' : '#FAFAFA',
+          }}
           icon={<WorkHistoryIcon />}
         >
           <h3 className="vertical-timeline-element-title">Web Designer</h3>
@@ -67,8 +89,10 @@ const Experience = () => {
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           date="2006 - 2008"
-          iconStyle={{ background: theme === 'light' ? '#F7F7F7 ' : '#131314',
-          color: theme === 'light' ? 'black' : '#FAFAFA', }}
+          iconStyle={{
+            background: theme === 'light' ? '#F7F7F7 ' : '#131314',
+            color: theme === 'light' ? 'black' : '#FAFAFA',
+          }}
           icon={<WorkHistoryIcon />}
         >
           <h3 className="vertical-timeline-element-title">Web Designer</h3>
@@ -80,8 +104,10 @@ const Experience = () => {
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="April 2013"
-          iconStyle={{ background: theme === 'light' ? '#F7F7F7 ' : '#131314',
-          color: theme === 'light' ? 'black' : '#FAFAFA', }}
+          iconStyle={{
+            background: theme === 'light' ? '#F7F7F7 ' : '#131314',
+            color: theme === 'light' ? 'black' : '#FAFAFA',
+          }}
           icon={<SchoolIcon />}
         >
           <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3>
@@ -93,8 +119,10 @@ const Experience = () => {
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="November 2012"
-          iconStyle={{ background: theme === 'light' ? '#F7F7F7 ' : '#131314',
-          color: theme === 'light' ? 'black' : '#FAFAFA', }}
+          iconStyle={{
+            background: theme === 'light' ? '#F7F7F7 ' : '#131314',
+            color: theme === 'light' ? 'black' : '#FAFAFA',
+          }}
           icon={<SchoolIcon />}
         >
           <h3 className="vertical-timeline-element-title">Agile Development Scrum Master</h3>
@@ -106,8 +134,10 @@ const Experience = () => {
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="2002 - 2006"
-          iconStyle={{ background: theme === 'light' ? '#F7F7F7 ' : '#131314',
-          color: theme === 'light' ? 'black' : '#FAFAFA', }}
+          iconStyle={{
+            background: theme === 'light' ? '#F7F7F7 ' : '#131314',
+            color: theme === 'light' ? 'black' : '#FAFAFA',
+          }}
           icon={<SchoolIcon />}
         >
           <h3 className="vertical-timeline-element-title">Bachelor of Science in Interactive Digital Media Visual Imaging</h3>
@@ -117,7 +147,7 @@ const Experience = () => {
           </p>
         </VerticalTimelineElement>
       </VerticalTimeline>
-    </motion.div>
+    </motion.div >
   )
 }
 
